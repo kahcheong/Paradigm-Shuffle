@@ -14,7 +14,8 @@ public class SpawnRoom : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-        deckSize = 4;
+        deckSize+=10;
+        deck.AddRange(npcDeck);
 	}
 	
 	// Update is called once per frame
