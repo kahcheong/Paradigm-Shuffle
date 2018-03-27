@@ -6,7 +6,9 @@ public class Card : MonoBehaviour {
 
     public int id;
     public string Name;
-    public string Enemy;
+    public GameObject Enemy;
+    public int minInstance;
+    public int maxInstance;
 
 
 	// Use this for initialization
