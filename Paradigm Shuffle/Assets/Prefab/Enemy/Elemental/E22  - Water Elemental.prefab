@@ -21,14 +21,14 @@ GameObject:
   - component: {fileID: 4984417096133712}
   - component: {fileID: 212004527554382584}
   - component: {fileID: 114912229431484446}
-  - component: {fileID: 95137093992783054}
+  - component: {fileID: 95428098803259798}
   m_Layer: 0
   m_Name: E22  - Water Elemental
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4984417096133712
 Transform:
   m_ObjectHideFlags: 1
@@ -42,7 +42,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!95 &95137093992783054
+--- !u!95 &95428098803259798
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 1
@@ -51,7 +51,7 @@ Animator:
   m_GameObject: {fileID: 1599556231921024}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 5e6f2d23a5c53ca4ea15bb7ca51ad59c, type: 2}
+  m_Controller: {fileID: 9100000, guid: 3b562c15b84a69f4c8170bfa30fdee35, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -70,18 +70,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a93311b82acd91d44b5b283cf8b24f17, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  name: Militia
-  hp: 0
+  name: Water Elemental
+  hp: 40
   exp: 0
-  stab: 1
+  stab: 0
   swipe: 0
   lob: 0
   ranged: 0
+  special: 1
+  notAgressive: 0
   boss: 0
-  damage: 0
-  range: 0
-  atkSpeed: 0
-  moveSpeed: 0
+  minDamage: 5
+  maxDamage: 8
+  minRange: 3
+  maxRange: 5
+  atkSpeed: 1.1
+  moveSpeed: 1.2
   weapon: {fileID: 0}
 --- !u!212 &212004527554382584
 SpriteRenderer:

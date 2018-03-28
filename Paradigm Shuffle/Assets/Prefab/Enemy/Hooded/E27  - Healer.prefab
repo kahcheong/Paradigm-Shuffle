@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4622578471457388}
   - component: {fileID: 212250399761472168}
   - component: {fileID: 114520895115388972}
-  - component: {fileID: 95551747598593686}
+  - component: {fileID: 95084448416008902}
   m_Layer: 0
   m_Name: E27  - Healer
   m_TagString: Untagged
@@ -36,13 +36,13 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1182860083554830}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 1.342, z: 0}
   m_LocalScale: {x: 0.25, y: 0.25, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!95 &95551747598593686
+--- !u!95 &95084448416008902
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 1
@@ -51,7 +51,7 @@ Animator:
   m_GameObject: {fileID: 1182860083554830}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 5e6f2d23a5c53ca4ea15bb7ca51ad59c, type: 2}
+  m_Controller: {fileID: 9100000, guid: bac0d641f92928e4a8a26fe2a762dd05, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

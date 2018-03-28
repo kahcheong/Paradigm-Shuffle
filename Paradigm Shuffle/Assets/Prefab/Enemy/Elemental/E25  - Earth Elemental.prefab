@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4002675430179884}
   - component: {fileID: 212545231763315322}
   - component: {fileID: 114025353079546238}
-  - component: {fileID: 95507505506252964}
+  - component: {fileID: 95174571525756076}
   m_Layer: 0
   m_Name: E25  - Earth Elemental
   m_TagString: Untagged
@@ -42,7 +42,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!95 &95507505506252964
+--- !u!95 &95174571525756076
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 1
@@ -51,7 +51,7 @@ Animator:
   m_GameObject: {fileID: 1320212774760316}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 5e6f2d23a5c53ca4ea15bb7ca51ad59c, type: 2}
+  m_Controller: {fileID: 9100000, guid: 611e3bc560b68fa4cacad3125d15c5ee, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

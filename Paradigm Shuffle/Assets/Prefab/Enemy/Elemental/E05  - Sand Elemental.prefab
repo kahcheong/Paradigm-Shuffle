@@ -21,14 +21,14 @@ GameObject:
   - component: {fileID: 4124982200588206}
   - component: {fileID: 212644974334492958}
   - component: {fileID: 114649503065263948}
-  - component: {fileID: 95001712391444108}
+  - component: {fileID: 95025780629842096}
   m_Layer: 0
   m_Name: E05  - Sand Elemental
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4124982200588206
 Transform:
   m_ObjectHideFlags: 1
@@ -42,7 +42,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!95 &95001712391444108
+--- !u!95 &95025780629842096
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 1
@@ -51,7 +51,7 @@ Animator:
   m_GameObject: {fileID: 1910592862040832}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 5e6f2d23a5c53ca4ea15bb7ca51ad59c, type: 2}
+  m_Controller: {fileID: 9100000, guid: ab25ce841a013bb4fa00a03a930fb9f5, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -70,18 +70,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a93311b82acd91d44b5b283cf8b24f17, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  name: Militia
-  hp: 0
+  name: Sand Elemental
+  hp: 25
   exp: 0
-  stab: 1
-  swipe: 0
+  stab: 0
+  swipe: 1
   lob: 0
   ranged: 0
   boss: 0
-  damage: 0
-  range: 0
-  atkSpeed: 0
-  moveSpeed: 0
+  minDamage: 3
+  maxDamage: 5
+  minRange: 0
+  maxRange: 3
+  atkSpeed: 2
+  moveSpeed: 2
   weapon: {fileID: 0}
 --- !u!212 &212644974334492958
 SpriteRenderer:

@@ -21,14 +21,14 @@ GameObject:
   - component: {fileID: 4385213623653258}
   - component: {fileID: 212739997819231042}
   - component: {fileID: 114581542224439620}
-  - component: {fileID: 95093262598013090}
+  - component: {fileID: 95705821265030832}
   m_Layer: 0
   m_Name: E16  - Tinker
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4385213623653258
 Transform:
   m_ObjectHideFlags: 1
@@ -36,13 +36,13 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1758367817469814}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 1.68, z: 0}
   m_LocalScale: {x: 0.25, y: 0.25, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!95 &95093262598013090
+--- !u!95 &95705821265030832
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 1
@@ -51,7 +51,7 @@ Animator:
   m_GameObject: {fileID: 1758367817469814}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 5e6f2d23a5c53ca4ea15bb7ca51ad59c, type: 2}
+  m_Controller: {fileID: 9100000, guid: 618ba5387c8151e42bf6d723902026b3, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -70,17 +70,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a93311b82acd91d44b5b283cf8b24f17, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  name: Militia
-  hp: 0
+  name: Tinker
+  hp: 50
   exp: 0
-  stab: 1
+  stab: 0
   swipe: 0
   lob: 0
   ranged: 0
+  special: 0
+  notAgressive: 1
   boss: 0
-  damage: 0
-  range: 0
-  atkSpeed: 0
+  minDamage: 50
+  maxDamage: 50
+  minRange: 0
+  maxRange: 50
+  atkSpeed: 50
   moveSpeed: 0
   weapon: {fileID: 0}
 --- !u!212 &212739997819231042

@@ -5,18 +5,23 @@ using UnityEngine;
 public class Enemy : MonoBehaviour {
 
     public string name;
-    public int hp;
+    public float hp;
     public int exp;
 
     public bool stab;
     public bool swipe;
     public bool lob;
     public bool ranged;
+    public bool special;
+    public bool notAgressive;
     public bool boss;
-    public int damage;
-    public int range;
+
+    public float minDamage;
+    public float maxDamage;
+    public int minRange;
+    public int maxRange;
     public float atkSpeed;
-    public int moveSpeed;
+    public float moveSpeed;
 
     public GameObject weapon;
     

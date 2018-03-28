@@ -21,14 +21,14 @@ GameObject:
   - component: {fileID: 4382264879863812}
   - component: {fileID: 212603934347601482}
   - component: {fileID: 114476612591205220}
-  - component: {fileID: 95656940524828036}
+  - component: {fileID: 95398499451835972}
   m_Layer: 0
   m_Name: E12 - Militia
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4382264879863812
 Transform:
   m_ObjectHideFlags: 1
@@ -36,13 +36,13 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1052605987963614}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -0.73, y: 0, z: 0}
   m_LocalScale: {x: 0.25, y: 0.25, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!95 &95656940524828036
+--- !u!95 &95398499451835972
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 1
@@ -51,7 +51,7 @@ Animator:
   m_GameObject: {fileID: 1052605987963614}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 5e6f2d23a5c53ca4ea15bb7ca51ad59c, type: 2}
+  m_Controller: {fileID: 9100000, guid: 00001455a7307054b8ac4dbab031c862, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -71,17 +71,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   name: Militia
-  hp: 0
+  hp: 15
   exp: 0
   stab: 1
   swipe: 0
   lob: 0
   ranged: 0
   boss: 0
-  damage: 0
-  range: 0
-  atkSpeed: 0
-  moveSpeed: 0
+  minDamage: 1
+  maxDamage: 7
+  minRange: 0
+  maxRange: 2
+  atkSpeed: 1
+  moveSpeed: 1
   weapon: {fileID: 0}
 --- !u!212 &212603934347601482
 SpriteRenderer:

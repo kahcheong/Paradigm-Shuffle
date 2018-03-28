@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4827249089842842}
   - component: {fileID: 212959292715079514}
   - component: {fileID: 114254539128309592}
-  - component: {fileID: 95162698510196804}
+  - component: {fileID: 95013559624958714}
   m_Layer: 0
   m_Name: E28  - Wisp
   m_TagString: Untagged
@@ -42,7 +42,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!95 &95162698510196804
+--- !u!95 &95013559624958714
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 1
@@ -51,7 +51,7 @@ Animator:
   m_GameObject: {fileID: 1015117781540822}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 5e6f2d23a5c53ca4ea15bb7ca51ad59c, type: 2}
+  m_Controller: {fileID: 9100000, guid: 68f35301845cc4e44b5b9fc583e8efb6, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

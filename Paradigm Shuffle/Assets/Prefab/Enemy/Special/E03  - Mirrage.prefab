@@ -21,14 +21,14 @@ GameObject:
   - component: {fileID: 4193987376455524}
   - component: {fileID: 212414854624812924}
   - component: {fileID: 114039490920239748}
-  - component: {fileID: 95706665383621322}
+  - component: {fileID: 95188871736715328}
   m_Layer: 0
   m_Name: E03  - Mirrage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4193987376455524
 Transform:
   m_ObjectHideFlags: 1
@@ -36,13 +36,13 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1757911260146160}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -0.938, y: 0, z: 0}
   m_LocalScale: {x: 0.25, y: 0.25, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!95 &95706665383621322
+--- !u!95 &95188871736715328
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 1
@@ -51,7 +51,7 @@ Animator:
   m_GameObject: {fileID: 1757911260146160}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 5e6f2d23a5c53ca4ea15bb7ca51ad59c, type: 2}
+  m_Controller: {fileID: 9100000, guid: 99a2c9d3fc9997147af5d450db2ca195, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -70,16 +70,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a93311b82acd91d44b5b283cf8b24f17, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  name: Militia
-  hp: 0
-  exp: 0
-  stab: 1
+  name: Mirrage
+  hp: 100
+  exp: 100
+  stab: 0
   swipe: 0
   lob: 0
   ranged: 0
+  special: 1
   boss: 0
-  damage: 0
-  range: 0
+  minDamage: 0
+  maxDamage: 0
+  minRange: 0
+  maxRange: 0
   atkSpeed: 0
   moveSpeed: 0
   weapon: {fileID: 0}
@@ -115,7 +118,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 80db301099bd05448bec7bc81daab552, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -123,5 +126,5 @@ SpriteRenderer:
   m_Size: {x: 5.12, y: 5.12}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0

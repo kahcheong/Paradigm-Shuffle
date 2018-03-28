@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4619136526414766}
   - component: {fileID: 212927166384671060}
   - component: {fileID: 114008817929764490}
-  - component: {fileID: 95797286944080758}
+  - component: {fileID: 95901795241860832}
   m_Layer: 0
   m_Name: E26  - Air Elemental
   m_TagString: Untagged
@@ -42,7 +42,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!95 &95797286944080758
+--- !u!95 &95901795241860832
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 1
@@ -51,7 +51,7 @@ Animator:
   m_GameObject: {fileID: 1340590601197170}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 5e6f2d23a5c53ca4ea15bb7ca51ad59c, type: 2}
+  m_Controller: {fileID: 9100000, guid: efc7cc72b96462046a986ff53b545254, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
