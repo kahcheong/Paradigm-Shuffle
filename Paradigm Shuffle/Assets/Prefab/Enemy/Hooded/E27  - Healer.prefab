@@ -28,7 +28,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4622578471457388
 Transform:
   m_ObjectHideFlags: 1
@@ -70,17 +70,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a93311b82acd91d44b5b283cf8b24f17, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  name: Militia
-  hp: 0
+  name: Healer
+  hp: 50
   exp: 0
-  stab: 1
+  stab: 0
   swipe: 0
   lob: 0
   ranged: 0
+  special: 0
+  notAgressive: 1
   boss: 0
-  damage: 0
-  range: 0
-  atkSpeed: 0
+  minDamage: 50
+  maxDamage: 50
+  minRange: 0
+  maxRange: 50
+  atkSpeed: 50
   moveSpeed: 0
   weapon: {fileID: 0}
 --- !u!212 &212250399761472168

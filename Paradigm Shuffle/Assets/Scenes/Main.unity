@@ -198,10 +198,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 31
       objectReference: {fileID: 0}
-    - target: {fileID: 1378730462909026, guid: 3277c8e7a5381bd4196735ab7c61aca5, type: 2}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3277c8e7a5381bd4196735ab7c61aca5, type: 2}
   m_IsPrefabParent: 0
@@ -753,6 +749,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21f87700178449a45b30b1f52b5121c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  atk: 0
+  atkType: 0
+  animation: {fileID: 0}
 --- !u!1001 &425051762
 Prefab:
   m_ObjectHideFlags: 0
@@ -838,10 +837,6 @@ Prefab:
     - target: {fileID: 4933697708845104, guid: 3170a3766bb7c6449a7fe4f645d8c975, type: 2}
       propertyPath: m_RootOrder
       value: 32
-      objectReference: {fileID: 0}
-    - target: {fileID: 1378730462909026, guid: 3170a3766bb7c6449a7fe4f645d8c975, type: 2}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3170a3766bb7c6449a7fe4f645d8c975, type: 2}
@@ -1068,10 +1063,6 @@ Prefab:
     - target: {fileID: 4619136526414766, guid: 2970d0d57142f134cb276e30aa9e40d3, type: 2}
       propertyPath: m_RootOrder
       value: 28
-      objectReference: {fileID: 0}
-    - target: {fileID: 1340590601197170, guid: 2970d0d57142f134cb276e30aa9e40d3, type: 2}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2970d0d57142f134cb276e30aa9e40d3, type: 2}
@@ -1697,15 +1688,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 27
       objectReference: {fileID: 0}
-    - target: {fileID: 1320212774760316, guid: a394dd075f8c7cf4c9f707407c0ec49c, type: 2}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114025353079546238, guid: a394dd075f8c7cf4c9f707407c0ec49c,
-        type: 2}
-      propertyPath: name
-      value: Earth Elemental
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a394dd075f8c7cf4c9f707407c0ec49c, type: 2}
   m_IsPrefabParent: 0
@@ -1804,9 +1786,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 30
       objectReference: {fileID: 0}
-    - target: {fileID: 1015117781540822, guid: 6476f08045d64be49b62c97c632c6222, type: 2}
-      propertyPath: m_IsActive
-      value: 0
+    - target: {fileID: 114254539128309592, guid: 6476f08045d64be49b62c97c632c6222,
+        type: 2}
+      propertyPath: special
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6476f08045d64be49b62c97c632c6222, type: 2}
@@ -1905,10 +1888,6 @@ Prefab:
     - target: {fileID: 4622578471457388, guid: e090fcbe917882c4c8cffb7b2a2bed1b, type: 2}
       propertyPath: m_RootOrder
       value: 29
-      objectReference: {fileID: 0}
-    - target: {fileID: 1182860083554830, guid: e090fcbe917882c4c8cffb7b2a2bed1b, type: 2}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e090fcbe917882c4c8cffb7b2a2bed1b, type: 2}

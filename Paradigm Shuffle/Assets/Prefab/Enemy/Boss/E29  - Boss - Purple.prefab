@@ -28,7 +28,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4933697708845104
 Transform:
   m_ObjectHideFlags: 1
@@ -70,18 +70,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a93311b82acd91d44b5b283cf8b24f17, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  name: Militia
-  hp: 0
-  exp: 0
+  name: Sally
+  hp: 1000
+  exp: 600
   stab: 0
   swipe: 0
   lob: 0
   ranged: 0
+  special: 0
+  notAgressive: 0
   boss: 1
-  damage: 0
-  range: 0
-  atkSpeed: 0
-  moveSpeed: 0
+  minDamage: 20
+  maxDamage: 30
+  minRange: 0
+  maxRange: 5
+  atkSpeed: 0.5
+  moveSpeed: 0.5
   weapon: {fileID: 0}
 --- !u!212 &212844861315587566
 SpriteRenderer:
