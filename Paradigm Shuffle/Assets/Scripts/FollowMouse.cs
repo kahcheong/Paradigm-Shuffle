@@ -1,4 +1,4 @@
-﻿/*using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -7,7 +7,7 @@ public class FollowMouse : MonoBehaviour {
     // Use this for initialization
     public bool atk;
     public int atkType;
-    //public GameObject animation;
+    public GameObject animation;
 
     void Update()
     {
@@ -23,10 +23,10 @@ public class FollowMouse : MonoBehaviour {
         if (!atk)
         {
             transform.localRotation = Quaternion.Euler(new Vector3(0, 0, angle));
-         //   animation.GetComponent<Animator>().Play("idle");
+            animation.GetComponent<Animator>().Play("idle");
         }
 
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && !atk)
         {
             atk = true;
             StartCoroutine(Atacking());
@@ -48,7 +48,7 @@ public class FollowMouse : MonoBehaviour {
         {
             animation.GetComponent<Animator>().Play("swipe");
             Debug.Log("attaking swipe");
-            yield return new WaitForSeconds(0.10F);
+            yield return new WaitForSeconds(0.16F);
         }
         if (atkType == 2)
         {
@@ -63,4 +63,3 @@ public class FollowMouse : MonoBehaviour {
 
     
 }
-*/

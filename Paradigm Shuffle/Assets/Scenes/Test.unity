@@ -120,7 +120,7 @@ GameObject:
   - component: {fileID: 36484776}
   m_Layer: 0
   m_Name: atkMove
-  m_TagString: Untagged
+  m_TagString: weapon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -208,8 +208,6 @@ GameObject:
   - component: {fileID: 60383360}
   - component: {fileID: 60383359}
   - component: {fileID: 60383363}
-  - component: {fileID: 60383364}
-  - component: {fileID: 60383362}
   m_Layer: 0
   m_Name: player
   m_TagString: Untagged
@@ -290,20 +288,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!64 &60383362
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 60383358}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Convex: 0
-  m_InflateMesh: 0
-  m_SkinWidth: 0.01
-  m_Mesh: {fileID: 0}
 --- !u!114 &60383363
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -315,19 +299,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: faa461602a65bb84c81e88b0019de173, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerSpeed: 10
---- !u!114 &60383364
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 60383358}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: faa461602a65bb84c81e88b0019de173, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerSpeed: 0.05
+  playerSpeed: 7
+  hardLock: 0
 --- !u!1 &486120726
 GameObject:
   m_ObjectHideFlags: 0
@@ -542,7 +515,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1703693232}
   - component: {fileID: 1703693231}
-  - component: {fileID: 1703693230}
   - component: {fileID: 1703693229}
   m_Layer: 0
   m_Name: roomFloor
@@ -583,20 +555,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &1703693230
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1703693228}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Convex: 0
-  m_InflateMesh: 0
-  m_SkinWidth: 0.01
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!33 &1703693231
 MeshFilter:
   m_ObjectHideFlags: 0
