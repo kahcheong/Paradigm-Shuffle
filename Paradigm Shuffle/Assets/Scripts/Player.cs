@@ -7,6 +7,9 @@ public class Player : MonoBehaviour
 
     public float playerSpeed; //speed player moves
     public bool hardLock;
+    public GameObject decks;
+
+    public float hp = 100f;
 
     void Update()
     {
@@ -19,19 +22,19 @@ public class Player : MonoBehaviour
 
         if (hardLock)
         {
-            if (Input.GetKey("w") && gameObject.transform.position.y < 4.15)//go up
+            if (Input.GetKey("w") && gameObject.transform.position.y < 4.90)//go up
             {
                 transform.Translate(0, playerSpeed * Time.deltaTime, 0);
             }
-            if (Input.GetKey("s") && gameObject.transform.position.y > -4.1)//go down
+            if (Input.GetKey("s") && gameObject.transform.position.y > -3.9)//go down
             {
                 transform.Translate(0, -playerSpeed * Time.deltaTime, 0);
             }
-            if (Input.GetKey("a") && gameObject.transform.position.x > -4.42)//go left
+            if (Input.GetKey("a") && gameObject.transform.position.x > -6.46)//go left
             {
                 transform.Translate(-playerSpeed * Time.deltaTime, 0, 0);
             }
-            if (Input.GetKey("d") && gameObject.transform.position.x < 4.5)//go right
+            if (Input.GetKey("d") && gameObject.transform.position.x < 6.39)//go right
             {
                 transform.Translate(playerSpeed * Time.deltaTime, 0, 0);
             }

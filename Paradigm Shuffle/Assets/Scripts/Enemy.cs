@@ -34,5 +34,19 @@ public class Enemy : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		
+        if (hp <= 0)
+        {
+            Destroy(gameObject.gameObject);
+        }
 	}
+
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "weapon")
+        {
+            hp--;
+        }
+
+    }
 }

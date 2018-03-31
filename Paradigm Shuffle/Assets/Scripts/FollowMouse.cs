@@ -9,6 +9,8 @@ public class FollowMouse : MonoBehaviour {
     public int atkType;
     public GameObject animation;
 
+    public GameObject[] hitBox;
+
     void Update()
     {
         //rotation
@@ -47,6 +49,7 @@ public class FollowMouse : MonoBehaviour {
         if (atkType == 1)
         {
             animation.GetComponent<Animator>().Play("swipe");
+            hitBox[0].SetActive(true);
             Debug.Log("attaking swipe");
             yield return new WaitForSeconds(0.16F);
         }
@@ -57,6 +60,10 @@ public class FollowMouse : MonoBehaviour {
             yield return new WaitForSeconds(0.09F);
         }
         atk = false;
+        for(int i = 0; i <hitBox.Length; i++)
+        {
+            hitBox[i].SetActive(false);
+        }
         yield return true;
     }
 

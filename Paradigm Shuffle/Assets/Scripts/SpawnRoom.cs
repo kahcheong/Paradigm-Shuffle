@@ -27,9 +27,17 @@ public class SpawnRoom : MonoBehaviour {
             int temp2 = 0;
             if (deckSize >= 2)
             {
-                temp1 = Random.Range(0, deckSize+1);
+                temp1 = Random.Range(0, deckSize);
                 deckSize--;
-                temp2 = Random.Range(0, deckSize+1);
+                temp2 = Random.Range(0, deckSize);
+                deckSize--;
+            }
+            else
+            {
+                ReShuffleDeck();
+                temp1 = Random.Range(0, deckSize);
+                deckSize--;
+                temp2 = Random.Range(0, deckSize);
                 deckSize--;
             }
 
@@ -45,13 +53,23 @@ public class SpawnRoom : MonoBehaviour {
             
         }
 
-        if (Input.GetKeyDown(KeyCode.P)) // item creation
+        if (Input.GetKeyDown(KeyCode.O)) // item creation
         {
             int temp1 = 0;
             int temp2 = 0;
             int temp3 = 0;
             if (deckSize >= 3)
             {
+                temp1 = Random.Range(0, deckSize + 1);
+                deckSize--;
+                temp2 = Random.Range(0, deckSize + 1);
+                deckSize--;
+                temp3 = Random.Range(0, deckSize + 1);
+                deckSize--;
+            }
+            else
+            {
+                ReShuffleDeck();
                 temp1 = Random.Range(0, deckSize + 1);
                 deckSize--;
                 temp2 = Random.Range(0, deckSize + 1);
@@ -98,7 +116,7 @@ public class SpawnRoom : MonoBehaviour {
     void ReShuffleDeck()
     {
         deck.AddRange(discard);
-        //discard.RemoveAll();
-        deckSize = 20;
+        discard.Clear();
+        deckSize = 10;
     }
 }
