@@ -149,7 +149,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4292295060883828, guid: fda59c7c8a6d91545b086d7e9b952635, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -1.64
+      value: 2.09
       objectReference: {fileID: 0}
     - target: {fileID: 4292295060883828, guid: fda59c7c8a6d91545b086d7e9b952635, type: 2}
       propertyPath: m_LocalPosition.y
@@ -182,6 +182,11 @@ Prefab:
     - target: {fileID: 1557189555821084, guid: fda59c7c8a6d91545b086d7e9b952635, type: 2}
       propertyPath: m_Name
       value: E01  - Goblin w/ Spear
+      objectReference: {fileID: 0}
+    - target: {fileID: 212587689109724186, guid: fda59c7c8a6d91545b086d7e9b952635,
+        type: 2}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1557189555821084, guid: fda59c7c8a6d91545b086d7e9b952635, type: 2}
       propertyPath: m_IsActive
@@ -2621,6 +2626,7 @@ MonoBehaviour:
   Card1: {fileID: 0}
   Card2: {fileID: 0}
   Card3: {fileID: 0}
+  SpawnPoint: {fileID: 0}
   boss: 0
   itemBase:
   - {fileID: 0}
@@ -2653,6 +2659,8 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  decks: {fileID: 0}
+  dc: {fileID: 0}
 --- !u!4 &660808498
 Transform:
   m_ObjectHideFlags: 0
@@ -7394,7 +7402,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1917170562911660, guid: 5878343788dd7bf41a8fdd498104ccc4, type: 2}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5878343788dd7bf41a8fdd498104ccc4, type: 2}

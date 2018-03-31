@@ -20,6 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4121379002704702}
   - component: {fileID: 212298899173267578}
+  - component: {fileID: 114630064936400496}
   m_Layer: 0
   m_Name: Long Bow
   m_TagString: Untagged
@@ -40,6 +41,26 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114630064936400496
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1796062724248278}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 931865fe11fa74b45b53d25eee80c4e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minDamage: 2
+  maxDamge: 5
+  minRange: 4
+  maxRange: 8
+  atkSpeed: 1.5
+  stab: 0
+  swipe: 0
+  lob: 0
+  ranged: 1
 --- !u!212 &212298899173267578
 SpriteRenderer:
   m_ObjectHideFlags: 1

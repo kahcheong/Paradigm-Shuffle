@@ -3,12 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
 
-public class Item : MonoBehaviour
+public class Weapon : MonoBehaviour
 {
 
     public float minDamage;
     public float maxDamge;
-    public float range;
+    public float minRange;
+    public float maxRange;
     public float atkSpeed;
 
     public bool stab;

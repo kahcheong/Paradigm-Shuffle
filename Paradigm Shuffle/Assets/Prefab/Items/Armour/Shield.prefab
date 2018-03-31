@@ -20,6 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4073914979738288}
   - component: {fileID: 212170792636719620}
+  - component: {fileID: 114383715970670486}
   m_Layer: 0
   m_Name: Shield
   m_TagString: Untagged
@@ -40,6 +41,23 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114383715970670486
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1198913457254876}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a77100709b1759d45a071ac5f78ef31b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minBase: 0
+  maxBase: 2
+  Cover: 0
+  reduceDamage: 0
+  incDamage: 0
+  incHp: 0
 --- !u!212 &212170792636719620
 SpriteRenderer:
   m_ObjectHideFlags: 1

@@ -1,13 +1,13 @@
 fileFormatVersion: 2
-guid: ba20ec2c6436ab549b1f5b559952ef6e
-timeCreated: 1522182373
+guid: f861b2a5d3cbfaf44abac7b5382b23b6
+timeCreated: 1522537697
 licenseType: Pro
 TextureImporter:
   fileIDToRecycleName:
-    21300000: Goblin w spear_0
-    21300002: Goblin w spear_1
-    21300004: Goblin w spear_2
-    21300006: Goblin w spear_3
+    21300000: Goblin w spear 1_0
+    21300002: Goblin w spear 1_1
+    21300004: Goblin w spear 1_2
+    21300006: Goblin w spear 1_3
   serializedVersion: 4
   mipmaps:
     mipMapMode: 0
@@ -103,7 +103,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Goblin w spear_0
+      name: Goblin w spear 1_0
       rect:
         serializedVersion: 2
         x: 0
@@ -117,7 +117,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Goblin w spear_1
+      name: Goblin w spear 1_1
       rect:
         serializedVersion: 2
         x: 512
@@ -131,7 +131,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Goblin w spear_2
+      name: Goblin w spear 1_2
       rect:
         serializedVersion: 2
         x: 0
@@ -145,7 +145,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Goblin w spear_3
+      name: Goblin w spear 1_3
       rect:
         serializedVersion: 2
         x: 512
