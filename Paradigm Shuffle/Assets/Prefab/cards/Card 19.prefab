@@ -54,9 +54,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 19
   Name: Palidium
-  Enemy: {fileID: 0}
-  minInstance: 0
-  maxInstance: 0
+  enemy: {fileID: 1201898623351402, guid: 9c657d4d0c39a1544add915ded54d3ad, type: 2}
+  spawnsMinion: 1
+  minion: {fileID: 1201898623351402, guid: 8a43570d626ddf34ea97b8bcae0774de, type: 2}
+  minionCount: 4
+  minionFrequency: 5
+  minInstance: 1
+  maxInstance: 1
 --- !u!212 &212952781997955136
 SpriteRenderer:
   m_ObjectHideFlags: 1

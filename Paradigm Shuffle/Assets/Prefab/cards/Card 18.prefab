@@ -54,9 +54,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 18
   Name: Gadolinium
-  Enemy: {fileID: 0}
-  minInstance: 0
-  maxInstance: 0
+  enemy: {fileID: 1157689370359504, guid: 141ad7f2886637c499531d22f4ba9a7a, type: 2}
+  spawnsMinion: 0
+  minion: {fileID: 0}
+  minionCount: 0
+  minionFrequency: 0
+  minInstance: 5
+  maxInstance: 12
 --- !u!212 &212347075323987332
 SpriteRenderer:
   m_ObjectHideFlags: 1

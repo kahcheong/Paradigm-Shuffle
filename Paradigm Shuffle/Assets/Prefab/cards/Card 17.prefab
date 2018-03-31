@@ -54,9 +54,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 17
   Name: Lead
-  Enemy: {fileID: 0}
-  minInstance: 0
-  maxInstance: 0
+  enemy: {fileID: 1328757222375908, guid: ce86a15136c555b48a314030387b21e8, type: 2}
+  spawnsMinion: 0
+  minion: {fileID: 0}
+  minionCount: 0
+  minionFrequency: 0
+  minInstance: 8
+  maxInstance: 10
 --- !u!212 &212670635658952788
 SpriteRenderer:
   m_ObjectHideFlags: 1

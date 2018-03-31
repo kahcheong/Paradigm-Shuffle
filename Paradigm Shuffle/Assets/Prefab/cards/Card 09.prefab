@@ -34,13 +34,13 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1055664623801044}
-  m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: -0.14, z: 0}
-  m_LocalScale: {x: 0.16737999, y: 0.16738005, z: 0.16738005}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.16738, y: 0.16738, z: 0.16738}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &114770044391265900
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -54,9 +54,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 9
   Name: Lost Shrine
-  Enemy: {fileID: 0}
-  minInstance: 0
-  maxInstance: 0
+  enemy: {fileID: 1682339209092290, guid: cec970dad61614a4d84f20558ad11447, type: 2}
+  spawnsMinion: 1
+  minion: {fileID: 1682339209092290, guid: 535918569bc410b43ba6236eca18d659, type: 2}
+  minionCount: 3
+  minionFrequency: 5
+  minInstance: 1
+  maxInstance: 1
 --- !u!212 &212360806702031540
 SpriteRenderer:
   m_ObjectHideFlags: 1

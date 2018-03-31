@@ -54,9 +54,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 14
   Name: Gold
-  Enemy: {fileID: 0}
-  minInstance: 0
-  maxInstance: 0
+  enemy: {fileID: 1840840035050046, guid: 53c544be545e006419af13038b7e0425, type: 2}
+  spawnsMinion: 0
+  minion: {fileID: 0}
+  minionCount: 0
+  minionFrequency: 0
+  minInstance: 3
+  maxInstance: 6
 --- !u!212 &212628819429054342
 SpriteRenderer:
   m_ObjectHideFlags: 1

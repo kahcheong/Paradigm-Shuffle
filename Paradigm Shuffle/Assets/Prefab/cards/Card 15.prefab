@@ -54,9 +54,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 15
   Name: Silver
-  Enemy: {fileID: 0}
+  enemy: {fileID: 1420061059003456, guid: 9587de1058903244086ad98744992079, type: 2}
+  spawnsMinion: 0
+  minion: {fileID: 0}
+  minionCount: 0
+  minionFrequency: 0
   minInstance: 0
-  maxInstance: 0
+  maxInstance: 4
 --- !u!212 &212286513550013798
 SpriteRenderer:
   m_ObjectHideFlags: 1

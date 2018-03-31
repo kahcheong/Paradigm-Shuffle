@@ -54,9 +54,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 16
   Name: Cobalt
-  Enemy: {fileID: 0}
-  minInstance: 0
-  maxInstance: 0
+  enemy: {fileID: 1758367817469814, guid: 1f9c983167a029e46912dc64ea1f8af2, type: 2}
+  spawnsMinion: 0
+  minion: {fileID: 0}
+  minionCount: 0
+  minionFrequency: 0
+  minInstance: 5
+  maxInstance: 6
 --- !u!212 &212225195999646360
 SpriteRenderer:
   m_ObjectHideFlags: 1

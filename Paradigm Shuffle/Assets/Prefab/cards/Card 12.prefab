@@ -35,8 +35,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1010283649912402}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.14, z: 0}
-  m_LocalScale: {x: 0.16738081, y: 0.16738085, z: 0.16738085}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.16738, y: 0.16738, z: 0.16738}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -54,7 +54,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 12
   Name: bronze
-  Enemy: {fileID: 1379503343476676, guid: 963b2405c752d3f4f96ea3087932633c, type: 2}
+  enemy: {fileID: 1052605987963614, guid: 624004d2c1c1643428b6ec8368b0e5ce, type: 2}
+  spawnsMinion: 0
+  minion: {fileID: 0}
+  minionCount: 0
+  minionFrequency: 0
   minInstance: 0
   maxInstance: 5
 --- !u!212 &212787706563545574
