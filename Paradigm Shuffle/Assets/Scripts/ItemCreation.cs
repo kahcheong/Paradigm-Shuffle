@@ -23,18 +23,15 @@ public class ItemCreation : MonoBehaviour {
 
 
     // Use this for initialization
-    void Start () {
+    void Awake () {
         stat1 = Card1.GetComponent<Card>().id;
-        stat2 = Card2.GetComponent<Card>().id;
-        stat3 = Card3.GetComponent<Card>().id;
 
         if (stat1 % 10 == 9) boss = true;
         
 
+
+
 	}
 	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+	
 }
