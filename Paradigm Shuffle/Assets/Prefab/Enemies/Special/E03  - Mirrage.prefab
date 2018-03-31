@@ -28,7 +28,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &4193987376455524
 Transform:
   m_ObjectHideFlags: 1
@@ -78,6 +78,7 @@ MonoBehaviour:
   lob: 0
   ranged: 0
   special: 1
+  notAgressive: 0
   boss: 0
   minDamage: 0
   maxDamage: 0
