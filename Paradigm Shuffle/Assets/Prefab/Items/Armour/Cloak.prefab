@@ -20,6 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4758075330181942}
   - component: {fileID: 212777132166476622}
+  - component: {fileID: 114870497718155366}
   m_Layer: 0
   m_Name: Cloak
   m_TagString: Untagged
@@ -40,6 +41,23 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114870497718155366
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1791327159657562}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a77100709b1759d45a071ac5f78ef31b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minBase: 1
+  maxBase: 2
+  Cover: 1
+  reduceDamage: 1
+  incDamage: 0
+  incHp: 0
 --- !u!212 &212777132166476622
 SpriteRenderer:
   m_ObjectHideFlags: 1
