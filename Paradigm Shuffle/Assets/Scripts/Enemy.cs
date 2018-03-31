@@ -23,12 +23,15 @@ public class Enemy : MonoBehaviour {
     public float atkSpeed;
     public float moveSpeed;
 
+    public float distance;
+    public GameObject player;
+
     public GameObject weapon;
     
 
 	// Use this for initialization
 	void Start () {
-		
+        player = GameObject.Find("player");
 	}
 	
 	// Update is called once per frame
@@ -38,6 +41,7 @@ public class Enemy : MonoBehaviour {
         {
             Destroy(gameObject.gameObject);
         }
+        distance = Vector3.Distance(gameObject.transform.position, player.transform.position);
 	}
 
 

@@ -362,6 +362,7 @@ MonoBehaviour:
   playerSpeed: 7
   hardLock: 1
   decks: {fileID: 926792371}
+  playerAnim: {fileID: 0}
   hp: 100
 --- !u!65 &60383364
 BoxCollider:
@@ -402,6 +403,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 931865fe11fa74b45b53d25eee80c4e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  minDamage: 0
+  maxDamge: 0
+  range: 0
+  atkSpeed: 0
+  stab: 0
+  swipe: 0
+  lob: 0
+  ranged: 0
 --- !u!4 &177466332
 Transform:
   m_ObjectHideFlags: 0
