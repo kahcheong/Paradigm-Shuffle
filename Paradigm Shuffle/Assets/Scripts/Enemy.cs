@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -25,6 +26,8 @@ public class Enemy : MonoBehaviour {
 
     public float distance;
     public GameObject player;
+    public bool canAtk = true;
+    public GameObject target;
 
     public GameObject weapon;
     
@@ -42,8 +45,36 @@ public class Enemy : MonoBehaviour {
             Destroy(gameObject.gameObject);
         }
         distance = Vector3.Distance(gameObject.transform.position, player.transform.position);
+
+
+        if (distance > 1.5)
+        {
+            float step = moveSpeed * Time.deltaTime;
+            transform.position = Vector3.MoveTowards(transform.position, player.transform.position, step);
+        }
+        else if(canAtk)
+        {
+            StartCoroutine(Atacking());
+        }
+
 	}
 
+    private IEnumerator Atacking()
+    {
+        Vector3 playerPos = player.transform.position;
+
+        Vector3 objectPos = player.transform.position;
+        playerPos.x = playerPos.x - objectPos.x;
+        playerPos.y = playerPos.y - objectPos.y;
+
+        float angle = Mathf.Atan2(playerPos.y, playerPos.x) * Mathf.Rad2Deg;
+
+        canAtk = false;
+        GameObject atk =  Instantiate(weapon, gameObject.transform);
+        atk.transform.localRotation = Quaternion.Euler(new Vector3(0, 0, angle));
+        yield return new WaitForSeconds(1/atkSpeed);
+        canAtk = true;
+    }
 
     private void OnTriggerEnter(Collider other)
     {
@@ -53,4 +84,6 @@ public class Enemy : MonoBehaviour {
         }
 
     }
+
+    
 }
