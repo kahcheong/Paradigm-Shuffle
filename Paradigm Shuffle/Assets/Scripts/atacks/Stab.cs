@@ -17,7 +17,6 @@ public class Stab : MonoBehaviour {
     IEnumerator Atk()
     {
         atk.GetComponent<Animator>().Play("stab");
-        Debug.Log("attaking stab");
         yield return new WaitForSeconds(0.09F);
         Destroy(gameObject.gameObject);
     }

@@ -61,17 +61,9 @@ public class Enemy : MonoBehaviour {
 
     private IEnumerator Atacking()
     {
-        Vector3 playerPos = player.transform.position;
-
-        Vector3 objectPos = player.transform.position;
-        playerPos.x = playerPos.x - objectPos.x;
-        playerPos.y = playerPos.y - objectPos.y;
-
-        float angle = Mathf.Atan2(playerPos.y, playerPos.x) * Mathf.Rad2Deg;
-
         canAtk = false;
-        GameObject atk =  Instantiate(weapon, gameObject.transform);
-        atk.transform.localRotation = Quaternion.Euler(new Vector3(0, 0, angle));
+        GameObject atk =  Instantiate(weapon, transform.position,target.transform.rotation,transform);
+
         yield return new WaitForSeconds(1/atkSpeed);
         canAtk = true;
     }

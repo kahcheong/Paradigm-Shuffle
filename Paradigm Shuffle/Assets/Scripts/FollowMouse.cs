@@ -8,6 +8,7 @@ public class FollowMouse : MonoBehaviour {
     public bool atk;
     public int atkType;
     public GameObject animation;
+    public GameObject player;
 
     public GameObject[] hitBox;
 
@@ -15,6 +16,7 @@ public class FollowMouse : MonoBehaviour {
 
     void Update()
     {
+        player = GameObject.Find("player");
         //rotation
         Vector3 mousePos = Input.mousePosition;
         mousePos.z = 0;
@@ -58,7 +60,7 @@ public class FollowMouse : MonoBehaviour {
         if (atkType == 2)
         {
             //animation.GetComponent<Animator>().Play("stab");
-            Instantiate(stab, gameObject.transform);
+            Instantiate(stab, player.transform.position,transform.rotation,player.transform);
             Debug.Log("attaking stab");
             yield return new WaitForSeconds(0.09F);
         }

@@ -23,6 +23,6 @@ public class targeter : MonoBehaviour {
         selfPos.y = selfPos.y - objectPos.y;
 
         float angle = Mathf.Atan2(selfPos.y, selfPos.x) * Mathf.Rad2Deg;
-        transform.localRotation = Quaternion.Euler(new Vector3(0, 0, angle));
+        transform.localRotation = Quaternion.Euler(new Vector3(0, 0, angle+180));
     }
 }
