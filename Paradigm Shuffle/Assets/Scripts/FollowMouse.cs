@@ -62,6 +62,7 @@ public class FollowMouse : MonoBehaviour {
         {
             GameObject atkk =  Instantiate(stab, player.transform.position,transform.rotation,player.transform);
             atkk.gameObject.tag = "playerAttack";
+            atkk.transform.GetChild(0).gameObject.tag = "playerAttack";
             Debug.Log("attaking stab");
             yield return new WaitForSeconds(1/4f);
         }

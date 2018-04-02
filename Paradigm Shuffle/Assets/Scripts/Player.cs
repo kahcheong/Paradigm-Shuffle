@@ -10,11 +10,13 @@ public class Player : MonoBehaviour
     public GameObject decks;
     public Animator playerAnim;
 
-    public float hp = 100f;
+    public float maxHp = 100f;
+    public float hp;
 
     private void Start()
     {
         playerAnim = gameObject.GetComponent<Animator>();
+        hp = maxHp;
     }
 
     void Update()

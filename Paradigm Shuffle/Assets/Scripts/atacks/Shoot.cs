@@ -17,6 +17,11 @@ public class Shoot : MonoBehaviour {
     {
         if (other.tag == "enemy" && tag == "playerAttack" )
         {
+            other.GetComponent<Enemy>().hp--;
+            Destroy(gameObject.gameObject);
+        }
+        if (other.tag == "Player" && tag == "weapon")
+        {
             Destroy(gameObject.gameObject);
         }
         if (other.tag == "wall")

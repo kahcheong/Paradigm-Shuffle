@@ -6,6 +6,7 @@ using UnityEngine;
 public class Enemy : MonoBehaviour {
 
     public string name;
+    public float maxHp;
     public float hp;
     public int exp;
 
@@ -35,6 +36,7 @@ public class Enemy : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         player = GameObject.Find("player");
+        maxHp = hp;
 	}
 	
 	// Update is called once per frame
@@ -67,15 +69,6 @@ public class Enemy : MonoBehaviour {
 
         yield return new WaitForSeconds(1/atkSpeed);
         canAtk = true;
-    }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.tag == "playerAttack")
-        {
-            hp--;
-        }
-
     }
 
     

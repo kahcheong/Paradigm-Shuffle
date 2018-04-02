@@ -9,6 +9,7 @@ public class Stab : MonoBehaviour {
 
     private void Awake()
     {
+        atk.GetComponent<Animator>().Play("stab");
         StartCoroutine(Atk());
     }
 
@@ -16,8 +17,22 @@ public class Stab : MonoBehaviour {
 
     IEnumerator Atk()
     {
-        atk.GetComponent<Animator>().Play("stab");
         yield return new WaitForSeconds(0.09F);
         Destroy(gameObject.gameObject);
+    }
+
+
+    private void OnTriggerStay(Collider other)
+    {
+        if (other.tag == "enemy" && tag == "playerAttack")
+        {
+            other.GetComponent<Enemy>().hp--;
+            Destroy(gameObject.gameObject);
+        }
+        if (other.tag == "Player" && tag == "weapon")
+        {
+            other.GetComponent<Player>().hp--;
+            Destroy(gameObject.gameObject);
+        }
     }
 }
