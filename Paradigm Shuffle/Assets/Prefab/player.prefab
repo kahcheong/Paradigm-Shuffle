@@ -301,6 +301,7 @@ MonoBehaviour:
   hitBox:
   - {fileID: 1776484636417446}
   stab: {fileID: 1252872374490762, guid: c0947bff141d9ff4797b9c22f77cfd1c, type: 2}
+  arrow: {fileID: 1859282655915018, guid: f2712b1ad18c5a84bba401e32fcf643b, type: 2}
 --- !u!212 &212116894850590078
 SpriteRenderer:
   m_ObjectHideFlags: 1

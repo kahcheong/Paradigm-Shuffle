@@ -62,7 +62,8 @@ public class Enemy : MonoBehaviour {
     private IEnumerator Atacking()
     {
         canAtk = false;
-        GameObject atk =  Instantiate(weapon, transform.position,target.transform.rotation,transform);
+        if (ranged) Instantiate(weapon, transform.position,target.transform.rotation);
+        else Instantiate(weapon, transform.position, target.transform.rotation, transform);
 
         yield return new WaitForSeconds(1/atkSpeed);
         canAtk = true;
@@ -70,7 +71,7 @@ public class Enemy : MonoBehaviour {
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "weapon")
+        if (other.tag == "playerAttack")
         {
             hp--;
         }

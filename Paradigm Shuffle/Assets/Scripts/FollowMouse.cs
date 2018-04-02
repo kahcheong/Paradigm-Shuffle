@@ -13,6 +13,7 @@ public class FollowMouse : MonoBehaviour {
     public GameObject[] hitBox;
 
     public GameObject stab;
+    public GameObject arrow;
 
     void Update()
     {
@@ -59,10 +60,17 @@ public class FollowMouse : MonoBehaviour {
         }
         if (atkType == 2)
         {
-            //animation.GetComponent<Animator>().Play("stab");
-            Instantiate(stab, player.transform.position,transform.rotation,player.transform);
+            GameObject atkk =  Instantiate(stab, player.transform.position,transform.rotation,player.transform);
+            atkk.gameObject.tag = "playerAttack";
             Debug.Log("attaking stab");
-            yield return new WaitForSeconds(0.09F);
+            yield return new WaitForSeconds(1/4f);
+        }
+        if (atkType == 3)
+        {
+            GameObject atkk =  Instantiate(arrow, player.transform.position, transform.rotation * Quaternion.Euler(0,0,-90));
+            atkk.gameObject.tag = "playerAttack";
+            Debug.Log("shooting arrow");
+            yield return new WaitForSeconds(1/2.5f);
         }
         atk = false;
         for(int i = 0; i <hitBox.Length; i++)

@@ -4,14 +4,25 @@ using UnityEngine;
 
 public class Shoot : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    public GameObject atk;
+    public float speed;
+
+
+    private void Update()
+    {
+        transform.Translate(Vector3.up * Time.deltaTime*speed, Space.Self);
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "enemy" && tag == "playerAttack" )
+        {
+            Destroy(gameObject.gameObject);
+        }
+        if (other.tag == "wall")
+        {
+            Destroy(gameObject.gameObject);
+        }
+    }
 }
   

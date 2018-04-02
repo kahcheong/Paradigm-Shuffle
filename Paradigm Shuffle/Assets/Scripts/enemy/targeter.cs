@@ -5,6 +5,7 @@ using UnityEngine;
 public class targeter : MonoBehaviour {
 
     public GameObject player;
+    public GameObject enemy;
 
 	// Use this for initialization
 	void Start () {
@@ -23,6 +24,7 @@ public class targeter : MonoBehaviour {
         selfPos.y = selfPos.y - objectPos.y;
 
         float angle = Mathf.Atan2(selfPos.y, selfPos.x) * Mathf.Rad2Deg;
-        transform.localRotation = Quaternion.Euler(new Vector3(0, 0, angle+180));
+        if (enemy.GetComponent<Enemy>().stab) transform.localRotation = Quaternion.Euler(new Vector3(0, 0, angle+180));
+        if (enemy.GetComponent<Enemy>().ranged) transform.localRotation = Quaternion.Euler(new Vector3(0, 0, angle + 90));
     }
 }
