@@ -55,15 +55,12 @@ MonoBehaviour:
   id: 13
   Name: Copper
   enemy: {fileID: 0}
-  item: {fileID: 0}
+  spawnsMinion: 0
+  minion: {fileID: 0}
+  minionCount: 0
+  minionFrequency: 0
   minInstance: 1
   maxInstance: 2
-  minBaseBuff: 2
-  MinMultiplier: 0
-  maxBaseBuff: -2
-  maxMultiplier: 0
-  additionalAttacks: 0
-  specialDmgChange: 0
 --- !u!212 &212518426275471994
 SpriteRenderer:
   m_ObjectHideFlags: 1

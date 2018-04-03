@@ -28,7 +28,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &4124982200588206
 Transform:
   m_ObjectHideFlags: 1
@@ -71,12 +71,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   name: Sand Elemental
+  maxHp: 0
   hp: 25
   exp: 0
   stab: 0
   swipe: 1
   lob: 0
   ranged: 0
+  special: 0
+  notAgressive: 0
   boss: 0
   minDamage: 3
   maxDamage: 5
@@ -84,6 +87,10 @@ MonoBehaviour:
   maxRange: 3
   atkSpeed: 2
   moveSpeed: 2
+  distance: 0
+  player: {fileID: 0}
+  canAtk: 1
+  target: {fileID: 0}
   weapon: {fileID: 0}
 --- !u!212 &212644974334492958
 SpriteRenderer:
@@ -117,7 +124,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: fe98dcf1a1d9c0e4f8575a6af8e2ec06, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -125,5 +132,5 @@ SpriteRenderer:
   m_Size: {x: 5.12, y: 5.12}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
