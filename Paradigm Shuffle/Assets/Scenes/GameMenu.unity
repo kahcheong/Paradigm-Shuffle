@@ -316,8 +316,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   txtStart: {fileID: 0}
-  newColour: {r: 0, g: 0, b: 0, a: 0}
-  originalColour: {r: 0, g: 0, b: 0, a: 0}
+  newColour: {r: 1, g: 1, b: 1, a: 1}
+  originalColour: {r: 1, g: 0, b: 0, a: 1}
   sound: {fileID: 0}
   LoadLevel: 
 --- !u!114 &512537931
@@ -537,10 +537,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   txtStart: {fileID: 0}
-  newColour: {r: 0, g: 0, b: 0, a: 0}
-  originalColour: {r: 0, g: 0, b: 0, a: 0}
+  newColour: {r: 1, g: 1, b: 1, a: 1}
+  originalColour: {r: 1, g: 0, b: 0, a: 1}
   sound: {fileID: 0}
-  LoadLevel: 
+  LoadLevel: Bestiary - Goblins
 --- !u!114 &1019604569
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -628,10 +628,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   txtStart: {fileID: 0}
-  newColour: {r: 0, g: 0, b: 0, a: 0}
-  originalColour: {r: 0, g: 0, b: 0, a: 0}
+  newColour: {r: 1, g: 1, b: 1, a: 1}
+  originalColour: {r: 1, g: 0, b: 0, a: 1}
   sound: {fileID: 0}
-  LoadLevel: 
+  LoadLevel: main
 --- !u!114 &1074810209
 MonoBehaviour:
   m_ObjectHideFlags: 0
