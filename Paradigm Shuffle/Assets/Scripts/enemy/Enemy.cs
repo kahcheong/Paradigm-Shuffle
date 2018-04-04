@@ -3,6 +3,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
+[RequireComponent(typeof(Rigidbody))]
+[RequireComponent(typeof(BoxCollider))]
 public class Enemy : MonoBehaviour {
 
     public string name;
@@ -24,6 +27,7 @@ public class Enemy : MonoBehaviour {
     public int maxRange;
     public float atkSpeed;
     public float moveSpeed;
+    private bool canMove = true;
 
     public float damageReducFlat;
     public float damageReducPercent;
@@ -54,20 +58,22 @@ public class Enemy : MonoBehaviour {
         distance = Vector3.Distance(gameObject.transform.position, player.transform.position);
 
         if (stab) {
-            if (distance > 1.5f)
+            if (distance > minRange + 0.4f)
             {
-                float step = moveSpeed * Time.deltaTime;
-                transform.position = Vector3.MoveTowards(transform.position, player.transform.position, step);
-                meleeAtk = false;
+                if (canMove)
+                {
+                    float step = moveSpeed * Time.deltaTime;
+                    transform.position = Vector3.MoveTowards(transform.position, player.transform.position, step);
+                }
+                
             }
-            else if (canAtk && meleeAtk)
+            else if (canAtk)
             {
                 StartCoroutine(Atacking());
             }
-            else
-            {
-                StartCoroutine(melee());
-            }
+
+
+            
         } 
         else if(canAtk)
         {
@@ -81,31 +87,37 @@ public class Enemy : MonoBehaviour {
     public IEnumerator Atacking()
     {
         canAtk = false;
+        meleeAtk = false;
         if (ranged)
         {
             GameObject other = Instantiate(weapon, transform.position, target.transform.rotation);
             if (minDamage != maxDamage) other.GetComponent<Shoot>().damage = UnityEngine.Random.Range(minDamage, maxDamage);
             else other.GetComponent<Shoot>().damage = maxDamage;
+            yield return new WaitForSeconds(1 / atkSpeed);
         }
         else if (stab)
         {
-            GameObject other = Instantiate(weapon, transform.position, target.transform.rotation, transform);
-            other.GetComponent<Stab>().damage = UnityEngine.Random.Range(minDamage, maxDamage);
+            canMove = false;
+            yield return new WaitForSeconds(0.6f);
+            for (int i = 0; i < atkSpeed; i++) { 
+                GameObject other = Instantiate(weapon, transform.position, target.transform.rotation, transform);
+                other.GetComponent<Stab>().damage = UnityEngine.Random.Range(minDamage, maxDamage);
+                yield return new WaitForSeconds(1 / atkSpeed);
+            }
+            canMove = true;
         } 
         else if (lob)
         {
             GameObject other = Instantiate(weapon, transform.position, target.transform.rotation);
             other.GetComponent<Lob>().damage = UnityEngine.Random.Range(minDamage, maxDamage);
+            yield return new WaitForSeconds(1 / atkSpeed);
         }
 
-        yield return new WaitForSeconds(1/atkSpeed);
+        
         canAtk = true;
+        canMove = true;
+
     }
-    
-    private IEnumerator melee()
-    { 
-        yield return new WaitForSeconds(2 / atkSpeed);
-        meleeAtk = true;
-    }
+
     
 }

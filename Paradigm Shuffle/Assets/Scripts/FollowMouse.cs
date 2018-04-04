@@ -9,6 +9,7 @@ public class FollowMouse : MonoBehaviour {
     public int atkType;
     public GameObject animation;
     public GameObject player;
+    public float atkSpeed;
 
     public GameObject[] hitBox;
     public float damage;
@@ -67,7 +68,7 @@ public class FollowMouse : MonoBehaviour {
             atkk.transform.GetChild(0).gameObject.tag = "playerAttack";
             atkk.GetComponent<Stab>().damage = damage;
             Debug.Log("attaking stab");
-            yield return new WaitForSeconds(1/4f);
+            yield return new WaitForSeconds(1f/atkSpeed);
         }
         if (atkType == 3)
         {
@@ -75,7 +76,7 @@ public class FollowMouse : MonoBehaviour {
             atkk.gameObject.tag = "playerAttack";
             atkk.GetComponent<Shoot>().damage = damage;
             Debug.Log("shooting arrow");
-            yield return new WaitForSeconds(1/2.5f);
+            yield return new WaitForSeconds(1f/atkSpeed);
         }
         if (atkType == 4)
         {
@@ -83,7 +84,7 @@ public class FollowMouse : MonoBehaviour {
             atkk.gameObject.tag = "playerAttack";
             atkk.GetComponent<Lob>().damage = damage;
             Debug.Log("throwing bomb");
-            yield return new WaitForSeconds(1 /2f);
+            yield return new WaitForSeconds(1f /atkSpeed);
         }
         atk = false;
         for(int i = 0; i <hitBox.Length; i++)

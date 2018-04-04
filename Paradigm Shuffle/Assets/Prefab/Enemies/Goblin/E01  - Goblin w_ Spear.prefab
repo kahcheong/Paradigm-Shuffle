@@ -71,6 +71,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   name: Goblin w/ Spear
+  maxHp: 0
   hp: 15
   exp: 0
   stab: 1
@@ -86,6 +87,12 @@ MonoBehaviour:
   maxRange: 3
   atkSpeed: 1
   moveSpeed: 1
+  damageReducFlat: 0
+  damageReducPercent: 0
+  distance: 0
+  player: {fileID: 0}
+  canAtk: 1
+  target: {fileID: 0}
   weapon: {fileID: 0}
 --- !u!212 &212587689109724186
 SpriteRenderer:
