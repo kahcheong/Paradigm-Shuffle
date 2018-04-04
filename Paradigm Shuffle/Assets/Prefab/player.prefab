@@ -59,7 +59,7 @@ GameObject:
   - component: {fileID: 65257193333910810}
   m_Layer: 0
   m_Name: player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -90,7 +90,7 @@ GameObject:
   - component: {fileID: 65400279678768798}
   m_Layer: 0
   m_Name: swipeHitbox
-  m_TagString: weapon
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -282,6 +282,7 @@ MonoBehaviour:
   hardLock: 1
   decks: {fileID: 0}
   playerAnim: {fileID: 0}
+  maxHp: 100
   hp: 100
 --- !u!114 &114345555798453102
 MonoBehaviour:
@@ -295,13 +296,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   atk: 0
-  atkType: 1
+  atkType: 2
   animation: {fileID: 1178149941569658}
   player: {fileID: 0}
   hitBox:
   - {fileID: 1776484636417446}
+  damage: 1
   stab: {fileID: 1252872374490762, guid: c0947bff141d9ff4797b9c22f77cfd1c, type: 2}
   arrow: {fileID: 1859282655915018, guid: f2712b1ad18c5a84bba401e32fcf643b, type: 2}
+  bomb: {fileID: 1852851002882904, guid: b2f72fd7dc794f943a48c0fa44def04f, type: 2}
 --- !u!212 &212116894850590078
 SpriteRenderer:
   m_ObjectHideFlags: 1

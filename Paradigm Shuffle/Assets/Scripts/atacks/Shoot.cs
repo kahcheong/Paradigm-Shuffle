@@ -4,9 +4,8 @@ using UnityEngine;
 
 public class Shoot : MonoBehaviour {
 
-    public GameObject atk;
     public float speed;
-
+    public float damage;
 
     private void Update()
     {
@@ -17,11 +16,15 @@ public class Shoot : MonoBehaviour {
     {
         if (other.tag == "enemy" && tag == "playerAttack" )
         {
-            other.GetComponent<Enemy>().hp--;
+            float temp = damage - other.GetComponent<Enemy>().damageReducFlat;
+            if (temp > 0) other.GetComponent<Enemy>().hp -= temp * (1f-other.GetComponent<Enemy>().damageReducPercent);
+            
             Destroy(gameObject.gameObject);
         }
         if (other.tag == "Player" && tag == "weapon")
         {
+            float temp = damage - other.GetComponent<Player>().damageReducFlat;
+            if (temp > 0) other.GetComponent<Player>().hp -= temp * (1f - other.GetComponent<Player>().damageReducPercent);
             Destroy(gameObject.gameObject);
         }
         if (other.tag == "wall")

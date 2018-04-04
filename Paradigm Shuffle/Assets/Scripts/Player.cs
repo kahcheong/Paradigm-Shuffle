@@ -12,6 +12,8 @@ public class Player : MonoBehaviour
 
     public float maxHp = 100f;
     public float hp;
+    public float damageReducFlat;
+    public float damageReducPercent;
 
     private void Start()
     {

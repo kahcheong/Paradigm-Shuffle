@@ -130,6 +130,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   name: Goblin w/ Dagger
+  maxHp: 5
   hp: 5
   exp: 0
   stab: 1
@@ -145,6 +146,8 @@ MonoBehaviour:
   maxRange: 1
   atkSpeed: 4
   moveSpeed: 1
+  damageReducFlat: 0
+  damageReducPercent: 0
   distance: 0
   player: {fileID: 0}
   canAtk: 1
