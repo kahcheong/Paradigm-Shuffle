@@ -73,17 +73,19 @@ public class Enemy : MonoBehaviour {
         {
             StartCoroutine(Atacking());
         }
+
         
 
 	}
 
-    private IEnumerator Atacking()
+    public IEnumerator Atacking()
     {
         canAtk = false;
         if (ranged)
         {
             GameObject other = Instantiate(weapon, transform.position, target.transform.rotation);
-            other.GetComponent<Shoot>().damage = UnityEngine.Random.Range(minDamage, maxDamage);
+            if (minDamage != maxDamage) other.GetComponent<Shoot>().damage = UnityEngine.Random.Range(minDamage, maxDamage);
+            else other.GetComponent<Shoot>().damage = maxDamage;
         }
         else if (stab)
         {

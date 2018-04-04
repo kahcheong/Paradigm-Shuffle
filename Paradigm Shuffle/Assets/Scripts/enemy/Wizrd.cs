@@ -19,7 +19,7 @@ public class Wizrd : MonoBehaviour {
     void Update () {
         if (max > 0)  me.maxDamage = max * (me.distance / 13.5f);
 
-	}
+    }
 
     IEnumerator wait()
     {

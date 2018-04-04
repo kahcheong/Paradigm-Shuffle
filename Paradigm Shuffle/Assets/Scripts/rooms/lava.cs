@@ -6,22 +6,38 @@ public class lava : MonoBehaviour {
 
     public float damage;
     public float ticksPerSecond;
-    private bool canDamage = true;
+    private bool canDamage;
+
+    private void Start()
+    {
+        StartCoroutine(burn());
+    }
 
     private void OnTriggerStay(Collider other)
     {
         if (other.tag == "Player" && canDamage )
         {
             other.GetComponent<Player>().hp -= damage;
-            canDamage = false;
-            StartCoroutine(burn());
+            //canDamage = false;
+            
             
         }
+        if (other.tag == "enemy" && canDamage)
+        {
+            other.GetComponent<Enemy>().hp -= damage;
+            //canDamage = false;
+
+
+        }
+
     }
 
     IEnumerator burn()
     {
         yield return new WaitForSeconds(1/ticksPerSecond);
         canDamage = true;
+        yield return 0;
+        canDamage = false;
+        StartCoroutine(burn());
     }
 }
