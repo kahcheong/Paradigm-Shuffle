@@ -148,8 +148,8 @@ MonoBehaviour:
   exp: 0
   stab: 0
   swipe: 0
-  lob: 0
-  ranged: 1
+  lob: 1
+  ranged: 0
   special: 0
   notAgressive: 0
   boss: 0
@@ -165,7 +165,7 @@ MonoBehaviour:
   player: {fileID: 0}
   canAtk: 1
   target: {fileID: 1770611527761280}
-  weapon: {fileID: 1859282655915018, guid: f2712b1ad18c5a84bba401e32fcf643b, type: 2}
+  weapon: {fileID: 1332934402171300, guid: 2347e0025d00d4b4ebdaa1404c74dc1c, type: 2}
 --- !u!114 &114869684585771374
 MonoBehaviour:
   m_ObjectHideFlags: 1
