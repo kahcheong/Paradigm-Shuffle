@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 212545231763315322}
   - component: {fileID: 114025353079546238}
   - component: {fileID: 95174571525756076}
+  - component: {fileID: 65599447758850248}
   m_Layer: 0
   m_Name: E25  - Earth Elemental
   m_TagString: Untagged
@@ -72,6 +73,18 @@ Transform:
   m_Father: {fileID: 4002675430179884}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &65599447758850248
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1320212774760316}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.65, y: 2.63, z: 0.2}
+  m_Center: {x: 0, y: 0.07, z: 0}
 --- !u!95 &95174571525756076
 Animator:
   serializedVersion: 3

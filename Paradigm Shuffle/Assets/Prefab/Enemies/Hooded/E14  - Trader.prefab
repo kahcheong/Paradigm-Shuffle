@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 212833875355234150}
   - component: {fileID: 114917178643368124}
   - component: {fileID: 95398070426612806}
+  - component: {fileID: 65748446535042860}
   m_Layer: 0
   m_Name: E14  - Trader
   m_TagString: Untagged
@@ -42,6 +43,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &65748446535042860
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1840840035050046}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.5982275, y: 4.057104, z: 0.2}
+  m_Center: {x: 0.010420322, y: 0.072944164, z: 0}
 --- !u!95 &95398070426612806
 Animator:
   serializedVersion: 3
