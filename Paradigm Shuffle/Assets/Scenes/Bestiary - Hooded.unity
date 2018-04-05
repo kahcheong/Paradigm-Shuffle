@@ -1062,7 +1062,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   txtStart: {fileID: 0}
   newColour: {r: 1, g: 1, b: 1, a: 0}
-  originalColour: {r: 1, g: 0, b: 0, a: 0}
+  originalColour: {r: 1, g: 1, b: 1, a: 0}
   sound: {fileID: 0}
   LoadLevel: GameMenu
 --- !u!114 &1074810209
