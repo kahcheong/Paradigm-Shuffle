@@ -102,7 +102,7 @@ public class Enemy : MonoBehaviour {
             for (int i = 0; i < atkSpeed; i++) { 
                 GameObject other = Instantiate(weapon, transform.position, target.transform.rotation, transform);
                 other.GetComponent<Stab>().damage = UnityEngine.Random.Range(minDamage, maxDamage);
-                yield return new WaitForSeconds(1 / atkSpeed);
+                if (i<atkSpeed-1) yield return new WaitForSeconds(1 / atkSpeed);
             }
             canMove = true;
         } 
