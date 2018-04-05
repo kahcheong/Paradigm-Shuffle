@@ -75,7 +75,7 @@ public class Enemy : MonoBehaviour {
 
             
         } 
-        else if(canAtk)
+        else if(canAtk && (lob || ranged))
         {
             StartCoroutine(Atacking());
         }
