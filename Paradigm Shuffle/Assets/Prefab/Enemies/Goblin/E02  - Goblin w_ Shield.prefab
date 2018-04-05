@@ -38,9 +38,11 @@ GameObject:
   - component: {fileID: 212283508076819950}
   - component: {fileID: 114503611577472702}
   - component: {fileID: 95336823212863968}
+  - component: {fileID: 65080174395355780}
+  - component: {fileID: 54829246976178288}
   m_Layer: 0
   m_Name: E02  - Goblin w_ Shield
-  m_TagString: Untagged
+  m_TagString: enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -72,6 +74,33 @@ Transform:
   m_Father: {fileID: 4308710376719344}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!54 &54829246976178288
+Rigidbody:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1557213701601986}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!65 &65080174395355780
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1557213701601986}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.5108144, y: 4.2502723, z: 0.2}
+  m_Center: {x: 0.081537515, y: -0.4348643, z: 0}
 --- !u!95 &95336823212863968
 Animator:
   serializedVersion: 3
