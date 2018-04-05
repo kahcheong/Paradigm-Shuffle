@@ -23,8 +23,8 @@ public class Enemy : MonoBehaviour {
 
     public float minDamage;
     public float maxDamage;
-    public int minRange;
-    public int maxRange;
+    public float minRange;
+    public float maxRange;
     public float atkSpeed;
     public float moveSpeed;
     private bool canMove = true;
@@ -75,10 +75,11 @@ public class Enemy : MonoBehaviour {
 
             
         } 
-        else if(canAtk && (lob || ranged))
+        else if(canAtk )
         {
             StartCoroutine(Atacking());
         }
+
 
         
 
@@ -112,7 +113,19 @@ public class Enemy : MonoBehaviour {
             other.GetComponent<Lob>().damage = UnityEngine.Random.Range(minDamage, maxDamage);
             yield return new WaitForSeconds(1 / atkSpeed);
         }
+        else if (boss)
+        {
+            GameObject other = Instantiate(weapon, transform.position, target.transform.rotation);
+            other.GetComponent<slime>().damage = UnityEngine.Random.Range(minDamage, maxDamage);
 
+            other = Instantiate(weapon, transform.position, target.transform.rotation * Quaternion.Euler(0,0,30));
+            other.GetComponent<slime>().damage = UnityEngine.Random.Range(minDamage, maxDamage);
+
+            other = Instantiate(weapon, transform.position, target.transform.rotation * Quaternion.Euler(0, 0, -30));
+            other.GetComponent<slime>().damage = UnityEngine.Random.Range(minDamage, maxDamage);
+
+            yield return new WaitForSeconds(1 / atkSpeed);
+        }
         
         canAtk = true;
         canMove = true;

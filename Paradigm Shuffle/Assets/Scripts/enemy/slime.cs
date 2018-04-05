@@ -23,10 +23,17 @@ public class slime : MonoBehaviour
         {
             float temp = damage - other.GetComponent<Player>().damageReducFlat;
             if (temp > 0) other.GetComponent<Player>().hp -= temp * (1f - other.GetComponent<Player>().damageReducPercent);
+            awake.enabled = true;
+            transform.localRotation = Quaternion.Euler(0, 0, 0);
+            tag = "enemy";
+            enabled = false;
         }
         if (other.tag == "wall")
         {
-            
+            awake.enabled = true;
+            transform.localRotation = Quaternion.Euler(0, 0, 0);
+            tag = "enemy";
+            enabled = false;
         }
 
     }
