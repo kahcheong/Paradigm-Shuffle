@@ -11,6 +11,22 @@ Prefab:
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 1328757222375908}
   m_IsPrefabParent: 1
+--- !u!1 &1187628561381230
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4487485254150116}
+  - component: {fileID: 114456387623097552}
+  m_Layer: 0
+  m_Name: Target
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1328757222375908
 GameObject:
   m_ObjectHideFlags: 0
@@ -28,7 +44,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &4209409069175142
 Transform:
   m_ObjectHideFlags: 1
@@ -36,10 +52,24 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1328757222375908}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -0.1}
   m_LocalScale: {x: 0.25, y: 0.25, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 4487485254150116}
   m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4487485254150116
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1187628561381230}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.79999995, y: 0.79999995, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4209409069175142}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &95032961578908240
@@ -59,6 +89,19 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114456387623097552
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1187628561381230}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ffaa61cc68d89b43a0a15f4a57f2d98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  enemy: {fileID: 1328757222375908}
 --- !u!114 &114534995199884268
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -71,20 +114,29 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   name: Skeleton
+  maxHp: 5
   hp: 5
   exp: 1
   stab: 0
   swipe: 1
   lob: 0
   ranged: 0
+  special: 0
+  notAgressive: 0
   boss: 0
   minDamage: 1
   maxDamage: 2
-  minRange: 0
+  minRange: 1
   maxRange: 1
   atkSpeed: 1
   moveSpeed: 0.9
-  weapon: {fileID: 0}
+  damageReducFlat: 0
+  damageReducPercent: 0
+  distance: 0
+  player: {fileID: 0}
+  canAtk: 1
+  target: {fileID: 1187628561381230}
+  weapon: {fileID: 1252872374490762, guid: c0947bff141d9ff4797b9c22f77cfd1c, type: 2}
 --- !u!212 &212554982131484652
 SpriteRenderer:
   m_ObjectHideFlags: 1

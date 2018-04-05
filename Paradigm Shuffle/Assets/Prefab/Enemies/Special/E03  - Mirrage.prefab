@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4638363970649478}
   - component: {fileID: 114046664596617288}
   m_Layer: 0
-  m_Name: target
+  m_Name: Target
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -55,7 +55,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1757911260146160}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.0838413, y: -2.0723577, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -0.1}
   m_LocalScale: {x: 0.25, y: 0.25, z: 1}
   m_Children:
   - {fileID: 4638363970649478}
@@ -131,7 +131,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   name: Mirrage
-  maxHp: 0
+  maxHp: 100
   hp: 100
   exp: 100
   stab: 0
@@ -143,7 +143,7 @@ MonoBehaviour:
   boss: 0
   minDamage: 0
   maxDamage: 0
-  minRange: 0
+  minRange: 1
   maxRange: 0
   atkSpeed: 0
   moveSpeed: 0
