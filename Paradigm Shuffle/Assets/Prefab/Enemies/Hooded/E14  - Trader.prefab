@@ -36,7 +36,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1840840035050046}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.68, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -0.1}
   m_LocalScale: {x: 0.25, y: 0.25, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -71,6 +71,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   name: Trader
+  maxHp: 50
   hp: 50
   exp: 0
   stab: 0
@@ -82,10 +83,16 @@ MonoBehaviour:
   boss: 0
   minDamage: 50
   maxDamage: 50
-  minRange: 0
+  minRange: 1
   maxRange: 50
   atkSpeed: 50
   moveSpeed: 0
+  damageReducFlat: 0
+  damageReducPercent: 0
+  distance: 0
+  player: {fileID: 0}
+  canAtk: 1
+  target: {fileID: 0}
   weapon: {fileID: 0}
 --- !u!212 &212833875355234150
 SpriteRenderer:

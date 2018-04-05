@@ -11,6 +11,22 @@ Prefab:
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 1662559920810866}
   m_IsPrefabParent: 1
+--- !u!1 &1455027080814300
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4794919166635338}
+  - component: {fileID: 114169932177132128}
+  m_Layer: 0
+  m_Name: Target
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1662559920810866
 GameObject:
   m_ObjectHideFlags: 0
@@ -36,10 +52,24 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1662559920810866}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.64, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -0.1}
   m_LocalScale: {x: 0.2, y: 0.2, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 4794919166635338}
   m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4794919166635338
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1455027080814300}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4026662317347032}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &95216682083728658
@@ -59,6 +89,19 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114169932177132128
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1455027080814300}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ffaa61cc68d89b43a0a15f4a57f2d98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  enemy: {fileID: 1662559920810866}
 --- !u!114 &114932838922282272
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -71,6 +114,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   name: Goblin w/ Armour
+  maxHp: 30
   hp: 30
   exp: 0
   stab: 0
@@ -82,11 +126,17 @@ MonoBehaviour:
   boss: 0
   minDamage: 4
   maxDamage: 6
-  minRange: 0
+  minRange: 1
   maxRange: 1
   atkSpeed: 0.5
   moveSpeed: 0.5
-  weapon: {fileID: 0}
+  damageReducFlat: 5
+  damageReducPercent: 0
+  distance: 0
+  player: {fileID: 0}
+  canAtk: 1
+  target: {fileID: 1455027080814300}
+  weapon: {fileID: 1252872374490762, guid: c0947bff141d9ff4797b9c22f77cfd1c, type: 2}
 --- !u!212 &212639398742957816
 SpriteRenderer:
   m_ObjectHideFlags: 1
