@@ -20,8 +20,10 @@ public class SpawnRoom : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        
-		if (Input.GetKeyDown(KeyCode.P)) // room load
+
+        if (deckSize == 0) ReShuffleDeck();
+
+            if (Input.GetKeyDown(KeyCode.P)) // room load
         {
             int temp1 = 0;
             int temp2 = 0;
