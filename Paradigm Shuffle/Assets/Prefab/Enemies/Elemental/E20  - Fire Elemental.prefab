@@ -54,7 +54,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1498852772846572}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -0.1}
+  m_LocalPosition: {x: -6.024466, y: 1.8227029, z: -0.1}
   m_LocalScale: {x: 0.25, y: 0.25, z: 1}
   m_Children:
   - {fileID: 4806197333350822}
@@ -129,6 +129,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a93311b82acd91d44b5b283cf8b24f17, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hpBar: {fileID: 1782327014950820, guid: 7b3d356eca372484f965b5c07d15242a, type: 2}
   name: Fire Elemental
   maxHp: 40
   hp: 40
@@ -140,6 +141,7 @@ MonoBehaviour:
   special: 1
   notAgressive: 0
   boss: 0
+  bossCount: 0
   minDamage: 8
   maxDamage: 10
   minRange: 1

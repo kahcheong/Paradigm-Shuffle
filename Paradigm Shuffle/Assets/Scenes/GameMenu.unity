@@ -319,7 +319,7 @@ MonoBehaviour:
   newColour: {r: 1, g: 1, b: 1, a: 1}
   originalColour: {r: 1, g: 0, b: 0, a: 1}
   sound: {fileID: 0}
-  LoadLevel: 
+  LoadLevel: Library
 --- !u!114 &512537931
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -631,7 +631,7 @@ MonoBehaviour:
   newColour: {r: 1, g: 1, b: 1, a: 1}
   originalColour: {r: 1, g: 0, b: 0, a: 1}
   sound: {fileID: 0}
-  LoadLevel: main
+  LoadLevel: Intro 1
 --- !u!114 &1074810209
 MonoBehaviour:
   m_ObjectHideFlags: 0

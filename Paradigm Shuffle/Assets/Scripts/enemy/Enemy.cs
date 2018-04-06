@@ -8,6 +8,9 @@ using UnityEngine;
 [RequireComponent(typeof(BoxCollider))]
 public class Enemy : MonoBehaviour {
 
+    private float height;
+    public GameObject hpBar;
+
     public string name;
     public float maxHp;
     public float hp;
@@ -20,6 +23,7 @@ public class Enemy : MonoBehaviour {
     public bool special;
     public bool notAgressive;
     public bool boss;
+    public int bossCount;
 
     public float minDamage;
     public float maxDamage;
@@ -46,10 +50,22 @@ public class Enemy : MonoBehaviour {
 	void Start () {
         player = GameObject.Find("player");
         maxHp = hp;
-	}
+        if (!boss)
+        {
+            GameObject other = Instantiate(hpBar, transform.position +  new Vector3(0, 2.5f/4, -0.1f), transform.rotation,transform);
+            other.GetComponent<HP>().enem = gameObject;
+        } else
+        {
+            GameObject other = Instantiate(hpBar, transform.position + new Vector3(0, 2.5f/2, -0.1f), transform.rotation, transform);
+            other.GetComponent<HP>().enem = gameObject;
+        }
+        
+    }
 	
 	// Update is called once per frame
 	void Update () {
+
+        height = GetComponent<BoxCollider>().bounds.size.y;
 		
         if (hp <= 0)
         {
@@ -115,14 +131,60 @@ public class Enemy : MonoBehaviour {
         }
         else if (boss)
         {
-            GameObject other = Instantiate(weapon, transform.position, target.transform.rotation);
-            other.GetComponent<slime>().damage = UnityEngine.Random.Range(minDamage, maxDamage);
+            if (bossCount == 1)
+            {
+                GameObject other = Instantiate(weapon, transform.position, target.transform.rotation);
+                other.GetComponent<slime>().damage = UnityEngine.Random.Range(minDamage, maxDamage);
 
-            other = Instantiate(weapon, transform.position, target.transform.rotation * Quaternion.Euler(0,0,30));
-            other.GetComponent<slime>().damage = UnityEngine.Random.Range(minDamage, maxDamage);
+                other = Instantiate(weapon, transform.position, target.transform.rotation * Quaternion.Euler(0, 0, 30));
+                other.GetComponent<slime>().damage = UnityEngine.Random.Range(minDamage, maxDamage);
 
-            other = Instantiate(weapon, transform.position, target.transform.rotation * Quaternion.Euler(0, 0, -30));
-            other.GetComponent<slime>().damage = UnityEngine.Random.Range(minDamage, maxDamage);
+                other = Instantiate(weapon, transform.position, target.transform.rotation * Quaternion.Euler(0, 0, -30));
+                other.GetComponent<slime>().damage = UnityEngine.Random.Range(minDamage, maxDamage);
+            }
+            else if (bossCount == 2)
+            {
+                var angle = target.transform.rotation;
+
+                GameObject other = Instantiate(weapon, transform.position, angle);
+                other.GetComponent<slime>().damage = UnityEngine.Random.Range(minDamage, maxDamage);
+
+                other = Instantiate(weapon, transform.position, angle * Quaternion.Euler(0, 0, 72));
+                other.GetComponent<slime>().damage = UnityEngine.Random.Range(minDamage, maxDamage);
+
+                other = Instantiate(weapon, transform.position, angle * Quaternion.Euler(0, 0, -72));
+                other.GetComponent<slime>().damage = UnityEngine.Random.Range(minDamage, maxDamage);
+
+                other = Instantiate(weapon, transform.position, angle * Quaternion.Euler(0, 0, 144));
+                other.GetComponent<slime>().damage = UnityEngine.Random.Range(minDamage, maxDamage);
+
+                other = Instantiate(weapon, transform.position, angle * Quaternion.Euler(0, 0, -144));
+                other.GetComponent<slime>().damage = UnityEngine.Random.Range(minDamage, maxDamage);
+            }
+
+            else if (bossCount == 3)
+            {
+                var angle = target.transform.rotation;
+
+                GameObject other = Instantiate(weapon, transform.position, angle);
+                other.GetComponent<slime>().damage = UnityEngine.Random.Range(minDamage, maxDamage);
+
+                other = Instantiate(weapon, transform.position, angle * Quaternion.Euler(0, 0, 60));
+                other.GetComponent<slime>().damage = UnityEngine.Random.Range(minDamage, maxDamage);
+
+                other = Instantiate(weapon, transform.position, angle * Quaternion.Euler(0, 0, -60));
+                other.GetComponent<slime>().damage = UnityEngine.Random.Range(minDamage, maxDamage);
+
+                other = Instantiate(weapon, transform.position, angle * Quaternion.Euler(0, 0, 120));
+                other.GetComponent<slime>().damage = UnityEngine.Random.Range(minDamage, maxDamage);
+
+                other = Instantiate(weapon, transform.position, angle * Quaternion.Euler(0, 0, -120));
+                other.GetComponent<slime>().damage = UnityEngine.Random.Range(minDamage, maxDamage);
+
+                other = Instantiate(weapon, transform.position, angle * Quaternion.Euler(0, 0, 180));
+                other.GetComponent<slime>().damage = UnityEngine.Random.Range(minDamage, maxDamage);
+            }
+
 
             yield return new WaitForSeconds(1 / atkSpeed);
         }

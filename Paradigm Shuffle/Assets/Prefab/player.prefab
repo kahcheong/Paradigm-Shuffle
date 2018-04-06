@@ -301,6 +301,7 @@ MonoBehaviour:
   atkType: 2
   animation: {fileID: 1178149941569658}
   player: {fileID: 0}
+  atkSpeed: 4
   hitBox:
   - {fileID: 1776484636417446}
   damage: 1
