@@ -11,7 +11,7 @@ public class ItemCreation : MonoBehaviour {
     private Weapon weapon;
 
     public bool elite = false;
-    private readonly Vector3 SpawnDisplay = new Vector3(0, 0, -10);
+    private readonly Vector3 SpawnDisplay = new Vector3(0, 0, -5);
     private readonly Quaternion rotation = Quaternion.Euler(0, 0, 0);
 
     private int stat1;

@@ -53,7 +53,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   minDamage: 2
-  maxDamage: 0
+  maxDamage: 4
   minRange: 0
   maxRange: 4
   atkSpeed: 1

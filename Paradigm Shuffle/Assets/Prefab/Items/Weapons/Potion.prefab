@@ -59,11 +59,11 @@ MonoBehaviour:
   atkSpeed: 1
   flatReduction: 0
   percentReduction: 0
-  weapon: 1
+  weapon: 0
   flatReduc: 0
   percentReduc: 0
   trinket: 0
-  consume: 0
+  consume: 1
   stab: 0
   lob: 1
   ranged: 0

@@ -90,7 +90,7 @@ public class GameController : MonoBehaviour {
     {
         
             int temp1 = 0;
-            if (deckSize >= 1)
+            if (deckSize !=0)
             {
                 temp1 = Random.Range(0, deckSize);
                 deckSize--;
