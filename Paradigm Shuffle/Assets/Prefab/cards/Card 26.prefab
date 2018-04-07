@@ -55,6 +55,9 @@ MonoBehaviour:
   id: 26
   Name: Air
   enemy: {fileID: 1340590601197170, guid: 2970d0d57142f134cb276e30aa9e40d3, type: 2}
+  card: {fileID: 1745389402347950}
+  itemName: Calf Holster
+  item: {fileID: 1410469127853526, guid: 8e28eca75961ea6428251153e785eb21, type: 2}
   spawnsMinion: 0
   minion: {fileID: 0}
   minionCount: 0

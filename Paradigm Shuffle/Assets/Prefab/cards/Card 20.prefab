@@ -55,6 +55,9 @@ MonoBehaviour:
   id: 20
   Name: Flame
   enemy: {fileID: 1498852772846572, guid: 714a48e0e5d4ace428d25675ccf15cd8, type: 2}
+  card: {fileID: 1745389402347950}
+  itemName: FireBalls
+  item: {fileID: 1977504773326486, guid: 8befac4b18abee24289d4aebc23eebe8, type: 2}
   spawnsMinion: 0
   minion: {fileID: 0}
   minionCount: 0

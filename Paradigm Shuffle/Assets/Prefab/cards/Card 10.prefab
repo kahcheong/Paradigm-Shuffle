@@ -55,6 +55,9 @@ MonoBehaviour:
   id: 10
   Name: Iron
   enemy: {fileID: 1895953353777582, guid: e0e8a7a60fe3f4045a902316df59098c, type: 2}
+  card: {fileID: 1912988197818124}
+  itemName: Short Sword
+  item: {fileID: 1498194253677614, guid: e40a2ec091278c248982b2db35378687, type: 2}
   spawnsMinion: 0
   minion: {fileID: 0}
   minionCount: 0

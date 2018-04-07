@@ -55,6 +55,9 @@ MonoBehaviour:
   id: 25
   Name: Earth
   enemy: {fileID: 1320212774760316, guid: a394dd075f8c7cf4c9f707407c0ec49c, type: 2}
+  card: {fileID: 1745389402347950}
+  itemName: Xp
+  item: {fileID: 1727788400251338, guid: d8205a8e9dba3ef47b45e40702556c93, type: 2}
   spawnsMinion: 0
   minion: {fileID: 0}
   minionCount: 0

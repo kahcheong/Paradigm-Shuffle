@@ -55,6 +55,9 @@ MonoBehaviour:
   id: 12
   Name: bronze
   enemy: {fileID: 1052605987963614, guid: 624004d2c1c1643428b6ec8368b0e5ce, type: 2}
+  card: {fileID: 1010283649912402}
+  itemName: Shield
+  item: {fileID: 1198913457254876, guid: 9b2dbfe4acad9ca4c86ce22db835dcec, type: 2}
   spawnsMinion: 0
   minion: {fileID: 0}
   minionCount: 0

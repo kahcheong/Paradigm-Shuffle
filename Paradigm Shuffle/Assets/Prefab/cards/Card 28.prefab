@@ -55,6 +55,9 @@ MonoBehaviour:
   id: 28
   Name: Sonic
   enemy: {fileID: 1015117781540822, guid: 6476f08045d64be49b62c97c632c6222, type: 2}
+  card: {fileID: 1745389402347950}
+  itemName: Stat buff
+  item: {fileID: 1453797913410980, guid: 776d32f449c3512449f4e5092286ec49, type: 2}
   spawnsMinion: 0
   minion: {fileID: 0}
   minionCount: 0

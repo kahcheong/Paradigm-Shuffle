@@ -55,6 +55,9 @@ MonoBehaviour:
   id: 9
   Name: Lost Shrine
   enemy: {fileID: 1682339209092290, guid: cec970dad61614a4d84f20558ad11447, type: 2}
+  card: {fileID: 1055664623801044}
+  itemName: 
+  item: {fileID: 0}
   spawnsMinion: 1
   minion: {fileID: 1682339209092290, guid: 535918569bc410b43ba6236eca18d659, type: 2}
   minionCount: 3

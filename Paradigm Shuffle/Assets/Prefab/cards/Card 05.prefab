@@ -55,6 +55,9 @@ MonoBehaviour:
   id: 5
   Name: Sand
   enemy: {fileID: 1910592862040832, guid: c941fc2e8b456914eb1ef6dc59900e00, type: 2}
+  card: {fileID: 1679785680084718}
+  itemName: Bangel
+  item: {fileID: 1233025939516132, guid: 0306a7788f339534e8346685a1da9cc9, type: 2}
   spawnsMinion: 0
   minion: {fileID: 0}
   minionCount: 0

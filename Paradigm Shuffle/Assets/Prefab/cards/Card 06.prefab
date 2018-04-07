@@ -55,6 +55,9 @@ MonoBehaviour:
   id: 6
   Name: Grass
   enemy: {fileID: 1243389686397118, guid: d1b91661151de9b4984dd6c84f0fdab7, type: 2}
+  card: {fileID: 1426355539307434}
+  itemName: Shiv
+  item: {fileID: 1683732467080980, guid: 37853eb4153efb343a3e0aea067fb3d9, type: 2}
   spawnsMinion: 0
   minion: {fileID: 0}
   minionCount: 0

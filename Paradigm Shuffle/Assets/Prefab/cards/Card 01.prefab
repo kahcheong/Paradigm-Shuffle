@@ -54,7 +54,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 1
   Name: grove
-  enemy: {fileID: 1557189555821084, guid: fda59c7c8a6d91545b086d7e9b952635, type: 2}
+  enemy: {fileID: 1025392800409876, guid: fda59c7c8a6d91545b086d7e9b952635, type: 2}
+  card: {fileID: 1885245263964106}
+  itemName: Staff
+  item: {fileID: 1028606069120874, guid: 8c719b712df842045a1d70cb7fcfe48f, type: 2}
   spawnsMinion: 0
   minion: {fileID: 0}
   minionCount: 0

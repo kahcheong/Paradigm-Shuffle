@@ -55,6 +55,9 @@ MonoBehaviour:
   id: 22
   Name: Water
   enemy: {fileID: 1599556231921024, guid: 49dc93b369ad144499804327a918ad38, type: 2}
+  card: {fileID: 1745389402347950}
+  itemName: Potion
+  item: {fileID: 1471357214534290, guid: b170c6d73f253b24c8e6c719d0940963, type: 2}
   spawnsMinion: 0
   minion: {fileID: 0}
   minionCount: 0

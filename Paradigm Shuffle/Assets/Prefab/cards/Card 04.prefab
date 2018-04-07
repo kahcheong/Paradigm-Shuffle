@@ -55,6 +55,9 @@ MonoBehaviour:
   id: 4
   Name: Lake
   enemy: {fileID: 1498893595087128, guid: 2ad5efec4d82a7449a50e88244455bbc, type: 2}
+  card: {fileID: 1875687301971170}
+  itemName: Hat
+  item: {fileID: 1384347716456822, guid: 2bd56fdc19ebaaa4fa3e45ae8eec8f33, type: 2}
   spawnsMinion: 0
   minion: {fileID: 0}
   minionCount: 0

@@ -55,6 +55,9 @@ MonoBehaviour:
   id: 0
   Name: Dirt
   enemy: {fileID: 1917170562911660, guid: 5878343788dd7bf41a8fdd498104ccc4, type: 2}
+  card: {fileID: 1156466021937018}
+  itemName: Dagger
+  item: {fileID: 1420207324793006, guid: 72a05559b2decde4c9380e13bff383df, type: 2}
   spawnsMinion: 0
   minion: {fileID: 0}
   minionCount: 0
