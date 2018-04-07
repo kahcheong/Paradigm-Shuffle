@@ -8,7 +8,7 @@ public class ItemCreation : MonoBehaviour {
     public Card Card2;
     public Card Card3;
 
-    public bool boss = false;
+    public bool elite = false;
 
     private int stat1;
     private int stat2;
@@ -21,7 +21,10 @@ public class ItemCreation : MonoBehaviour {
 
         stat1 = Card1.GetComponent<Card>().id;
 
-        if (stat1 % 10 == 9) boss = true;
+        if (stat1 % 10 == 9) elite = true;
+        if (stat1 == 30) Destroy(gameObject.gameObject);
+
+
 
 
 
