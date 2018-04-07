@@ -9,6 +9,7 @@ public class ItemCreation : MonoBehaviour {
     public Card Card2;
     public Card Card3;
     private Weapon weapon;
+    private bool hold;
 
     public bool elite = false;
     private readonly Vector3 SpawnDisplay = new Vector3(0, 0, -5);
@@ -202,5 +203,14 @@ public class ItemCreation : MonoBehaviour {
         weapon.maxDamage = high;
     }
 
+    void showCard()
+    {
+
+    }
+
+    IEnumerator wait(float time)
+    {
+        yield return new WaitForSeconds(time);
+    }
 
 }

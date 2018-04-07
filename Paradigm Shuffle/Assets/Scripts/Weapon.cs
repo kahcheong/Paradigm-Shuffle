@@ -12,7 +12,8 @@ public class Weapon : MonoBehaviour
     public float maxRange;
     public float atkSpeed;
     public float flatReduction;
-    public float percentReduction;
+    public float percentReduction; //buff hp instead
+    public float[] buff;
 
     public bool weapon;
     public bool flatReduc;
