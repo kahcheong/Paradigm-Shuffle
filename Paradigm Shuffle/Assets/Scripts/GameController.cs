@@ -16,6 +16,16 @@ public class GameController : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
+        if (control == null)
+        {
+            DontDestroyOnLoad(gameObject);
+            control = this;
+        }
+        else if (control != this)
+        {
+            Destroy(gameObject);
+        }
+
         deckSize+=10;
         deck.AddRange(npcDeck);
 	}
