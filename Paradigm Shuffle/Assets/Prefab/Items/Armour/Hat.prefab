@@ -20,7 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4491871219230616}
   - component: {fileID: 212793935434900942}
-  - component: {fileID: 114052366970230410}
+  - component: {fileID: 114079587759268724}
   m_Layer: 0
   m_Name: Hat
   m_TagString: Untagged
@@ -41,7 +41,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &114052366970230410
+--- !u!114 &114079587759268724
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -49,15 +49,24 @@ MonoBehaviour:
   m_GameObject: {fileID: 1384347716456822}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a77100709b1759d45a071ac5f78ef31b, type: 3}
+  m_Script: {fileID: 11500000, guid: 931865fe11fa74b45b53d25eee80c4e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minBase: 5
-  maxBase: 5
-  Cover: 2
-  reduceDamage: 0
-  incDamage: 0
-  incHp: 1
+  minDamage: 0
+  maxDamage: 0
+  minRange: 0
+  maxRange: 0
+  atkSpeed: 0
+  flatReduction: 0
+  percentReduction: 1.05
+  weapon: 0
+  flatReduc: 0
+  percentReduc: 1
+  trinket: 0
+  consume: 0
+  stab: 0
+  lob: 0
+  ranged: 0
 --- !u!212 &212793935434900942
 SpriteRenderer:
   m_ObjectHideFlags: 1

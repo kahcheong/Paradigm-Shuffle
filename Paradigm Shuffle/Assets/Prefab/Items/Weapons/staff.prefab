@@ -64,7 +64,7 @@ MonoBehaviour:
   percentReduc: 0
   trinket: 0
   consume: 0
-  stab: 0
+  stab: 1
   lob: 0
   ranged: 0
 --- !u!212 &212084091666235722

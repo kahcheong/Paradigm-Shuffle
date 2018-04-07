@@ -52,11 +52,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 931865fe11fa74b45b53d25eee80c4e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minDamage: 1
+  minDamage: 0
   maxDamage: 0
-  minRange: 1
-  maxRange: 6
-  atkSpeed: 1
+  minRange: 0
+  maxRange: 0
+  atkSpeed: 0
   flatReduction: 0
   percentReduction: 0
   weapon: 0
@@ -65,7 +65,7 @@ MonoBehaviour:
   trinket: 0
   consume: 1
   stab: 0
-  lob: 1
+  lob: 0
   ranged: 0
 --- !u!212 &212084091666235722
 SpriteRenderer:
