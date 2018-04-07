@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GameControl : MonoBehaviour {
+public class GameController : MonoBehaviour {
 
-    public static GameControl control;
+    public static GameController control;
 
     public GameObject spawnLoc;
     public int deckSize;
@@ -24,6 +24,7 @@ public class GameControl : MonoBehaviour {
 	void Update () {
 
         if (deckSize == 0) ReShuffleDeck();
+
 
         if (Input.GetKeyDown(KeyCode.P)) // room load
         {
@@ -57,70 +58,50 @@ public class GameControl : MonoBehaviour {
             
         }
 
-        if (Input.GetKeyDown(KeyCode.O)) // item creation
-        {
+        
+    }
+
+    public void LoadRoom (Card c1, Card c2)
+    {
+        var card1 = Instantiate(c1, spawnLoc.transform);
+
+        var card2 = Instantiate(c2, spawnLoc.transform);
+
+    }
+
+    public Card GetCard()
+    {
+        
             int temp1 = 0;
-            int temp2 = 0;
-            int temp3 = 0;
-            if (deckSize >= 3)
+            if (deckSize >= 1)
             {
                 temp1 = Random.Range(0, deckSize);
                 deckSize--;
-                temp2 = Random.Range(0, deckSize);
-                deckSize--;
-                temp3 = Random.Range(0, deckSize);
-                deckSize--;
+
             }
             else
-            {  
+            {
                 ReShuffleDeck();
                 temp1 = Random.Range(0, deckSize);
                 deckSize--;
-                temp2 = Random.Range(0, deckSize);
-                deckSize--;
-                temp3 = Random.Range(0, deckSize);
-                deckSize--;
+
             }
 
             Card temp4 = deck[temp1];
             deck.RemoveAt(temp1);
             discard.Add(temp4);
 
-            Card temp5 = deck[temp2];
-            deck.RemoveAt(temp2);
-            discard.Add(temp5);
 
-            Card temp6 = deck[temp3];
-            deck.RemoveAt(temp3);
-            discard.Add(temp6);
 
-            CreateItem(temp4, temp5,temp6);
-            
-        }
-    }
 
-    void LoadRoom (Card c1, Card c2)
-    {
-        var card1 = Instantiate(c1, spawnLoc.transform);
-
-        var card2 = Instantiate(c2, spawnLoc.transform);
+        return (temp4);
 
     }
 
-    void CreateItem(Card c1, Card c2, Card c3)
-    {
-        var card1 = Instantiate(c1, spawnLoc.transform);
-
-        var card2 = Instantiate(c2, spawnLoc.transform);
-
-        var card3 = Instantiate(c2, spawnLoc.transform);
-
-    }
-
-    void ReShuffleDeck()
+    public void ReShuffleDeck()
     {
         deck.AddRange(discard);
         discard.Clear();
-        deckSize = 10;
+        deckSize = 30;
     }
 }

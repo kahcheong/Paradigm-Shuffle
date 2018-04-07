@@ -7,6 +7,9 @@ public class Card : MonoBehaviour {
     public int id;
     public string Name;
     public GameObject enemy;
+    public GameObject card;
+    public string itemName;
+    public GameObject item;
     // minions to spawn for special enemies
     
     public bool spawnsMinion;
