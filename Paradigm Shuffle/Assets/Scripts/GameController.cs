@@ -1,10 +1,17 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameController : MonoBehaviour {
 
     public static GameController control;
+
+    public GameObject itemStat;
+    public GameObject minDmg;
+    public GameObject dash;
+    public GameObject maxDmg;
+
 
     public GameObject spawnLoc;
     public int deckSize;

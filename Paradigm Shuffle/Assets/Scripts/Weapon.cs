@@ -7,13 +7,20 @@ public class Weapon : MonoBehaviour
 {
 
     public float minDamage;
-    public float maxDamge;
+    public float maxDamage;
     public float minRange;
     public float maxRange;
     public float atkSpeed;
+    public float flatReduction;
+    public float percentReduction;
+
+    public bool weapon;
+    public bool flatReduc;
+    public bool percentReduc;
+    public bool trinket;
+    public bool consume;
 
     public bool stab;
-    public bool swipe;
     public bool lob;
     public bool ranged;
 

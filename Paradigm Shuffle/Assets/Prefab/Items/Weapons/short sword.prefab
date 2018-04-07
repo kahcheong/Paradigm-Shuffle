@@ -53,12 +53,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   minDamage: 2
-  maxDamge: 4
+  maxDamage: 0
   minRange: 0
   maxRange: 2
   atkSpeed: 1.5
+  flatReduction: 0
+  percentReduction: 0
+  weapon: 1
+  flatReduc: 0
+  percentReduc: 0
+  trinket: 0
+  consume: 0
   stab: 1
-  swipe: 0
   lob: 0
   ranged: 0
 --- !u!212 &212518906902867842
