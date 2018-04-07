@@ -9,6 +9,7 @@ public class ItemCreation : MonoBehaviour {
     public Card Card3;
 
     public bool elite = false;
+    private Vector3 SpawnDisplay = new Vector3(0, 0, -5);
 
     private int stat1;
     private int stat2;
@@ -18,7 +19,6 @@ public class ItemCreation : MonoBehaviour {
     // Use this for initialization
     void Awake () {
         Card1 = GameController.control.GetCard();
-
         stat1 = Card1.GetComponent<Card>().id;
 
         if (stat1 % 10 == 9) elite = true;
