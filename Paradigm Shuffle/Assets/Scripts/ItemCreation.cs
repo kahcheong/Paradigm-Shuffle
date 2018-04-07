@@ -60,6 +60,8 @@ public class ItemCreation : MonoBehaviour {
     {
         float low = weapon.minDamage;
         float high = weapon.maxDamage;
+        
+
 
         switch (weaponid)
         {
@@ -75,11 +77,129 @@ public class ItemCreation : MonoBehaviour {
                 low += 2;
                 high += 0;
                 break;
-
-
+            case 3:
+                low += 1;
+                high += 3;
+                break;
+            case 4:
+                low -= 1;
+                high += 3;
+                break;
+            case 5:
+                low *= .5f;
+                high *= .7f;
+                break;
+            case 6:
+                low += 2;
+                high += 2;
+                break;
+            case 7:
+                low += 2;
+                high += 5;
+                break;
+            case 8:
+                low *= .3f;
+                high *= .4f;
+                break;
+            case 9:
+                low *= 2f;
+                high *= 2f;
+                break;
+            case 10:
+                low += 2;
+                high += 3;
+                break;
+            case 11:
+                low += 2;
+                high += 5;
+                break;
+            case 12:
+                low -= 1;
+                high += 5;
+                break;
+            case 13:
+                low -= 2;
+                high += 2;
+                break;
+            case 14:
+                low -= 5;
+                high += 10;
+                break;
+            case 15:
+                low -= 2;
+                high += 5;
+                break;
+            case 16:
+                low -= 3;
+                high -= 3;
+                break;
+            case 17:
+                float range1 = high - low;
+                high -= range1 / 4;
+                low += range1 / 4;
+                low *= 1.4f;
+                high *= 1.6f;
+                break;
+            case 18:
+                low += 0;
+                high += 0;
+                break;
+            case 19:
+                low *= 1.5f;
+                high *= 3f;
+                break;
+            case 20:
+                low += 0;
+                high *= 2;
+                break;
+            case 21:
+                low *= 2f;
+                high += 0;
+                break;
+            case 22:
+                float range2 = high - low;
+                high -= range2 / 2;
+                low += range2 / 2;
+                break;
+            case 23:
+                float range3 = high - low;
+                high += range3 / 4;
+                low -= range3 / 4;
+                break;
+            case 24:
+                low *= .6f;
+                high += 0;
+                break;
+            case 25:
+                low *= 2.5f;
+                high *= 4f;
+                break;
+            case 26:
+                low *= .7f;
+                high *= .7f;
+                break;
+            case 27:
+                low *= 1f;
+                high *= 1.6f;
+                break;
+            case 28:
+                low = high;
+                break;
+            case 29:
+                low += 0;
+                high *= 5;
+                break;
+            case 30:
+                low += 0;
+                high += 0;
+                break;
 
 
         }
+
+        if (low > high) high = low;
+        weapon.minDamage = low;
+        weapon.maxDamage = high;
     }
 
 
