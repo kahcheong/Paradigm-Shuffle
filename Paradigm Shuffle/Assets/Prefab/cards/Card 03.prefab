@@ -55,6 +55,9 @@ MonoBehaviour:
   id: 3
   Name: Oasis
   enemy: {fileID: 1757911260146160, guid: 2d374309151b31748862043aa06c32eb, type: 2}
+  card: {fileID: 1470874236782258}
+  itemName: Short Bow
+  item: {fileID: 1190610931051618, guid: 8cc6b277ba333574a94f8aa80df57b9d, type: 2}
   spawnsMinion: 0
   minion: {fileID: 0}
   minionCount: 0

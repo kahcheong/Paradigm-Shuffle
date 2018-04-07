@@ -55,6 +55,9 @@ MonoBehaviour:
   id: 11
   Name: Steal
   enemy: {fileID: 1964148231983874, guid: ae76a3c80e72bb546bd03286d6999bf3, type: 2}
+  card: {fileID: 1318939999746584}
+  itemName: Long Sword
+  item: {fileID: 1703990702475538, guid: 06e9c6cc5ddb50840af9910128675581, type: 2}
   spawnsMinion: 0
   minion: {fileID: 0}
   minionCount: 0

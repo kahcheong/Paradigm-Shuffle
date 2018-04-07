@@ -55,6 +55,9 @@ MonoBehaviour:
   id: 17
   Name: Lead
   enemy: {fileID: 1328757222375908, guid: ce86a15136c555b48a314030387b21e8, type: 2}
+  card: {fileID: 1605017765022948}
+  itemName: Boots
+  item: {fileID: 1318182450482384, guid: 6ec5ffe511251534999dd05c26214b76, type: 2}
   spawnsMinion: 0
   minion: {fileID: 0}
   minionCount: 0

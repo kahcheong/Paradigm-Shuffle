@@ -55,6 +55,9 @@ MonoBehaviour:
   id: 7
   Name: canyon
   enemy: {fileID: 1662559920810866, guid: 9f330340d37b9e6498cd3f98ee40d62a, type: 2}
+  card: {fileID: 1729249192301434}
+  itemName: 
+  item: {fileID: 1675014666119156, guid: e8c575240c21fca40a7a94fe9167899b, type: 2}
   spawnsMinion: 0
   minion: {fileID: 0}
   minionCount: 0

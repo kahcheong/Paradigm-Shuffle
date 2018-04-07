@@ -55,6 +55,9 @@ MonoBehaviour:
   id: 19
   Name: Palidium
   enemy: {fileID: 1201898623351402, guid: 9c657d4d0c39a1544add915ded54d3ad, type: 2}
+  card: {fileID: 1745389402347950}
+  itemName: 
+  item: {fileID: 0}
   spawnsMinion: 1
   minion: {fileID: 1201898623351402, guid: 8a43570d626ddf34ea97b8bcae0774de, type: 2}
   minionCount: 4

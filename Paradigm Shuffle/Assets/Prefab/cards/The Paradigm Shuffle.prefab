@@ -54,9 +54,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 30
   Name: paradigm shuffle
-  enemy: {fileID: 1378730462909026, guid: 3277c8e7a5381bd4196735ab7c61aca5, type: 2}
-  spawnsMinion: 1
-  minion: {fileID: 1378730462909026, guid: 3170a3766bb7c6449a7fe4f645d8c975, type: 2}
+  enemy: {fileID: 0}
+  card: {fileID: 1830475289230694}
+  itemName: 
+  item: {fileID: 0}
+  spawnsMinion: 0
+  minion: {fileID: 0}
   minionCount: 5
   minionFrequency: 5
   minInstance: 1

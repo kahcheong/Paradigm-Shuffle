@@ -55,6 +55,9 @@ MonoBehaviour:
   id: 27
   Name: Light
   enemy: {fileID: 1182860083554830, guid: e090fcbe917882c4c8cffb7b2a2bed1b, type: 2}
+  card: {fileID: 1745389402347950}
+  itemName: Blessing
+  item: {fileID: 1691271582278098, guid: 7f08e4fe01083ec48be2f9870b21eef1, type: 2}
   spawnsMinion: 0
   minion: {fileID: 0}
   minionCount: 0

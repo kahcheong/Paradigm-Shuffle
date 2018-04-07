@@ -54,7 +54,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 24
   Name: Shadow
-  enemy: {fileID: 1815970905086870, guid: a260fa5fb7a3bbc43a241e3312e12170, type: 2}
+  enemy: {fileID: 1890472818654304, guid: f931603fb52394140a89537237c7ac7c, type: 2}
+  card: {fileID: 1745389402347950}
+  itemName: 
+  item: {fileID: 1791327159657562, guid: 5dfe44d8ff8bfe841a85b789cabd02bb, type: 2}
   spawnsMinion: 0
   minion: {fileID: 1328757222375908, guid: 4b775923430406843be7c7de14b2d41d, type: 2}
   minionCount: 3

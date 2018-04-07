@@ -55,6 +55,9 @@ MonoBehaviour:
   id: 2
   Name: cave
   enemy: {fileID: 1557213701601986, guid: 643180a694161c040bbb5a8afefecad9, type: 2}
+  card: {fileID: 1135759578150940}
+  itemName: Buckel
+  item: {fileID: 1709868249929546, guid: 50ebbac2db2234e439640797a0ea651d, type: 2}
   spawnsMinion: 0
   minion: {fileID: 0}
   minionCount: 0

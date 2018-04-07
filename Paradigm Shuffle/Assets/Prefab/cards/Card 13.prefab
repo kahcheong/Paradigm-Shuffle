@@ -54,7 +54,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 13
   Name: Copper
-  enemy: {fileID: 0}
+  enemy: {fileID: 1865265508154914, guid: 47953961599b50047ad8a9697a29d524, type: 2}
+  card: {fileID: 1167643977713352}
+  itemName: Ring
+  item: {fileID: 1237077486726906, guid: 328dd5a79124d7d458c24065cfc4c70d, type: 2}
   spawnsMinion: 0
   minion: {fileID: 0}
   minionCount: 0

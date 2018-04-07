@@ -55,6 +55,9 @@ MonoBehaviour:
   id: 15
   Name: Silver
   enemy: {fileID: 1420061059003456, guid: 9587de1058903244086ad98744992079, type: 2}
+  card: {fileID: 1252489019727298}
+  itemName: Necklace
+  item: {fileID: 1287979865171920, guid: 10bb8b231ab0d1043b341cc07f60d213, type: 2}
   spawnsMinion: 0
   minion: {fileID: 0}
   minionCount: 0

@@ -55,6 +55,9 @@ MonoBehaviour:
   id: 8
   Name: Clearing
   enemy: {fileID: 1526917146529098, guid: e4a3c1d13ee4ac04884e2444e5969380, type: 2}
+  card: {fileID: 1347630675443802}
+  itemName: 
+  item: {fileID: 1505780786561204, guid: a79f77109c3f3b84693f2d2f2c7cd012, type: 2}
   spawnsMinion: 0
   minion: {fileID: 0}
   minionCount: 0

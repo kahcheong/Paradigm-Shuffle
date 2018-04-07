@@ -55,6 +55,9 @@ MonoBehaviour:
   id: 21
   Name: Ice
   enemy: {fileID: 1899015804299040, guid: b70e09f2eae6eed439606920cc24aede, type: 2}
+  card: {fileID: 1745389402347950}
+  itemName: IceBall
+  item: {fileID: 1137231203733344, guid: 80fc7c099c4c6e841a3cbc358e2fde51, type: 2}
   spawnsMinion: 0
   minion: {fileID: 0}
   minionCount: 0

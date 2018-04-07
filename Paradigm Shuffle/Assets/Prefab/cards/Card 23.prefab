@@ -55,6 +55,9 @@ MonoBehaviour:
   id: 23
   Name: Lightning
   enemy: {fileID: 1009117237852864, guid: c0054891701b11e4eac3cb419c463a11, type: 2}
+  card: {fileID: 1745389402347950}
+  itemName: Bandolier
+  item: {fileID: 1322985319060820, guid: e6180c9efbbfa3940b1c912484a43e61, type: 2}
   spawnsMinion: 0
   minion: {fileID: 0}
   minionCount: 0

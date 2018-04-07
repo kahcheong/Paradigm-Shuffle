@@ -54,7 +54,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 0
   Name: Dirt
-  enemy: {fileID: 1917170562911660, guid: 5878343788dd7bf41a8fdd498104ccc4, type: 2}
+  enemy: {fileID: 0}
+  card: {fileID: 1791079053439206}
+  itemName: 
+  item: {fileID: 0}
   spawnsMinion: 0
   minion: {fileID: 0}
   minionCount: 0

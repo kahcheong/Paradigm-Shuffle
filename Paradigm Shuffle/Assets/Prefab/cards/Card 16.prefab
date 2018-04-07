@@ -55,6 +55,9 @@ MonoBehaviour:
   id: 16
   Name: Cobalt
   enemy: {fileID: 1758367817469814, guid: 1f9c983167a029e46912dc64ea1f8af2, type: 2}
+  card: {fileID: 1079412104352772}
+  itemName: Long Bow
+  item: {fileID: 1796062724248278, guid: b3d899ae6900a76449cccb52fef2d711, type: 2}
   spawnsMinion: 0
   minion: {fileID: 0}
   minionCount: 0
