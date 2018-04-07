@@ -14,6 +14,7 @@ public class Weapon : MonoBehaviour
     public float flatReduction;
     public float percentReduction;
 
+
     public bool weapon;
     public bool flatReduc;
     public bool percentReduc;
