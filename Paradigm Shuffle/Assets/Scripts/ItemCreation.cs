@@ -16,6 +16,7 @@ public class ItemCreation : MonoBehaviour {
     public bool elite = false;
     private readonly Vector3 SpawnDisplay = new Vector3(0, 0, -5);
     private readonly Quaternion rotation = Quaternion.Euler(0, 0, 0);
+    private readonly Vector3 cardSpawn = new Vector3(-13.8f,2.3f,0);
 
     private int stat1;
     private int stat2;
@@ -82,36 +83,45 @@ public class ItemCreation : MonoBehaviour {
     {
         if (weapon != null)
         {
-            if (weapon.weapon && stage == 2)
+            if (stage == 1)
             {
 
-                Card2 = GameController.control.GetCard();
-                stat2 = Card2.GetComponent<Card>().id;
-                statChange(stat2);
-                GameController.control.minDmg.GetComponent<Text>().text = weapon.minDamage.ToString();
-                GameController.control.maxDmg.GetComponent<Text>().text = weapon.maxDamage.ToString();
+            }
+            else if (stage == 3)
+            {
+                if (weapon.weapon)
+                {
 
-                stage++;
+                    Card2 = GameController.control.GetCard();
+                    stat2 = Card2.GetComponent<Card>().id;
+                    statChange(stat2);
+                    GameController.control.minDmg.GetComponent<Text>().text = weapon.minDamage.ToString();
+                    GameController.control.maxDmg.GetComponent<Text>().text = weapon.maxDamage.ToString();
 
+                    stage++;
+
+                }
+                else if (weapon.flatReduc)
+                {
+                    GameController.control.minDmg.GetComponent<Text>().text = "Reduce damage Taken by";
+                    GameController.control.dash.GetComponent<Text>().text = " : ";
+                    GameController.control.maxDmg.GetComponent<Text>().text = weapon.flatReduction.ToString();
+                }
+                else if (weapon.percentReduc)
+                {
+                    GameController.control.minDmg.GetComponent<Text>().text = "Increase HP by";
+                    GameController.control.dash.GetComponent<Text>().text = " : ";
+                    GameController.control.maxDmg.GetComponent<Text>().text = weapon.percentReduction.ToString() + "X";
+                }
+                else if (weapon.trinket)
+                {
+                    GameController.control.minDmg.GetComponent<Text>().text = "";
+                    GameController.control.dash.GetComponent<Text>().text = "";
+                    GameController.control.maxDmg.GetComponent<Text>().text = "";
+                }
             }
-            else if (weapon.flatReduc)
-            {
-                GameController.control.minDmg.GetComponent<Text>().text = "Reduce damage Taken by";
-                GameController.control.dash.GetComponent<Text>().text = " : ";
-                GameController.control.maxDmg.GetComponent<Text>().text = weapon.flatReduction.ToString();
-            }
-            else if (weapon.percentReduc)
-            {
-                GameController.control.minDmg.GetComponent<Text>().text = "Increase HP by";
-                GameController.control.dash.GetComponent<Text>().text = " : ";
-                GameController.control.maxDmg.GetComponent<Text>().text = weapon.percentReduction.ToString() + "X";
-            }
-            else if (weapon.trinket)
-            {
-                GameController.control.minDmg.GetComponent<Text>().text = "";
-                GameController.control.dash.GetComponent<Text>().text = "";
-                GameController.control.maxDmg.GetComponent<Text>().text = "";
-            }
+
+            
         }
 
         
