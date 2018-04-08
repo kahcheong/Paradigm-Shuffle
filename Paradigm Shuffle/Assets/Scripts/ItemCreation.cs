@@ -9,7 +9,9 @@ public class ItemCreation : MonoBehaviour {
     public Card Card2;
     public Card Card3;
     private Weapon weapon;
+    private GameObject item;
     private bool hold;
+    public int stage = 1;
 
     public bool elite = false;
     private readonly Vector3 SpawnDisplay = new Vector3(0, 0, -5);
@@ -25,6 +27,7 @@ public class ItemCreation : MonoBehaviour {
     {
         if (other.tag == "Player")
         {
+            GameController.control.itemStat.SetActive(true);
             //other.GetComponent<Player>().enabled = false;
 
             Card1 = GameController.control.GetCard();
@@ -33,7 +36,7 @@ public class ItemCreation : MonoBehaviour {
             if (stat1 % 10 == 9) elite = true;
             if (stat1 == 30) Destroy(gameObject.gameObject);
 
-            GameObject item = Instantiate(Card1.item, SpawnDisplay, rotation);
+            item = Instantiate(Card1.item, SpawnDisplay, rotation);
             weapon = item.GetComponent<Weapon>();
 
             if (weapon.weapon)
@@ -41,10 +44,27 @@ public class ItemCreation : MonoBehaviour {
                 GameController.control.minDmg.GetComponent<Text>().text = weapon.minDamage.ToString();
                 GameController.control.maxDmg.GetComponent<Text>().text = weapon.maxDamage.ToString();
 
-                Card2 = GameController.control.GetCard();
-                stat2 = Card2.GetComponent<Card>().id;
 
-                statChange(stat2);
+                StartCoroutine(wait(1f));
+                
+            }
+            else if (weapon.flatReduc)
+            {
+                GameController.control.minDmg.GetComponent<Text>().text = "Reduce damage Taken by";
+                GameController.control.dash.GetComponent<Text>().text = " : ";
+                GameController.control.maxDmg.GetComponent<Text>().text = weapon.flatReduction.ToString();
+            }
+            else if (weapon.percentReduc)
+            {
+                GameController.control.minDmg.GetComponent<Text>().text = "Increase HP by";
+                GameController.control.dash.GetComponent<Text>().text = " : ";
+                GameController.control.maxDmg.GetComponent<Text>().text = weapon.percentReduction.ToString();
+            }
+            else if (weapon.trinket)
+            {
+                GameController.control.minDmg.GetComponent<Text>().text = "";
+                GameController.control.dash.GetComponent<Text>().text = "";
+                GameController.control.maxDmg.GetComponent<Text>().text = "";
             }
 
 
@@ -53,8 +73,48 @@ public class ItemCreation : MonoBehaviour {
 
             //other.GetComponent<Player>().enabled = true;
             //Destroy(gameObject);
+            //Destroy(item.gameObject);
 
         }
+    }
+
+    private void Update()
+    {
+        if (weapon != null)
+        {
+            if (weapon.weapon && stage == 2)
+            {
+
+                Card2 = GameController.control.GetCard();
+                stat2 = Card2.GetComponent<Card>().id;
+                statChange(stat2);
+                GameController.control.minDmg.GetComponent<Text>().text = weapon.minDamage.ToString();
+                GameController.control.maxDmg.GetComponent<Text>().text = weapon.maxDamage.ToString();
+
+                stage++;
+
+            }
+            else if (weapon.flatReduc)
+            {
+                GameController.control.minDmg.GetComponent<Text>().text = "Reduce damage Taken by";
+                GameController.control.dash.GetComponent<Text>().text = " : ";
+                GameController.control.maxDmg.GetComponent<Text>().text = weapon.flatReduction.ToString();
+            }
+            else if (weapon.percentReduc)
+            {
+                GameController.control.minDmg.GetComponent<Text>().text = "Increase HP by";
+                GameController.control.dash.GetComponent<Text>().text = " : ";
+                GameController.control.maxDmg.GetComponent<Text>().text = weapon.percentReduction.ToString() + "X";
+            }
+            else if (weapon.trinket)
+            {
+                GameController.control.minDmg.GetComponent<Text>().text = "";
+                GameController.control.dash.GetComponent<Text>().text = "";
+                GameController.control.maxDmg.GetComponent<Text>().text = "";
+            }
+        }
+
+        
     }
 
     void statChange(int weaponid)
@@ -211,6 +271,8 @@ public class ItemCreation : MonoBehaviour {
     IEnumerator wait(float time)
     {
         yield return new WaitForSeconds(time);
+        stage++;
+
     }
 
 }

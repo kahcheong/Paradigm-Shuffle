@@ -1152,7 +1152,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 292859d5490b09c42b13651decfa92c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemStat: {fileID: 0}
+  itemStat: {fileID: 1513286482}
   minDmg: {fileID: 1945745251}
   dash: {fileID: 2142071062}
   maxDmg: {fileID: 227201337}
@@ -4814,6 +4814,11 @@ Transform:
   m_PrefabParentObject: {fileID: 4371723704088646, guid: ae76a3c80e72bb546bd03286d6999bf3,
     type: 2}
   m_PrefabInternal: {fileID: 1492571070}
+--- !u!1 &1513286482 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1579027531984986, guid: 91be35d0fe7a42644af4ee090913e1b0,
+    type: 2}
+  m_PrefabInternal: {fileID: 1083747972}
 --- !u!1001 &1525178010
 Prefab:
   m_ObjectHideFlags: 0

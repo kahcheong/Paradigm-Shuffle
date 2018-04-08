@@ -119,6 +119,6 @@ public class GameController : MonoBehaviour {
     {
         deck.AddRange(discard);
         discard.Clear();
-        deckSize = 30;
+        deckSize = 10;
     }
 }
