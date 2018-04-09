@@ -57,10 +57,11 @@ MonoBehaviour:
   minRange: 0
   maxRange: 0
   atkSpeed: 0
-  flatReduction: 0
+  flatReduction: 1
   percentReduction: 0
+  buff: []
   weapon: 0
-  flatReduc: 0
+  flatReduc: 1
   percentReduc: 0
   trinket: 1
   consume: 0

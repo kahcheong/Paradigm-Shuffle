@@ -56,9 +56,10 @@ MonoBehaviour:
   maxDamage: 12
   minRange: 6
   maxRange: 6
-  atkSpeed: 1
+  atkSpeed: 0.5
   flatReduction: 0
   percentReduction: 0
+  buff: []
   weapon: 1
   flatReduc: 0
   percentReduc: 0

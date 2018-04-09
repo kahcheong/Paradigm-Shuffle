@@ -11,6 +11,7 @@ public class GameController : MonoBehaviour {
     public GameObject minDmg;
     public GameObject dash;
     public GameObject maxDmg;
+    public GameObject cardDisplay;
 
 
     public GameObject spawnLoc;
@@ -23,6 +24,7 @@ public class GameController : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
+
         if (control == null)
         {
             DontDestroyOnLoad(gameObject);
@@ -74,8 +76,6 @@ public class GameController : MonoBehaviour {
             LoadRoom(temp3, temp4);
             
         }
-
-        
     }
 
     public void LoadRoom (Card c1, Card c2)
@@ -88,31 +88,24 @@ public class GameController : MonoBehaviour {
 
     public Card GetCard()
     {
-        
             int temp1 = 0;
             if (deckSize !=0)
             {
                 temp1 = Random.Range(0, deckSize);
                 deckSize--;
-
             }
             else
             {
                 ReShuffleDeck();
                 temp1 = Random.Range(0, deckSize);
                 deckSize--;
-
             }
 
             Card temp4 = deck[temp1];
             deck.RemoveAt(temp1);
             discard.Add(temp4);
 
-
-
-
         return (temp4);
-
     }
 
     public void ReShuffleDeck()

@@ -67,4 +67,11 @@ MonoBehaviour:
   Card1: {fileID: 0}
   Card2: {fileID: 0}
   Card3: {fileID: 0}
+  item: {fileID: 0}
+  stage: 0
+  cardDisplay: {fileID: 1005504034000364, guid: 57fd1d6c33a16864d8b5823d9283fc02,
+    type: 2}
+  take: {fileID: 0}
+  discard: {fileID: 0}
+  player: {fileID: 0}
   elite: 0

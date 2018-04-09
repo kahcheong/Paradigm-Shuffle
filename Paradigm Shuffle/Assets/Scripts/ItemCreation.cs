@@ -1,17 +1,26 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class ItemCreation : MonoBehaviour {
 
+    public static ItemCreation creator;
+
     public Card Card1;
     public Card Card2;
     public Card Card3;
     private Weapon weapon;
-    private GameObject item;
+    public GameObject item;
     private bool hold;
-    public int stage = 1;
+    public int stage = 0;
+    public GameObject cardDisplay;
+    public GameObject take;
+    public GameObject discard;
+    private Button taker;
+    private Button discarder;
+    public GameObject player;
 
     public bool elite = false;
     private readonly Vector3 SpawnDisplay = new Vector3(0, 0, -5);
@@ -23,13 +32,13 @@ public class ItemCreation : MonoBehaviour {
     private int stat3;
 
 
-
     private void OnTriggerEnter(Collider other)
     {
         if (other.tag == "Player")
         {
             GameController.control.itemStat.SetActive(true);
-            //other.GetComponent<Player>().enabled = false;
+            other.gameObject.GetComponent<Player>().enabled = false;
+            player = other.gameObject;
 
             Card1 = GameController.control.GetCard();
             stat1 = Card1.GetComponent<Card>().id;
@@ -37,103 +46,85 @@ public class ItemCreation : MonoBehaviour {
             if (stat1 % 10 == 9) elite = true;
             if (stat1 == 30) Destroy(gameObject.gameObject);
 
-            item = Instantiate(Card1.item, SpawnDisplay, rotation);
-            weapon = item.GetComponent<Weapon>();
+            
 
-            if (weapon.weapon)
-            { 
-                GameController.control.minDmg.GetComponent<Text>().text = weapon.minDamage.ToString();
-                GameController.control.maxDmg.GetComponent<Text>().text = weapon.maxDamage.ToString();
-
-
-                StartCoroutine(wait(1f));
-                
-            }
-            else if (weapon.flatReduc)
-            {
-                GameController.control.minDmg.GetComponent<Text>().text = "Reduce damage Taken by";
-                GameController.control.dash.GetComponent<Text>().text = " : ";
-                GameController.control.maxDmg.GetComponent<Text>().text = weapon.flatReduction.ToString();
-            }
-            else if (weapon.percentReduc)
-            {
-                GameController.control.minDmg.GetComponent<Text>().text = "Increase HP by";
-                GameController.control.dash.GetComponent<Text>().text = " : ";
-                GameController.control.maxDmg.GetComponent<Text>().text = weapon.percentReduction.ToString();
-            }
-            else if (weapon.trinket)
-            {
-                GameController.control.minDmg.GetComponent<Text>().text = "";
-                GameController.control.dash.GetComponent<Text>().text = "";
-                GameController.control.maxDmg.GetComponent<Text>().text = "";
-            }
-
-
-
-
-
-            //other.GetComponent<Player>().enabled = true;
-            //Destroy(gameObject);
-            //Destroy(item.gameObject);
+            GameObject card =  Instantiate(cardDisplay, GameController.control.itemStat.transform);
+            card.GetComponent<Image>().sprite = Card1.card.GetComponent<SpriteRenderer>().sprite;
+            StartCoroutine(wait(2.5f));
 
         }
     }
 
     private void Update()
     {
-        if (weapon != null)
+        if (stage == 1)
         {
-            if (stage == 1)
+            item = Instantiate(Card1.item, SpawnDisplay, rotation);
+            weapon = item.GetComponent<Weapon>();
+
+            if (weapon.weapon)
             {
+                GameController.control.minDmg.GetComponent<Text>().text = weapon.minDamage.ToString();
+                GameController.control.maxDmg.GetComponent<Text>().text = weapon.maxDamage.ToString();
+
+                stage++;
+                StartCoroutine(wait(2.5f));
 
             }
-            else if (stage == 3)
+            else if (weapon.flatReduc)
             {
-                if (weapon.weapon)
-                {
+                GameController.control.minDmg.GetComponent<Text>().text = "Reduce damage Taken by";
+                GameController.control.dash.GetComponent<Text>().text = " : ";
+                GameController.control.maxDmg.GetComponent<Text>().text = weapon.flatReduction.ToString();
 
-                    Card2 = GameController.control.GetCard();
-                    stat2 = Card2.GetComponent<Card>().id;
-                    statChange(stat2);
-                    GameController.control.minDmg.GetComponent<Text>().text = weapon.minDamage.ToString();
-                    GameController.control.maxDmg.GetComponent<Text>().text = weapon.maxDamage.ToString();
-
-                    stage++;
-
-                }
-                else if (weapon.flatReduc)
-                {
-                    GameController.control.minDmg.GetComponent<Text>().text = "Reduce damage Taken by";
-                    GameController.control.dash.GetComponent<Text>().text = " : ";
-                    GameController.control.maxDmg.GetComponent<Text>().text = weapon.flatReduction.ToString();
-                }
-                else if (weapon.percentReduc)
-                {
-                    GameController.control.minDmg.GetComponent<Text>().text = "Increase HP by";
-                    GameController.control.dash.GetComponent<Text>().text = " : ";
-                    GameController.control.maxDmg.GetComponent<Text>().text = weapon.percentReduction.ToString() + "X";
-                }
-                else if (weapon.trinket)
-                {
-                    GameController.control.minDmg.GetComponent<Text>().text = "";
-                    GameController.control.dash.GetComponent<Text>().text = "";
-                    GameController.control.maxDmg.GetComponent<Text>().text = "";
-                }
+                stage++;
+                StartCoroutine(wait(2.5f));
             }
+            else if (weapon.percentReduc)
+            {
+                GameController.control.minDmg.GetComponent<Text>().text = "Increase HP by";
+                GameController.control.dash.GetComponent<Text>().text = " : ";
+                GameController.control.maxDmg.GetComponent<Text>().text = weapon.percentReduction.ToString();
 
-            
+                stage++;
+                StartCoroutine(wait(2.5f));
+            }
+        }
+        else if (stage == 2)
+        {
+            Card2 = GameController.control.GetCard();
+            stat2 = Card2.GetComponent<Card>().id;
+            GameObject card2 = Instantiate(cardDisplay, GameController.control.itemStat.transform);
+            card2.GetComponent<Image>().sprite = Card2.card.GetComponent<SpriteRenderer>().sprite;
+            stage++;
+            StartCoroutine(wait(2.5f));
+        }
+        else if (stage == 4)
+        {
+            if (weapon.weapon)
+            {
+                statChange(stat2);
+                GameController.control.minDmg.GetComponent<Text>().text = weapon.minDamage.ToString();
+                GameController.control.maxDmg.GetComponent<Text>().text = weapon.maxDamage.ToString();
+
+                stage++;
+
+            }     
+        }
+        else if (stage >= 5)
+        {
+            creator = this;
+            take.SetActive(true);
+            discard.SetActive(true);
         }
 
-        
     }
 
     void statChange(int weaponid)
     {
         float low = weapon.minDamage;
         float high = weapon.maxDamage;
-        
-
-
+       
         switch (weaponid)
         {
             case 0:
