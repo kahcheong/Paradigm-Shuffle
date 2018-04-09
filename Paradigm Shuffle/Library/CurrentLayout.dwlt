@@ -70,7 +70,7 @@ MonoBehaviour:
   m_MinSize: {x: 466, y: 271}
   m_MaxSize: {x: 20006, y: 10021}
   vertical: 0
-  controlID: 129
+  controlID: 71
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -94,7 +94,7 @@ MonoBehaviour:
   m_MinSize: {x: 743, y: 492}
   m_MaxSize: {x: 24008, y: 14042}
   vertical: 0
-  controlID: 181
+  controlID: 9
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -360,7 +360,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 682d0000
     m_LastClickedID: 11624
-    m_ExpandedIDs: 0000000046260000b82800004a2d0000182e000000ca9a3bffffff7f
+    m_ExpandedIDs: 0000000046260000b8280000d82800000e2900004a2d0000182e000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -388,7 +388,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000462600004a2d0000182e0000
+    m_ExpandedIDs: 0000000046260000d82800000e2900004a2d0000182e0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -415,7 +415,7 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 1
+    m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: 
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -507,18 +507,18 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets/Sound
+    - Assets/Prefab/Items/Trinkets
   m_ViewMode: 1
   m_StartGridSize: 55
   m_LastFolders:
-  - Assets/Sound
+  - Assets/Prefab/Items/Trinkets
   m_LastFoldersGridSize: 55
   m_LastProjectPath: C:\Users\gc16sf\Documents\GitHub\Paradigm-Shuffle\Paradigm Shuffle
   m_IsLocked: 1
   m_FolderTreeState:
     scrollPos: {x: 0, y: 213}
-    m_SelectedIDs: 18280000
-    m_LastClickedID: 10264
+    m_SelectedIDs: 7c2e0000
+    m_LastClickedID: 11900
     m_ExpandedIDs: 0000000046260000d82800000e2900004a2d0000182e000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -547,7 +547,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000462600004a2d0000182e0000
+    m_ExpandedIDs: 0000000046260000d82800000e2900004a2d0000182e0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -574,7 +574,7 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 1
+    m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: c6230000a4280000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
