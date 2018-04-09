@@ -36,6 +36,12 @@ public class ItemCreation : MonoBehaviour {
     {
         if (other.tag == "Player")
         {
+
+            GameController.control.minDmg.GetComponent<Text>().text = "";
+            GameController.control.dash.GetComponent<Text>().text = "";
+            GameController.control.maxDmg.GetComponent<Text>().text = "";
+            GameController.control.atkSpeed.GetComponent<Text>().text = "";
+
             GameController.control.itemStat.SetActive(true);
             other.gameObject.GetComponent<Player>().enabled = false;
             player = other.gameObject;
@@ -65,7 +71,9 @@ public class ItemCreation : MonoBehaviour {
             if (weapon.weapon)
             {
                 GameController.control.minDmg.GetComponent<Text>().text = weapon.minDamage.ToString();
+                GameController.control.dash.GetComponent<Text>().text = " - ";
                 GameController.control.maxDmg.GetComponent<Text>().text = weapon.maxDamage.ToString();
+                GameController.control.atkSpeed.GetComponent<Text>().text = weapon.atkSpeed.ToString() + " attacks per second";
 
                 stage++;
                 StartCoroutine(wait(2.5f));
@@ -76,6 +84,7 @@ public class ItemCreation : MonoBehaviour {
                 GameController.control.minDmg.GetComponent<Text>().text = "Reduce damage Taken by";
                 GameController.control.dash.GetComponent<Text>().text = " : ";
                 GameController.control.maxDmg.GetComponent<Text>().text = weapon.flatReduction.ToString();
+                GameController.control.atkSpeed.GetComponent<Text>().text = "";
 
                 stage++;
                 StartCoroutine(wait(2.5f));
@@ -85,6 +94,7 @@ public class ItemCreation : MonoBehaviour {
                 GameController.control.minDmg.GetComponent<Text>().text = "Increase HP by";
                 GameController.control.dash.GetComponent<Text>().text = " : ";
                 GameController.control.maxDmg.GetComponent<Text>().text = weapon.percentReduction.ToString();
+                GameController.control.atkSpeed.GetComponent<Text>().text = "";
 
                 stage++;
                 StartCoroutine(wait(2.5f));
@@ -106,6 +116,7 @@ public class ItemCreation : MonoBehaviour {
                 statChange(stat2);
                 GameController.control.minDmg.GetComponent<Text>().text = weapon.minDamage.ToString();
                 GameController.control.maxDmg.GetComponent<Text>().text = weapon.maxDamage.ToString();
+                GameController.control.atkSpeed.GetComponent<Text>().text = weapon.atkSpeed.ToString() + " attacks per second";
 
                 stage++;
 
@@ -124,6 +135,7 @@ public class ItemCreation : MonoBehaviour {
     {
         float low = weapon.minDamage;
         float high = weapon.maxDamage;
+        float spd = weapon.atkSpeed;
        
         switch (weaponid)
         {
@@ -150,6 +162,7 @@ public class ItemCreation : MonoBehaviour {
             case 5:
                 low *= .5f;
                 high *= .7f;
+                spd *= 2; 
                 break;
             case 6:
                 low += 2;
@@ -162,6 +175,7 @@ public class ItemCreation : MonoBehaviour {
             case 8:
                 low *= .3f;
                 high *= .4f;
+                spd *= 4;
                 break;
             case 9:
                 low *= 2f;
@@ -205,6 +219,7 @@ public class ItemCreation : MonoBehaviour {
             case 18:
                 low += 0;
                 high += 0;
+                spd *= 1.5f;
                 break;
             case 19:
                 low *= 1.5f;
@@ -231,18 +246,22 @@ public class ItemCreation : MonoBehaviour {
             case 24:
                 low *= .6f;
                 high += 0;
+                spd *= 3;
                 break;
             case 25:
                 low *= 2.5f;
                 high *= 4f;
+                spd *= 0.5f;
                 break;
             case 26:
                 low *= .7f;
                 high *= .7f;
+                spd *= 2;
                 break;
             case 27:
                 low *= 1f;
                 high *= 1.6f;
+                spd *= 3;
                 break;
             case 28:
                 low = high;
@@ -260,8 +279,10 @@ public class ItemCreation : MonoBehaviour {
         }
 
         if (low > high) high = low;
+        if (low < 0) low = 0;
         weapon.minDamage = low;
         weapon.maxDamage = high;
+        weapon.atkSpeed = spd;
     }
 
     void showCard()

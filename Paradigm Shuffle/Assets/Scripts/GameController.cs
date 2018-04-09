@@ -11,7 +11,9 @@ public class GameController : MonoBehaviour {
     public GameObject minDmg;
     public GameObject dash;
     public GameObject maxDmg;
+    public GameObject atkSpeed;
     public GameObject cardDisplay;
+    public bool[] unlockedCards = new bool[30];
 
 
     public GameObject spawnLoc;

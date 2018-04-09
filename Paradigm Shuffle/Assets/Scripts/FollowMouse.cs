@@ -11,7 +11,6 @@ public class FollowMouse : MonoBehaviour {
     public GameObject player;
     public float atkSpeed;
 
-    public GameObject[] hitBox;
     public float damage;
 
     public GameObject stab;
@@ -36,11 +35,14 @@ public class FollowMouse : MonoBehaviour {
             animation.GetComponent<Animator>().Play("idle");
         }
 
-        if (Input.GetMouseButtonDown(0) && !atk)
+        if (Input.GetMouseButton(0))
         {
-            atk = true;
-            StartCoroutine(Atacking());
-            Debug.Log("clicking");
+            if (!atk)
+            {
+                atk = true;
+                StartCoroutine(Atacking());
+                Debug.Log("clicking");
+            }
         }
         if (Input.GetKeyDown(KeyCode.Keypad1)) atkType = 1;
         if (Input.GetKeyDown(KeyCode.Keypad2)) atkType = 2;
@@ -54,13 +56,7 @@ public class FollowMouse : MonoBehaviour {
 
     IEnumerator Atacking()
     {
-        if (atkType == 1)
-        {
-            animation.GetComponent<Animator>().Play("swipe");
-            hitBox[0].SetActive(true);
-            Debug.Log("attaking swipe");
-            yield return new WaitForSeconds(0.16F);
-        }
+
         if (atkType == 2)
         {
             GameObject atkk =  Instantiate(stab, player.transform.position,transform.rotation,player.transform);
@@ -87,10 +83,7 @@ public class FollowMouse : MonoBehaviour {
             yield return new WaitForSeconds(1f /atkSpeed);
         }
         atk = false;
-        for(int i = 0; i <hitBox.Length; i++)
-        {
-            hitBox[i].SetActive(false);
-        }
+
         yield return true;
     }
 

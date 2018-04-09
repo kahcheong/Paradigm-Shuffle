@@ -12,7 +12,10 @@ public class inventory : MonoBehaviour {
     public GameObject item1;
     public GameObject item2;
     public GameObject item3;
+    public GameObject inv;
     public int stored;
+
+    private bool showInventory;
 
     // Use this for initialization
     void Start () {
@@ -28,7 +31,7 @@ public class inventory : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
+        if (Input.GetKeyDown(KeyCode.I)) showInventory = !showInventory;
 	}
     public void change()
     {
@@ -71,4 +74,14 @@ public class inventory : MonoBehaviour {
             item3.GetComponent<Image>().enabled = false;
         }
     }
+
+    public void Reset(int pos)
+    {
+        for ( int i = pos; i < 3; i++)
+        {
+            items[pos] = items[pos + 1];
+        }
+        change();
+    }
+
 }
