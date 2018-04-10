@@ -14,6 +14,7 @@ public class Weapon : MonoBehaviour
     public float flatReduction;
     public float percentReduction; //buff hp instead
     public float[] buff;
+    public int level;
 
 
     public bool weapon;

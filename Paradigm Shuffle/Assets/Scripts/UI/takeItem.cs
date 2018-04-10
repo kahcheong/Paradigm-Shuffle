@@ -22,7 +22,7 @@ public class takeItem : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 
 
     // Use this for initialization
-    void OnEnable()
+    void Start()
     {
         Button btn = GetComponent<Button>();
         btn.onClick.AddListener(() => TaskOnClick());
@@ -37,11 +37,11 @@ public class takeItem : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
             GameController.control.maxDmg.GetComponent<Text>().text = "";
             ItemCreation.creator.player.GetComponent<Player>().enabled = true;
             inventory.inventor.items[inventory.inventor.stored] = ItemCreation.creator.item.gameObject;
-            inventory.inventor.stored++;
             ItemCreation.creator.item.gameObject.transform.position = hide;
             ItemCreation.creator.discard.SetActive(false);
             GameController.control.itemStat.SetActive(false);
             Destroy(ItemCreation.creator.gameObject);
+            inventory.inventor.stored++;
             inventory.inventor.change();
             gameObject.SetActive(false);
         }

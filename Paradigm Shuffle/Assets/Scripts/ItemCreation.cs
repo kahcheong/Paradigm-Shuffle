@@ -67,6 +67,7 @@ public class ItemCreation : MonoBehaviour {
         {
             item = Instantiate(Card1.item, SpawnDisplay, rotation);
             weapon = item.GetComponent<Weapon>();
+            weapon.level = GameController.control.level;
 
             if (weapon.weapon)
             {
@@ -93,7 +94,7 @@ public class ItemCreation : MonoBehaviour {
             {
                 GameController.control.minDmg.GetComponent<Text>().text = "Increase HP by";
                 GameController.control.dash.GetComponent<Text>().text = " : ";
-                GameController.control.maxDmg.GetComponent<Text>().text = weapon.percentReduction.ToString();
+                GameController.control.maxDmg.GetComponent<Text>().text = ((weapon.percentReduction - 1)*100 ).ToString() + "%";
                 GameController.control.atkSpeed.GetComponent<Text>().text = "";
 
                 stage++;

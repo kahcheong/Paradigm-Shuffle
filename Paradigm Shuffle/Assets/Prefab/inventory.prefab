@@ -52,11 +52,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e7e5bed4d75fd1459a170f5c018c842, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  items: []
+  items:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   item0: {fileID: 0}
   item1: {fileID: 0}
   item2: {fileID: 0}
   item3: {fileID: 0}
+  inv: {fileID: 0}
   stored: 0
 --- !u!114 &114407724670903346
 MonoBehaviour:
