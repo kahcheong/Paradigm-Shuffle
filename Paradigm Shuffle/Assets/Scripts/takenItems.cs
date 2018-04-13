@@ -12,11 +12,14 @@ public class takenItems : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
     private Weapon wep;
     public GameObject desc;
     private GameObject uses;
+    private GameObject choice;
     private bool yes;
+    public GameObject Buttons;
 
     public void OnPointerEnter(PointerEventData eventData)
     {
         uses = Instantiate(desc, transform);
+        if (weapon != null) choice =  Instantiate(Buttons, transform);
         yes = true;
         if (wep.weapon)
         {
@@ -42,6 +45,7 @@ public class takenItems : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
     {
         yes = false;
         Destroy(uses);
+        Destroy(choice);
     }
 
     // Use this for initialization
