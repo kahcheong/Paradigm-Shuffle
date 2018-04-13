@@ -87,8 +87,13 @@ public class inventory : MonoBehaviour {
         }
     }
 
-    public void Reset(int pos)
+    public void Reset()
     {
+        int pos = 3;
+        if (items[0] == null) pos = 0;
+        if (items[1] == null) pos = 1;
+        if (items[2] == null) pos = 2;
+
         for ( int i = pos; i < 3; i++)
         {
             items[pos] = items[pos + 1];
