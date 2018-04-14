@@ -11,7 +11,8 @@ public class FollowMouse : MonoBehaviour {
     public GameObject player;
     public float atkSpeed;
 
-    public float damage;
+    public float minDamage;
+    public float maxDamage;
 
     public GameObject stab;
     public GameObject arrow;
@@ -41,7 +42,6 @@ public class FollowMouse : MonoBehaviour {
             {
                 atk = true;
                 StartCoroutine(Atacking());
-                Debug.Log("clicking");
             }
         }
         if (Input.GetKeyDown(KeyCode.Keypad1)) atkType = 1;
@@ -62,24 +62,24 @@ public class FollowMouse : MonoBehaviour {
             GameObject atkk =  Instantiate(stab, player.transform.position,transform.rotation,player.transform);
             atkk.gameObject.tag = "playerAttack";
             atkk.transform.GetChild(0).gameObject.tag = "playerAttack";
-            atkk.GetComponent<Stab>().damage = damage;
-            Debug.Log("attaking stab");
+            atkk.GetComponent<Stab>().damage = Random.Range(minDamage,maxDamage);
+            //Debug.Log("attaking stab");
             yield return new WaitForSeconds(1f/atkSpeed);
         }
         if (atkType == 3)
         {
             GameObject atkk =  Instantiate(arrow, player.transform.position, transform.rotation * Quaternion.Euler(0,0,-90));
             atkk.gameObject.tag = "playerAttack";
-            atkk.GetComponent<Shoot>().damage = damage;
-            Debug.Log("shooting arrow");
+            atkk.GetComponent<Shoot>().damage = Random.Range(minDamage, maxDamage);
+            //Debug.Log("shooting arrow");
             yield return new WaitForSeconds(1f/atkSpeed);
         }
         if (atkType == 4)
         {
             GameObject atkk = Instantiate(bomb, player.transform.position, transform.rotation * Quaternion.Euler(0, 0, -90));
             atkk.gameObject.tag = "playerAttack";
-            atkk.GetComponent<Lob>().damage = damage;
-            Debug.Log("throwing bomb");
+            atkk.GetComponent<Lob>().damage = Random.Range(minDamage, maxDamage);
+            //Debug.Log("throwing bomb");
             yield return new WaitForSeconds(1f /atkSpeed);
         }
         atk = false;

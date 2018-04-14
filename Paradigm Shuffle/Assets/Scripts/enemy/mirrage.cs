@@ -19,8 +19,8 @@ public class mirrage : MonoBehaviour {
 
         me.maxHp = ply.maxHp;
         me.hp = me.maxHp;
-        me.minDamage = weapon.damage;
-        me.maxDamage = me.minDamage;
+        me.minDamage = weapon.minDamage;
+        me.maxDamage = weapon.maxDamage;
         me.minRange = 1;
         me.damageReducFlat = ply.damageReducFlat;
         me.damageReducPercent = ply.damageReducPercent;

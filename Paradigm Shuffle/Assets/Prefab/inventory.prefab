@@ -74,9 +74,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bffe0afe32bb1f54c92e3500b737f0a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  armor: {fileID: 0}
-  weapon: {fileID: 0}
-  trinket: {fileID: 0}
-  slot1: {fileID: 0}
-  slot2: {fileID: 0}
-  slot3: {fileID: 0}
+  armorSlot: {fileID: 0}
+  weaponSlot: {fileID: 0}
+  trinketSlot: {fileID: 0}
+  armorObject: {fileID: 0}
+  weaponObject: {fileID: 0}
+  trinketObject: {fileID: 0}

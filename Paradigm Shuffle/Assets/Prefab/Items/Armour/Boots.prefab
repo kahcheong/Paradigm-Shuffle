@@ -57,8 +57,10 @@ MonoBehaviour:
   minRange: 0
   maxRange: 0
   atkSpeed: 0
-  flatReduction: 0
+  flatReduction: 0.5
   percentReduction: 1
+  buff: []
+  level: 0
   weapon: 0
   flatReduc: 0
   percentReduc: 1

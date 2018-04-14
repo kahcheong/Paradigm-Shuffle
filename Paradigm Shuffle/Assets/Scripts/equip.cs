@@ -25,6 +25,8 @@ public class equip : MonoBehaviour {
         {
             Destroy(gameObject);
         }
+
+        change();
     }
 	
 	// Update is called once per frame
@@ -38,13 +40,15 @@ public class equip : MonoBehaviour {
             armorSlot.GetComponent<Image>().enabled = true;
             armorSlot.GetComponent<Image>().preserveAspect = true;
             armorSlot.GetComponent<Image>().sprite = armorObject.GetComponent<SpriteRenderer>().sprite;
-            armorSlot.GetComponent<takenItems>().weapon = armorObject; // fix taken item later
-            armorSlot.GetComponent<takenItems>().enabled = true;
+            armorSlot.GetComponent<EquipedItem>().weapon = armorObject;
+            armorSlot.GetComponent<EquipedItem>().enabled = false;
+            armorSlot.GetComponent<EquipedItem>().enabled = true;
         }
         else
         {
+            armorSlot.GetComponent<EquipedItem>().weapon =null; 
             armorSlot.GetComponent<Image>().enabled = false;
-            armorSlot.GetComponent<takenItems>().enabled = false;
+            armorSlot.GetComponent<EquipedItem>().enabled = false;
         }
 
         if (weaponObject != null)
@@ -52,27 +56,32 @@ public class equip : MonoBehaviour {
             weaponSlot.GetComponent<Image>().enabled = true;
             weaponSlot.GetComponent<Image>().preserveAspect = true;
             weaponSlot.GetComponent<Image>().sprite = weaponObject.GetComponent<SpriteRenderer>().sprite;
-            weaponSlot.GetComponent<takenItems>().weapon = weaponObject;
-            weaponSlot.GetComponent<takenItems>().enabled = true;
+            weaponSlot.GetComponent<EquipedItem>().weapon = weaponObject;
+            weaponSlot.GetComponent<EquipedItem>().enabled = false;
+            weaponSlot.GetComponent<EquipedItem>().enabled = true;
         }
         else
         {
+            weaponSlot.GetComponent<EquipedItem>().weapon = null;
             weaponSlot.GetComponent<Image>().enabled = false;
-            weaponSlot.GetComponent<takenItems>().enabled = false;
+            weaponSlot.GetComponent<EquipedItem>().enabled = false;
         }
 
         if (trinketObject != null)
         {
+
             trinketSlot.GetComponent<Image>().enabled = true;
             trinketSlot.GetComponent<Image>().preserveAspect = true;
             trinketSlot.GetComponent<Image>().sprite = trinketObject.GetComponent<SpriteRenderer>().sprite;
-            trinketSlot.GetComponent<takenItems>().weapon = trinketObject;
-            trinketSlot.GetComponent<takenItems>().enabled = true;
+            trinketSlot.GetComponent<EquipedItem>().weapon = trinketObject;
+            trinketSlot.GetComponent<EquipedItem>().enabled = false;
+            trinketSlot.GetComponent<EquipedItem>().enabled = true;
         }
         else
         {
+            trinketSlot.GetComponent<EquipedItem>().weapon = null;
             trinketSlot.GetComponent<Image>().enabled = false;
-            trinketSlot.GetComponent<takenItems>().enabled = false;
+            trinketSlot.GetComponent<EquipedItem>().enabled = false;
         }
 
     }

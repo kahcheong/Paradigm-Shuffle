@@ -34,7 +34,7 @@ public class ItemCreation : MonoBehaviour {
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Player")
+        if (other.tag == "feet")
         {
 
             GameController.control.minDmg.GetComponent<Text>().text = "";
@@ -43,8 +43,8 @@ public class ItemCreation : MonoBehaviour {
             GameController.control.atkSpeed.GetComponent<Text>().text = "";
 
             GameController.control.itemStat.SetActive(true);
-            other.gameObject.GetComponent<Player>().enabled = false;
-            player = other.gameObject;
+            other.gameObject.transform.parent.GetComponent<Player>().enabled = false;
+            player = other.transform.parent.gameObject;
 
             Card1 = GameController.control.GetCard();
             stat1 = Card1.GetComponent<Card>().id;

@@ -36,10 +36,12 @@ public class inventory : MonoBehaviour {
             item0.GetComponent<Image>().preserveAspect = true;
             item0.GetComponent<Image>().sprite = items[0].GetComponent<SpriteRenderer>().sprite;
             item0.GetComponent<takenItems>().weapon = items[0];
+            item0.GetComponent<takenItems>().enabled = false;
             item0.GetComponent<takenItems>().enabled = true;
         }
         else
         {
+            item0.GetComponent<takenItems>().weapon = null;
             item0.GetComponent<Image>().enabled = false;
             item0.GetComponent<takenItems>().enabled = false;
         }
@@ -50,10 +52,12 @@ public class inventory : MonoBehaviour {
             item1.GetComponent<Image>().preserveAspect = true;
             item1.GetComponent<Image>().sprite = items[1].GetComponent<SpriteRenderer>().sprite;  
             item1.GetComponent<takenItems>().weapon = items[1];
+            item1.GetComponent<takenItems>().enabled = false;
             item1.GetComponent<takenItems>().enabled = true;
         }
         else
         {
+            item1.GetComponent<takenItems>().weapon = null;
             item1.GetComponent<Image>().enabled = false;
             item1.GetComponent<takenItems>().enabled = false;
         }
@@ -64,10 +68,12 @@ public class inventory : MonoBehaviour {
             item2.GetComponent<Image>().preserveAspect = true;
             item2.GetComponent<Image>().sprite = items[2].GetComponent<SpriteRenderer>().sprite;
             item2.GetComponent<takenItems>().weapon = items[2];
+            item2.GetComponent<takenItems>().enabled = false;
             item2.GetComponent<takenItems>().enabled = true;
         }
         else
         {
+            item2.GetComponent<takenItems>().weapon = null;
             item2.GetComponent<Image>().enabled = false;
             item2.GetComponent<takenItems>().enabled = false;
         }
@@ -78,10 +84,12 @@ public class inventory : MonoBehaviour {
             item3.GetComponent<Image>().preserveAspect = true;
             item3.GetComponent<Image>().sprite = items[3].GetComponent<SpriteRenderer>().sprite;
             item3.GetComponent<takenItems>().weapon = items[3];
+            item3.GetComponent<takenItems>().enabled = false;
             item3.GetComponent<takenItems>().enabled = true;
         }
         else
         {
+            item3.GetComponent<takenItems>().weapon = null;
             item3.GetComponent<Image>().enabled = false;
             item3.GetComponent<takenItems>().enabled = false;
         }
@@ -90,14 +98,18 @@ public class inventory : MonoBehaviour {
     public void Reset()
     {
         int pos = 3;
-        if (items[0] == null) pos = 0;
-        if (items[1] == null) pos = 1;
         if (items[2] == null) pos = 2;
+        if (items[1] == null) pos = 1;
+        if (items[0] == null) pos = 0;
 
+        
+        
         for ( int i = pos; i < 3; i++)
         {
-            items[pos] = items[pos + 1];
+            items[i] = items[i + 1];
         }
+        items[3] = null;
+        stored--;
         change();
     }
 
