@@ -24,7 +24,6 @@ public class Shoot : MonoBehaviour {
         if (other.tag == "Player" && tag == "weapon")
         {
             float temp = damage - other.GetComponent<Player>().damageReducFlat;
-            if (temp > 0) other.GetComponent<Player>().hp -= temp * (1f - other.GetComponent<Player>().damageReducPercent);
             Destroy(gameObject.gameObject);
         }
         if (other.tag == "wall")

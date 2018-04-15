@@ -7,7 +7,6 @@ public class FollowMouse : MonoBehaviour {
     // Use this for initialization
     public bool atk;
     public int atkType;
-    public GameObject animation;
     public GameObject player;
     public float atkSpeed;
 
@@ -33,7 +32,6 @@ public class FollowMouse : MonoBehaviour {
         if (!atk)
         {
             transform.localRotation = Quaternion.Euler(new Vector3(0, 0, angle));
-            animation.GetComponent<Animator>().Play("idle");
         }
 
         if (Input.GetMouseButton(0))

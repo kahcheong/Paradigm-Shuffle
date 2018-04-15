@@ -13,6 +13,7 @@ public class GameController : MonoBehaviour {
     public GameObject maxDmg;
     public GameObject atkSpeed;
     public GameObject cardDisplay;
+    public GameObject roomDisplay;
     public int level = 1;
     public bool[] unlockedCards = new bool[30];
 

@@ -286,10 +286,6 @@ public class ItemCreation : MonoBehaviour {
         weapon.atkSpeed = spd;
     }
 
-    void showCard()
-    {
-
-    }
 
     IEnumerator wait(float time)
     {

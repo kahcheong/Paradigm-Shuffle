@@ -6,7 +6,7 @@ public class Lob : MonoBehaviour {
 
     public float speed;
     public float damage;
-
+    private bool canBoom = true;
 
     private void Update()
     {
@@ -15,30 +15,41 @@ public class Lob : MonoBehaviour {
 
     private void OnTriggerEnter(Collider other)
     {
+
         if (other.tag == "enemy" && tag == "playerAttack")
         {
             float temp = damage - other.GetComponent<Enemy>().damageReducFlat;
             if (temp > 0) other.GetComponent<Enemy>().hp -= temp * (1f - other.GetComponent<Enemy>().damageReducPercent);
 
-            StartCoroutine(boom());
+            if (canBoom)
+            {
+                canBoom = false;
+                StartCoroutine(boom());
+            }
         }
         if (other.tag == "Player" && tag == "weapon")
         {
             float temp = damage - other.GetComponent<Player>().damageReducFlat;
-            if (temp > 0) other.GetComponent<Player>().hp -= temp * (1f - other.GetComponent<Player>().damageReducPercent);
-            StartCoroutine(boom());
+
+            if (canBoom)
+            {
+                canBoom = false;
+                StartCoroutine(boom());
+            }
         }
         if (other.tag == "wall")
         {
-            StartCoroutine(boom());
+            if (canBoom)
+            {
+                canBoom = false;
+                StartCoroutine(boom());
+            }
         }
-
     }
 
     IEnumerator boom()
     {
         transform.localScale = transform.localScale * 3;
-        damage *= 3;
         yield return new WaitForSeconds(0.05F);
         Destroy(gameObject.gameObject);
     }

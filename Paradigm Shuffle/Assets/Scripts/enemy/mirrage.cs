@@ -11,7 +11,7 @@ public class mirrage : MonoBehaviour {
 
 
     // Use this for initialization
-    private void Awake()
+    private void OnEnable()
     {
         ply = GameObject.Find("player").GetComponent<Player>();
         me = gameObject.GetComponent<Enemy>();

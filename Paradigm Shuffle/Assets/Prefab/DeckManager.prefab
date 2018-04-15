@@ -58,6 +58,8 @@ MonoBehaviour:
   atkSpeed: {fileID: 0}
   cardDisplay: {fileID: 1005504034000364, guid: 57fd1d6c33a16864d8b5823d9283fc02,
     type: 2}
+  roomDisplay: {fileID: 0}
+  level: 1
   unlockedCards: 010101000000000000000101010000000000000001010100000000000000
   spawnLoc: {fileID: 1247300077080094}
   deckSize: 0

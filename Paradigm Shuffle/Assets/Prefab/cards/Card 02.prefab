@@ -62,7 +62,7 @@ MonoBehaviour:
   minion: {fileID: 0}
   minionCount: 0
   minionFrequency: 0
-  minInstance: 2
+  minInstance: 1
   maxInstance: 2
 --- !u!212 &212334675111769362
 SpriteRenderer:
