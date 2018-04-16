@@ -9,12 +9,21 @@ public class room : MonoBehaviour {
     public GameObject Card2;
     private GameObject enemy;
     public GameObject[] spawnPoints = new GameObject[12];
-    public GameObject leftRoom;
-    public GameObject rightRoom;
-    public GameObject topRoom;
-    public GameObject bottomRoom;
+    public GameObject[] rooms = new GameObject[4]; // 0 = left, 1 = right, 2 = up,, 3 = down
+    public Texture[] skin = new Texture[3];
+    //public GameObject leftRoom;
+    //public GameObject rightRoom;
+    //public GameObject topRoom;
+    //public GameObject bottomRoom;
+
+    public GameObject[] doors = new GameObject[4];
+    //public GameObject leftDoor;
+    //public GameObject rightDoor;
+    //public GameObject topDoor;
+    //public GameObject bottomDoor;
+
     public GameObject itemSpawner;
-    private bool cleared = false;
+    public bool cleared = false;
     public List<GameObject> enemies = new List<GameObject>();
     private int stage = 0;
     public GameObject cardDisplay;
@@ -23,8 +32,13 @@ public class room : MonoBehaviour {
     private bool activate = true;
 
     // Use this for initialization
-    void Start () {
+    void OnEnable () {
 
+        for(int i = 0; i < 4; i++)
+        {
+            if (rooms[i] == null) Destroy(doors[i]);
+        }
+    
         StartCoroutine(wait(2.5f));
         
 
@@ -55,6 +69,9 @@ public class room : MonoBehaviour {
         }
         else if (stage == 6)
         {
+            if (Card2.GetComponent<Card>().id < 10) gameObject.GetComponent<MeshRenderer>().material.mainTexture = skin[1];
+            if (Card2.GetComponent<Card>().id > 9) gameObject.GetComponent<MeshRenderer>().material.mainTexture = skin[2];
+            if (Card2.GetComponent<Card>().id > 19) gameObject.GetComponent<MeshRenderer>().material.mainTexture = skin[3];
             StartCoroutine(loadEnemy(Card2.GetComponent<Card>().enemy));
             stage++;
         }

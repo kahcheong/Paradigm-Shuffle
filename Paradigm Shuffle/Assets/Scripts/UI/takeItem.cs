@@ -38,7 +38,7 @@ public class takeItem : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
             ItemCreation.creator.player.GetComponent<Player>().enabled = true;
             inventory.inventor.items[inventory.inventor.stored] = ItemCreation.creator.item.gameObject;
             ItemCreation.creator.item.gameObject.transform.position = hide;
-            ItemCreation.creator.discard.SetActive(false);
+            GameController.control.discardUI.SetActive(false);
             GameController.control.itemStat.SetActive(false);
             Destroy(ItemCreation.creator.gameObject);
             inventory.inventor.stored++;

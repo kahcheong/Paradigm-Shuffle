@@ -53,7 +53,7 @@ public class Player : MonoBehaviour
     {
         float temp = 0;
 
-
+        gameObject.transform.GetChild(0).GetComponent<FollowMouse>().atkType = 2;
         if (hp !=0 && maxHp !=0) temp = hp / maxHp;
         maxHp = trueHP;
         if (equip.equipment.armorObject != null && equip.equipment.armorObject.GetComponent<Weapon>().percentReduc) maxHp *= equip.equipment.armorObject.GetComponent<Weapon>().percentReduction;

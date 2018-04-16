@@ -102,8 +102,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1403800051133936}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.9022502, y: -0.28703177, z: -0.1}
-  m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
+  m_LocalPosition: {x: 0, y: 0, z: -0.1}
+  m_LocalScale: {x: 0.3000002, y: 0.30000055, z: 0.30000058}
   m_Children:
   - {fileID: 4387328481520288}
   - {fileID: 4694772107579304}
@@ -144,8 +144,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1121882090471616}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.89, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0, y: -0.8900005, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4331456973379264}
@@ -267,9 +267,9 @@ MonoBehaviour:
   atk: 0
   atkType: 2
   player: {fileID: 0}
-  atkSpeed: 4
+  atkSpeed: 1
   minDamage: 1
-  maxDamage: 2
+  maxDamage: 1
   stab: {fileID: 1252872374490762, guid: c0947bff141d9ff4797b9c22f77cfd1c, type: 2}
   arrow: {fileID: 1859282655915018, guid: f2712b1ad18c5a84bba401e32fcf643b, type: 2}
   bomb: {fileID: 1852851002882904, guid: b2f72fd7dc794f943a48c0fa44def04f, type: 2}

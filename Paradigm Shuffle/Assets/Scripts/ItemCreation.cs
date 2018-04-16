@@ -126,8 +126,9 @@ public class ItemCreation : MonoBehaviour {
         else if (stage >= 5)
         {
             creator = this;
-            take.SetActive(true);
-            discard.SetActive(true);
+            GameController.control.takeUI.SetActive(true);
+            GameController.control.discardUI.SetActive(true);
+
         }
 
     }

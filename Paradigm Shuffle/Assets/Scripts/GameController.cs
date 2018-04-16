@@ -17,6 +17,8 @@ public class GameController : MonoBehaviour {
     public int level = 1;
     public bool[] unlockedCards = new bool[30];
 
+    public GameObject takeUI;
+    public GameObject discardUI;
 
     public GameObject spawnLoc;
     public int deckSize;

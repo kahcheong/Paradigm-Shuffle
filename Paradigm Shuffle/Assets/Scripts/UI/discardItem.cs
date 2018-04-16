@@ -24,7 +24,7 @@ public class discardItem : MonoBehaviour
         GameController.control.maxDmg.GetComponent<Text>().text = "";
         ItemCreation.creator.player.GetComponent<Player>().enabled = true;
         Destroy(ItemCreation.creator.item.gameObject);
-        ItemCreation.creator.take.SetActive(false);
+        GameController.control.takeUI.SetActive(false);
         GameController.control.itemStat.SetActive(false);
         Destroy(ItemCreation.creator.gameObject);
         gameObject.SetActive(false);
