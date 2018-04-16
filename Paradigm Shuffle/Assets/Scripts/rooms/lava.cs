@@ -12,12 +12,11 @@ public class lava : MonoBehaviour {
     {
         StartCoroutine(burn());
     }
-
     private void OnTriggerStay(Collider other)
     {
-        if (other.tag == "Player" && canDamage )
+        if (other.tag == "feet" && canDamage )
         {
-            other.GetComponent<Player>().hp -= damage;
+            other.transform.parent.GetComponent<Player>().hp -= damage;
             //canDamage = false;
             
             

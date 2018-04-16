@@ -683,7 +683,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1166175931196506}
   m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0.100529104, y: -0, z: 1.4255466}
+  m_LocalPosition: {x: 0.10052912, y: 0, z: 1.4255472}
   m_LocalScale: {x: 0.52910054, y: 0.7057162, z: 1}
   m_Children: []
   m_Father: {fileID: 4708644129942818}
@@ -1221,9 +1221,10 @@ MonoBehaviour:
   - {fileID: 1922493802975164}
   - {fileID: 1575253078639078}
   - {fileID: 1484653368222850}
-  itemSpawner: {fileID: 1166175931196506}
+  itemSpawner: {fileID: 0}
   cleared: 0
   enemies: []
+  stage: 0
   cardDisplay: {fileID: 1005504034000364, guid: 57fd1d6c33a16864d8b5823d9283fc02,
     type: 2}
 --- !u!114 &114468063380380770

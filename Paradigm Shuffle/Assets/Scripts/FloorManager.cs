@@ -89,9 +89,10 @@ public class FloorManager : MonoBehaviour {
         {
             if (rOrigin.rooms[i] == null) temp1++;
         }
-        if (temp1 != -1) ;
         bool linked = false;
-        int temp2 = Random.Range(0, temp1);
+        int temp2 = -1;
+        if (temp1 != 0) temp2 = Random.Range(0, temp1);
+        else temp2 = 0;
         if (temp1 == -1)  connectRoom(setUpedRooms, r2);
         else
         {
