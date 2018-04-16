@@ -147,8 +147,8 @@ MonoBehaviour:
   maxHp: 5
   hp: 5
   exp: 1
-  stab: 0
-  swipe: 1
+  stab: 1
+  swipe: 0
   lob: 0
   ranged: 0
   special: 0

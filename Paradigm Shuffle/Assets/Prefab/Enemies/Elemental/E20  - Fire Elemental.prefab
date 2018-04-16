@@ -136,9 +136,9 @@ MonoBehaviour:
   exp: 0
   stab: 0
   swipe: 0
-  lob: 0
+  lob: 1
   ranged: 0
-  special: 1
+  special: 0
   notAgressive: 0
   boss: 0
   bossCount: 0
