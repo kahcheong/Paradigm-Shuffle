@@ -98,6 +98,8 @@ public class room : MonoBehaviour {
             {
                 if (itemSpawner.gameObject!=null) itemSpawner.SetActive(true);
                 cleared = true;
+                FloorManager.floorManager.floorSize--;
+                if (FloorManager.floorManager.floorSize < 5)
             }
         }
         

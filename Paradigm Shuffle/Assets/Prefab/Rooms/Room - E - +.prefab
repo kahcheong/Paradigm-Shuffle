@@ -764,8 +764,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.8569435, y: 4.2362127, z: 0.20000009}
-  m_Center: {x: -0.010186508, y: 0.8719925, z: 0.00000014184715}
+  m_Size: {x: 1.8569435, y: 4.515615, z: 0.20000009}
+  m_Center: {x: -0.010186508, y: 0.7322913, z: 0.000000119121935}
 --- !u!65 &65164622662645646
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -1213,9 +1213,9 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   skin:
-  - {fileID: 2800000, guid: 9c921e439d5972c4a97e1f1838155520, type: 3}
-  - {fileID: 2800000, guid: c71edc06b1e1d7747bb8336a2bfb35d1, type: 3}
   - {fileID: 2800000, guid: a6b786ad73489924ba1b6d6a3278393f, type: 3}
+  - {fileID: 2800000, guid: c71edc06b1e1d7747bb8336a2bfb35d1, type: 3}
+  - {fileID: 2800000, guid: 9c921e439d5972c4a97e1f1838155520, type: 3}
   doors:
   - {fileID: 1397869385781026}
   - {fileID: 1922493802975164}

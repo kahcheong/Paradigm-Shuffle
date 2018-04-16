@@ -11,7 +11,8 @@ public class FloorManager : MonoBehaviour {
     public GameObject[] availRooms = new GameObject[4];
     public GameObject[] floorRooms;
     public int floorSize;
-    private bool giveExit;
+    public bool giveExit;
+    public GameObject exitLoc;
 
 	// Use this for initialization
 	void Start () {
