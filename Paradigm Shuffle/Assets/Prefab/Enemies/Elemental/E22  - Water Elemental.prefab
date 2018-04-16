@@ -167,7 +167,7 @@ MonoBehaviour:
   player: {fileID: 0}
   canAtk: 1
   target: {fileID: 1456939122023694}
-  weapon: {fileID: 1252872374490762, guid: c0947bff141d9ff4797b9c22f77cfd1c, type: 2}
+  weapon: {fileID: 1837589680353254, guid: 2d91a693721668640ad5743f4a19d37c, type: 2}
 --- !u!212 &212004527554382584
 SpriteRenderer:
   m_ObjectHideFlags: 1
