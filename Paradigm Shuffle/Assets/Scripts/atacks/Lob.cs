@@ -30,6 +30,7 @@ public class Lob : MonoBehaviour {
         if (other.tag == "Player" && tag == "weapon")
         {
             float temp = damage - other.GetComponent<Player>().damageReducFlat;
+            other.GetComponent<Player>().hp -= temp;
 
             if (canBoom)
             {

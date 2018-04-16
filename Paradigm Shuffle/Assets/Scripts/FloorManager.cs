@@ -54,6 +54,7 @@ public class FloorManager : MonoBehaviour {
 
     public void loadFloor()
     {
+        GameController.control.buuf.GetComponent<statBuff>().count--;
         floor++;
         floorSize = Random.Range(10, 15);
         floorRooms = new GameObject[floorSize];

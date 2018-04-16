@@ -52,7 +52,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d0a8ec5fa199cd4ab976b331eade600, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: 30
+  id: 29
   Name: paradigm shuffle
   enemy: {fileID: 1378730462909026, guid: 3277c8e7a5381bd4196735ab7c61aca5, type: 2}
   card: {fileID: 1745389402347950}

@@ -57,7 +57,8 @@ public class FollowMouse : MonoBehaviour {
 
         if (atkType == 2)
         {
-            GameObject atkk =  Instantiate(stab, player.transform.position,transform.rotation,player.transform);
+            GameObject atkk =  Instantiate(stab, player.transform.position,transform.rotation);
+            atkk.transform.parent = player.transform;
             atkk.gameObject.tag = "playerAttack";
             atkk.transform.GetChild(0).gameObject.tag = "playerAttack";
             atkk.GetComponent<Stab>().damage = Random.Range(minDamage,maxDamage);

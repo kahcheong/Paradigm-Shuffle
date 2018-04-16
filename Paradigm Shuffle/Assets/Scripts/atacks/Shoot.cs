@@ -6,10 +6,11 @@ public class Shoot : MonoBehaviour {
 
     public float speed;
     public float damage;
+    private bool move = true;
 
     private void Update()
     {
-        transform.Translate(Vector3.up * Time.deltaTime*speed, Space.Self);
+        if (move)  transform.Translate(Vector3.up * Time.deltaTime*speed, Space.Self);
     }
 
     private void OnTriggerEnter(Collider other)
@@ -24,11 +25,14 @@ public class Shoot : MonoBehaviour {
         if (other.tag == "Player" && tag == "weapon")
         {
             float temp = damage - other.GetComponent<Player>().damageReducFlat;
-            Destroy(gameObject.gameObject);
+            other.GetComponent<Player>().hp -= temp;
+            Destroy(gameObject);
         }
         if (other.tag == "wall")
         {
-            Destroy(gameObject.gameObject);
+            //Destroy(gameObject.gameObject);
+            move = false;
+            transform.parent = FloorManager.floorManager.currRoom.transform;
         }
     }
 }

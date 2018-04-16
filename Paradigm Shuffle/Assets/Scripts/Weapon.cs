@@ -15,7 +15,10 @@ public class Weapon : MonoBehaviour
     public float percentReduction; //buff hp instead
     public float[] buff;
     public int level;
-
+    public int stacks;
+    public bool xp;
+    public bool statBuff;
+    public bool GODPOTION;
 
     public bool weapon;
     public bool flatReduc;

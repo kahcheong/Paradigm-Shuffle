@@ -10,14 +10,15 @@ public class Player : MonoBehaviour
     public bool hardLock;
     public GameObject decks;
     public Animator playerAnim;
+    public bool GOD;
 
     private readonly float baseHp = 100;
     private readonly float baseMinAtk = 1;
     private readonly float baseMaxAtk = 1;
     private readonly float baseAtkSpeed = 1;
 
-    private float hpLvl;
-    private float damageLvl;
+    public float hpLvl;
+    public float damageLvl;
     //private float 
 
     public float trueHP;
@@ -46,6 +47,7 @@ public class Player : MonoBehaviour
     {
 
         MoveForward(); // Player Movement 
+        if (hp > maxHp) hp = maxHp;
         
     }
 
@@ -55,7 +57,13 @@ public class Player : MonoBehaviour
 
         gameObject.transform.GetChild(0).GetComponent<FollowMouse>().atkType = 2;
         if (hp !=0 && maxHp !=0) temp = hp / maxHp;
-        maxHp = trueHP;
+
+        float temp100 = hpLvl;
+        if (statBuff.stats.count > 0) temp100 = hpLvl + statBuff.stats.count;
+
+        maxHp = trueHP * Mathf.Pow(1.1f,(temp100));
+
+
         if (equip.equipment.armorObject != null && equip.equipment.armorObject.GetComponent<Weapon>().percentReduc) maxHp *= equip.equipment.armorObject.GetComponent<Weapon>().percentReduction;
         if (equip.equipment.trinketObject != null && equip.equipment.trinketObject.GetComponent<Weapon>().percentReduc) maxHp *= equip.equipment.trinketObject.GetComponent<Weapon>().percentReduction;
         if (temp != 0) hp = maxHp * temp;
@@ -67,8 +75,8 @@ public class Player : MonoBehaviour
 
         if (equip.equipment.weaponObject != null && equip.equipment.weaponObject.GetComponent<Weapon>().weapon)
         {
-            gameObject.transform.GetChild(0).GetComponent<FollowMouse>().minDamage = equip.equipment.weaponObject.GetComponent<Weapon>().minDamage;
-            gameObject.transform.GetChild(0).GetComponent<FollowMouse>().maxDamage = equip.equipment.weaponObject.GetComponent<Weapon>().maxDamage;
+            gameObject.transform.GetChild(0).GetComponent<FollowMouse>().minDamage = equip.equipment.weaponObject.GetComponent<Weapon>().minDamage + damageLvl + statBuff.stats.count;
+            gameObject.transform.GetChild(0).GetComponent<FollowMouse>().maxDamage = equip.equipment.weaponObject.GetComponent<Weapon>().maxDamage + damageLvl + statBuff.stats.count;
             gameObject.transform.GetChild(0).GetComponent<FollowMouse>().atkSpeed = equip.equipment.weaponObject.GetComponent<Weapon>().atkSpeed;
             if (equip.equipment.weaponObject.GetComponent<Weapon>().stab) gameObject.transform.GetChild(0).GetComponent<FollowMouse>().atkType = 2;
             if (equip.equipment.weaponObject.GetComponent<Weapon>().ranged) gameObject.transform.GetChild(0).GetComponent<FollowMouse>().atkType = 3;
@@ -76,11 +84,11 @@ public class Player : MonoBehaviour
         }
         else
         {
-            gameObject.transform.GetChild(0).GetComponent<FollowMouse>().minDamage = baseMinAtk;
-            gameObject.transform.GetChild(0).GetComponent<FollowMouse>().maxDamage = baseMaxAtk;
+            gameObject.transform.GetChild(0).GetComponent<FollowMouse>().minDamage = baseMinAtk + damageLvl + statBuff.stats.count;
+            gameObject.transform.GetChild(0).GetComponent<FollowMouse>().maxDamage = baseMaxAtk + damageLvl + statBuff.stats.count;
             gameObject.transform.GetChild(0).GetComponent<FollowMouse>().atkSpeed = baseAtkSpeed;
         }
-
+        if (GOD) damageReducFlat = 9999999;
     }
 
     void MoveForward()

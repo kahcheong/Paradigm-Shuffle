@@ -10,7 +10,7 @@ public class Stab : MonoBehaviour {
 
     private void Awake()
     {
-        atk.GetComponent<Animator>().Play("stab");
+        //atk.GetComponent<Animator>().Play("stab");
         StartCoroutine(Atk());
     }
 
@@ -35,6 +35,7 @@ public class Stab : MonoBehaviour {
         if (other.tag == "Player" && tag == "weapon")
         {
             float temp = damage - other.GetComponent<Player>().damageReducFlat;
+            other.GetComponent<Player>().hp -= temp;
         }
     }
 }

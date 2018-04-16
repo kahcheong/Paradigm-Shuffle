@@ -61,9 +61,18 @@ public class Enemy : MonoBehaviour {
         }
         
     }
-	
-	// Update is called once per frame
-	void Update () {
+
+    private void OnEnable()
+    {
+        maxHp *= (FloorManager.floorManager.floor / 100 + 1.0f);
+        minDamage *= (FloorManager.floorManager.floor / 100 + 1.0f);
+        maxDamage *= (FloorManager.floorManager.floor / 100 + 1.0f);
+        hp = maxHp;
+
+    }
+
+    // Update is called once per frame
+    void Update () {
 
         height = GetComponent<BoxCollider>().bounds.size.y;
 		
@@ -115,9 +124,11 @@ public class Enemy : MonoBehaviour {
         else if (stab)
         {
             canMove = false;
+            var rotato = target.transform.rotation;
             yield return new WaitForSeconds(0.6f);
             for (int i = 0; i < atkSpeed; i++) { 
-                GameObject other = Instantiate(weapon, transform.position, target.transform.rotation, transform);
+                GameObject other = Instantiate(weapon, transform.position, rotato);
+                other.transform.parent = transform;
                 other.GetComponent<Stab>().damage = UnityEngine.Random.Range(minDamage, maxDamage);
                 if (i<atkSpeed-1) yield return new WaitForSeconds(1 / atkSpeed);
             }

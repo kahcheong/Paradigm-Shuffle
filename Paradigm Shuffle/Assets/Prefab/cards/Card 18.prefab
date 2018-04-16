@@ -57,7 +57,7 @@ MonoBehaviour:
   enemy: {fileID: 1157689370359504, guid: 141ad7f2886637c499531d22f4ba9a7a, type: 2}
   card: {fileID: 1790504134410014}
   itemName: 
-  item: {fileID: 1471357214534290, guid: b170c6d73f253b24c8e6c719d0940963, type: 2}
+  item: {fileID: 1028606069120874, guid: c158f264c6d5b56448d23165175353eb, type: 2}
   spawnsMinion: 0
   minion: {fileID: 0}
   minionCount: 0

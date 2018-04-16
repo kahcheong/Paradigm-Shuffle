@@ -25,7 +25,7 @@ GameObject:
   - component: {fileID: 114936375476967774}
   - component: {fileID: 54558969277462536}
   m_Layer: 0
-  m_Name: Stab - Player
+  m_Name: Stab - player
   m_TagString: weapon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

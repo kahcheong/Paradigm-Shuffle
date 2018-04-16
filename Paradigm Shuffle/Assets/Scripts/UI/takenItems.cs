@@ -21,10 +21,10 @@ public class takenItems : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
         yes = true;
         if (wep.weapon)
         {
-            uses.GetComponent<Text>().text = ("LV " + wep.level + " " +   weapon.name  + 
-                "@" + "Damage : " + wep.minDamage + " - " + wep.maxDamage + 
+            uses.GetComponent<Text>().text = ("LV " + wep.level + " " + weapon.name +
+                "@" + "Damage : " + wep.minDamage + " - " + wep.maxDamage +
                 "@" + "Attack speed : " + wep.atkSpeed + "/s").Replace("@", "\n").Replace("(Clone)", "");
-        } 
+        }
         else if (wep.flatReduc)
         {
             uses.GetComponent<Text>().text = ("LV " + wep.level + " " + weapon.name +
@@ -34,8 +34,21 @@ public class takenItems : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
         else if (wep.percentReduc)
         {
             uses.GetComponent<Text>().text = ("LV " + wep.level + " " + weapon.name +
-                "@" + "increases HP by : " + (wep.percentReduction-1)*100 + "%" +
+                "@" + "increases HP by : " + (wep.percentReduction - 1) * 100 + "%" +
                 "@").Replace("@", "\n").Replace("(Clone)", "");
+        }
+        else if (wep.consume)
+        {
+            uses.GetComponent<Text>().text = ("LV " + wep.level + " " + weapon.name +
+                "@" + "Heal amount : " + wep.minDamage +
+                "@" + "Stacks left :" + wep.stacks).Replace("@", "\n").Replace("(Clone)", "");
+        }
+        else if (wep.GODPOTION)
+        {
+            uses.GetComponent<Text>().text = ("LV " + wep.level + " " + weapon.name +
+                   "@" + "Invincible for: " + wep.minDamage + "secs" +
+                   "@").Replace("@", "\n").Replace("(Clone)", "");
+
         }
     }
 
@@ -46,18 +59,21 @@ public class takenItems : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
     }
 
     // Use this for initialization
-    void OnEnable () {
+    void OnEnable()
+    {
         wep = weapon.GetComponent<Weapon>();
-	}
+    }
     private void OnDisable()
     {
-        if (gameObject.transform.childCount >0) Destroy(gameObject.transform.GetChild(0).gameObject);
+        if (gameObject.transform.childCount > 0) Destroy(gameObject.transform.GetChild(0).gameObject);
     }
 
     // Update is called once per frame
-    void Update () {
+    void Update()
+    {
 
-		if (yes) {
+        if (yes)
+        {
             if (Input.GetMouseButtonDown(0))
             {
                 yes = false;
@@ -111,6 +127,17 @@ public class takenItems : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
                         inventory.inventor.items[slot] = temp;
                     }
                 }
+                else if (wep.consume)
+                {
+                    Player.player.hp += wep.minDamage;
+                    wep.stacks--;
+                }
+                else if (wep.GODPOTION)
+                {
+                    StartCoroutine(GODMODE(wep.minDamage));
+                }
+
+
                 equip.equipment.change();
                 inventory.inventor.change();
                 Player.player.newEquip();
@@ -127,6 +154,31 @@ public class takenItems : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
             }
 
         }
+        if (wep.stacks <= 0 && wep.consume)
+        {
+            Destroy(uses);
+            yes = false;
+            inventory.inventor.items[slot] = null;
+            inventory.inventor.Reset();
+            Player.player.newEquip();
+        }
+    }
 
-	}
+    IEnumerator GODMODE(float time)
+    {
+        Player.player.GOD = true;
+        yes = false;
+        Destroy(uses);
+
+        inventory.inventor.items[slot] = null;
+        inventory.inventor.Reset();
+        Player.player.newEquip();
+        yield return new WaitForSeconds(time);
+        Player.player.GOD = false;
+        Player.player.newEquip();
+
+        
+
+    }
+    
 }

@@ -23,6 +23,7 @@ public class ItemCreation : MonoBehaviour {
     public GameObject player;
 
     public bool elite = false;
+    private readonly Vector3 split = new Vector3(3, 0, 0);
     private readonly Vector3 SpawnDisplay = new Vector3(0, 0, -5);
     private readonly Quaternion rotation = Quaternion.Euler(0, 0, 0);
     private readonly Vector3 cardSpawn = new Vector3(-13.8f,2.3f,0);
@@ -49,12 +50,23 @@ public class ItemCreation : MonoBehaviour {
             Card1 = GameController.control.GetCard();
             stat1 = Card1.GetComponent<Card>().id;
 
-            if (stat1 % 10 == 9) elite = true;
-            if (stat1 == 30) Destroy(gameObject.gameObject);
+            if (stat1 % 10 == 9)
+            {
+                elite = true;
+                Instantiate(gameObject, gameObject.transform.position + split, gameObject.transform.rotation,gameObject.transform.parent.transform);
+                Instantiate(gameObject, gameObject.transform.position - split, gameObject.transform.rotation, gameObject.transform.parent.transform);
+                Destroy(gameObject.gameObject);
+                player.GetComponent<Player>().enabled = true;
+            }
+            if (stat1 == 30)
+            {
+                Destroy(gameObject.gameObject);
+                player.GetComponent<Player>().enabled = true;
+            }
 
-            
 
-            GameObject card =  Instantiate(cardDisplay, GameController.control.itemStat.transform);
+
+                GameObject card =  Instantiate(cardDisplay, GameController.control.itemStat.transform);
             card.GetComponent<Image>().sprite = Card1.card.GetComponent<SpriteRenderer>().sprite;
             StartCoroutine(wait(2.5f));
 
@@ -67,10 +79,14 @@ public class ItemCreation : MonoBehaviour {
         {
             item = Instantiate(Card1.item, SpawnDisplay, rotation);
             weapon = item.GetComponent<Weapon>();
-            weapon.level = GameController.control.level;
+            weapon.level = FloorManager.floorManager.floor;
+            int temp25 = FloorManager.floorManager.floor / 10;
+            weapon.minDamage *= ((1 + (temp25 / 10f)));
+            weapon.maxDamage *= ((1 + (temp25 / 10f)));
 
             if (weapon.weapon)
             {
+
                 GameController.control.minDmg.GetComponent<Text>().text = weapon.minDamage.ToString();
                 GameController.control.dash.GetComponent<Text>().text = " - ";
                 GameController.control.maxDmg.GetComponent<Text>().text = weapon.maxDamage.ToString();
@@ -100,6 +116,51 @@ public class ItemCreation : MonoBehaviour {
                 stage++;
                 StartCoroutine(wait(2.5f));
             }
+            else if (weapon.consume)
+            {
+                GameController.control.minDmg.GetComponent<Text>().text = "Heals for ";
+                GameController.control.dash.GetComponent<Text>().text = " : ";
+                if (stat1 == 18) weapon.stacks = 3;
+                if (stat1 == 22) weapon.stacks = 1;
+
+                GameController.control.maxDmg.GetComponent<Text>().text = "? on cosume. stock:" + weapon.stacks;
+                GameController.control.atkSpeed.GetComponent<Text>().text = "";
+
+                stage++;
+                StartCoroutine(wait(2.5f));
+            }
+            else if (weapon.xp)
+            {
+                GameController.control.minDmg.GetComponent<Text>().text = "Gain ";
+                GameController.control.dash.GetComponent<Text>().text = " : ";
+                GameController.control.maxDmg.GetComponent<Text>().text = weapon.minDamage + "EXP" ;
+                GameController.control.atkSpeed.GetComponent<Text>().text = "";
+
+                stage++;
+                StartCoroutine(wait(2.5f));
+            }
+            else if (weapon.statBuff)
+            {
+                GameController.control.minDmg.GetComponent<Text>().text = "Gain 1 level in both   ";
+                GameController.control.dash.GetComponent<Text>().text = " stats";
+                GameController.control.maxDmg.GetComponent<Text>().text = "    till the end of the floor";
+                GameController.control.atkSpeed.GetComponent<Text>().text = "";
+                GameController.control.buuf.GetComponent<statBuff>().count++;
+
+                stage++;
+                StartCoroutine(wait(2.5f));
+
+            }
+            else if (weapon.GODPOTION)
+            {
+                GameController.control.minDmg.GetComponent<Text>().text = "Keeps you invinsible for ";
+                GameController.control.dash.GetComponent<Text>().text = "";
+                GameController.control.maxDmg.GetComponent<Text>().text = weapon.minDamage+ "secs";
+                GameController.control.atkSpeed.GetComponent<Text>().text = "";
+
+                stage++;
+                StartCoroutine(wait(2.5f));
+            }
         }
         else if (stage == 2)
         {
@@ -121,12 +182,32 @@ public class ItemCreation : MonoBehaviour {
 
                 stage++;
 
-            }     
+            }    
+            if (weapon.consume)
+            {
+                weapon.minDamage = (stat2 % 10 +1 )*5;
+                GameController.control.maxDmg.GetComponent<Text>().text = weapon.minDamage + " on cosume. stock:" + weapon.stacks;
+                stage++;
+            }
+            if (weapon.xp)
+            {
+                weapon.minDamage = (stat2 % 10 + 1) * 5;
+                GameController.control.maxDmg.GetComponent<Text>().text = weapon.minDamage + "EXP";
+                Player.player.exp += weapon.minDamage;
+                StartCoroutine(wait(2.5f));
+
+            }
+            if (weapon.GODPOTION)
+            {
+                weapon.minDamage += (stat2 % 10 + 1) * 2;
+                GameController.control.maxDmg.GetComponent<Text>().text = weapon.minDamage + "secs";
+                stage++;
+            }
         }
         else if (stage >= 5)
         {
             creator = this;
-            GameController.control.takeUI.SetActive(true);
+            if (!weapon.xp && !weapon.statBuff) GameController.control.takeUI.SetActive(true);
             GameController.control.discardUI.SetActive(true);
 
         }
@@ -286,7 +367,12 @@ public class ItemCreation : MonoBehaviour {
         weapon.maxDamage = high;
         weapon.atkSpeed = spd;
     }
-
+    
+    IEnumerator waitNo(float time)
+    {
+        yield return new WaitForSeconds(time);
+        Destroy(gameObject);
+    }
 
     IEnumerator wait(float time)
     {
