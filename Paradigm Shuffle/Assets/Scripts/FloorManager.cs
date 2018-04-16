@@ -44,12 +44,20 @@ public class FloorManager : MonoBehaviour {
             }
         }
     }
+    public void cleanHouse()
+    {
+        foreach (GameObject g in floorRooms)
+        {
+            Destroy(g);
+        }
+    }
 
     public void loadFloor()
     {
         floor++;
         floorSize = Random.Range(10, 15);
         floorRooms = new GameObject[floorSize];
+        giveExit = false;
 
         for (int i = 0; i < floorSize; i++)
         {

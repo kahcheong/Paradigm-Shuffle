@@ -25,7 +25,7 @@ public class room : MonoBehaviour {
     public GameObject itemSpawner;
     public bool cleared = false;
     public List<GameObject> enemies = new List<GameObject>();
-    private int stage = 0;
+    public int stage = 0;
     public GameObject cardDisplay;
     private int enemyCount = 0;
     private readonly Vector3 spawn = new Vector3(0, 0.5f, 0);
@@ -69,17 +69,18 @@ public class room : MonoBehaviour {
         }
         else if (stage == 6)
         {
-            if (Card2.GetComponent<Card>().id < 10) gameObject.GetComponent<MeshRenderer>().material.mainTexture = skin[1];
-            if (Card2.GetComponent<Card>().id > 9) gameObject.GetComponent<MeshRenderer>().material.mainTexture = skin[2];
-            if (Card2.GetComponent<Card>().id > 19) gameObject.GetComponent<MeshRenderer>().material.mainTexture = skin[3];
+            if (Card2.GetComponent<Card>().id < 10) gameObject.GetComponent<MeshRenderer>().material.mainTexture = skin[0];
+            if (Card2.GetComponent<Card>().id > 9) gameObject.GetComponent<MeshRenderer>().material.mainTexture = skin[1];
+            if (Card2.GetComponent<Card>().id > 19) gameObject.GetComponent<MeshRenderer>().material.mainTexture = skin[2];
             StartCoroutine(loadEnemy(Card2.GetComponent<Card>().enemy));
             stage++;
         }
         else if (stage == 8)
         {
+            stage++;
             StartCoroutine(wait(1f));
         }
-        else if (stage >= 9)
+        else if (stage == 10)
         {
             if (activate)
             {
@@ -99,7 +100,26 @@ public class room : MonoBehaviour {
                 if (itemSpawner.gameObject!=null) itemSpawner.SetActive(true);
                 cleared = true;
                 FloorManager.floorManager.floorSize--;
-                if (FloorManager.floorManager.floorSize < 5)
+                stage++;
+                
+            }
+        }
+        else if (stage == 11)
+        {
+            if (FloorManager.floorManager.floorSize <= 5)
+            {
+                int temp15 = 0; 
+                for (int i = 0; i < 10; i++)
+                {
+                    temp15 = Random.Range(1, FloorManager.floorManager.floorSize);
+                    Debug.Log(temp15);
+                }
+                if ( temp15 == 1 && !FloorManager.floorManager.giveExit)
+                {
+                    Instantiate(FloorManager.floorManager.exitLoc, new Vector3(0, 0, -0.1f), FloorManager.floorManager.exitLoc.transform.rotation,FloorManager.floorManager.currRoom.transform);
+                    FloorManager.floorManager.giveExit = true;
+                }
+                stage++;
             }
         }
         
