@@ -1193,7 +1193,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Card1: {fileID: 1885245263964106, guid: 2a47018ec190fe841bb05bf6c3072eee, type: 2}
-  Card2: {fileID: 1010283649912402, guid: 05c5c22a309e2a24ab806d6c361f5d0e, type: 2}
+  Card2: {fileID: 1745389402347950, guid: 99368558d768ed24386a70f491af75b3, type: 2}
   spawnPoints:
   - {fileID: 1789504655207876}
   - {fileID: 1633234774602222}
