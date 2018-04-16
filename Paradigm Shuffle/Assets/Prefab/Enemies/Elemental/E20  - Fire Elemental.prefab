@@ -54,7 +54,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1498852772846572}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -6.024466, y: 1.8227029, z: -0.1}
+  m_LocalPosition: {x: 0, y: 0, z: -0.1}
   m_LocalScale: {x: 0.25, y: 0.25, z: 1}
   m_Children:
   - {fileID: 4806197333350822}
@@ -154,7 +154,7 @@ MonoBehaviour:
   player: {fileID: 0}
   canAtk: 1
   target: {fileID: 1287311354950270}
-  weapon: {fileID: 1252872374490762, guid: c0947bff141d9ff4797b9c22f77cfd1c, type: 2}
+  weapon: {fileID: 1332934402171300, guid: 2347e0025d00d4b4ebdaa1404c74dc1c, type: 2}
 --- !u!114 &114925309174247444
 MonoBehaviour:
   m_ObjectHideFlags: 1

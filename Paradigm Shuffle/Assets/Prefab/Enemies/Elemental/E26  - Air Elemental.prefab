@@ -154,7 +154,7 @@ MonoBehaviour:
   player: {fileID: 0}
   canAtk: 1
   target: {fileID: 1471335167550384}
-  weapon: {fileID: 1252872374490762, guid: c0947bff141d9ff4797b9c22f77cfd1c, type: 2}
+  weapon: {fileID: 1252872374490762, guid: 97dd31cd5e708a04f8d1704d07faf63b, type: 2}
 --- !u!114 &114572412935427454
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -42,7 +42,7 @@ GameObject:
   - component: {fileID: 4051283938214828}
   - component: {fileID: 114869684585771374}
   m_Layer: 0
-  m_Name: target
+  m_Name: Target
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -68,7 +68,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1526917146529098}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.7034082, y: 1.4948349, z: -0.1}
+  m_LocalPosition: {x: 0, y: 0, z: -0.1}
   m_LocalScale: {x: 0.2, y: 0.2, z: 1}
   m_Children:
   - {fileID: 4051283938214828}
@@ -97,11 +97,11 @@ BoxCollider:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1526917146529098}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2.8998303, y: 4.009917, z: 0.6468055}
-  m_Center: {x: 0, y: -0.555042, z: 0.068066716}
+  m_Size: {x: 2.5108144, y: 4.2502723, z: 0.2}
+  m_Center: {x: 0.081537515, y: -0.4348643, z: 0}
 --- !u!95 &95234476724945906
 Animator:
   serializedVersion: 3
@@ -157,7 +157,7 @@ MonoBehaviour:
   bossCount: 0
   minDamage: 1
   maxDamage: 5.9171576
-  minRange: 3
+  minRange: 1
   maxRange: 10
   atkSpeed: 0.5
   moveSpeed: 1
