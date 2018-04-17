@@ -57,6 +57,14 @@ public class room : MonoBehaviour {
         else if (stage == 2)
         {
             enemyCount = Random.Range(Card1.GetComponent<Card>().minInstance, Card1.GetComponent<Card>().maxInstance);
+            if (Card2.GetComponent<Card>().singleSpawn)
+            {
+                enemyCount = 1;
+                for (int i = 1; i < spawnPoints.Length; i++)
+                {
+                    spawnPoints[i].SetActive(false);
+                }
+            }
             StartCoroutine(loadSpawn(enemyCount));
             stage++;
             

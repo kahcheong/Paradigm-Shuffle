@@ -31,6 +31,9 @@ public class StartGame : MonoBehaviour, IPointerEnterHandler, IPointerExitHandle
             {
                 if (g != null) GameController.control.deck.Add(g.GetComponent<Card>());
             }
+            GameController.control.setNPCDeck();
+            GameController.control.deck.AddRange(GameController.control.npcDeck);
+            enter = false;
             SceneManager.LoadScene("Test");
         }
     }

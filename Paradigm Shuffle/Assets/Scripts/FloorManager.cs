@@ -81,6 +81,13 @@ public class FloorManager : MonoBehaviour {
         floorSize = Random.Range(10, 15);
         floorRooms = new GameObject[floorSize];
         giveExit = false;
+        if (floor > 1)
+        {
+            GameController.control.ReShuffleDeck();
+            GameController.control.removeNpc();
+            GameController.control.setNPCDeck();
+            GameController.control.deck.AddRange(GameController.control.npcDeck);
+        }
 
         for (int i = 0; i < floorSize; i++)
         {
