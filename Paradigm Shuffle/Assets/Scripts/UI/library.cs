@@ -8,6 +8,8 @@ public class library : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler{
 
     public GameObject info;
     public GameObject hide;
+    public GameObject card;
+    private bool canClick = false;
 
     public void Start()
     {
@@ -18,6 +20,7 @@ public class library : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler{
     {
         info.SetActive(true);
         hide.SetActive(false);
+        canClick = true;
 
     }
 
@@ -25,6 +28,16 @@ public class library : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler{
     {
         info.SetActive(false);
         hide.SetActive(true);
+        canClick = false;
+    }
+
+    public void Update()
+    {
+        if (Input.GetMouseButtonDown(0) && canClick)
+        {
+            if (CardChoice.choices != null) CardChoice.choices.cards[CardChoice.choices.size] = card;
+            CardChoice.choices.size++;
+        }
     }
 
 }

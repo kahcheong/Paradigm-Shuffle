@@ -15,7 +15,7 @@ public class FloorManager : MonoBehaviour {
     public GameObject exitLoc;
 
 	// Use this for initialization
-	void Start () {
+	void OnEnable () {
 		if (floorManager == null)
         {
             floorManager = this;
