@@ -146,7 +146,7 @@ MonoBehaviour:
   name: Militia
   maxHp: 15
   hp: 15
-  exp: 0
+  exp: 7
   stab: 1
   swipe: 0
   lob: 0

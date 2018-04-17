@@ -134,7 +134,7 @@ MonoBehaviour:
   name: Wisp
   maxHp: 5
   hp: 5
-  exp: 0
+  exp: 2
   stab: 0
   swipe: 0
   lob: 0

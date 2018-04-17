@@ -133,7 +133,7 @@ MonoBehaviour:
   name: Goblin w/ Hat
   maxHp: 40
   hp: 40
-  exp: 0
+  exp: 3
   stab: 1
   swipe: 0
   lob: 0

@@ -146,7 +146,7 @@ MonoBehaviour:
   name: Goblin Wizard
   maxHp: 25
   hp: 25
-  exp: 0
+  exp: 15
   stab: 0
   swipe: 0
   lob: 1

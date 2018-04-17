@@ -133,7 +133,7 @@ MonoBehaviour:
   name: Fire Elemental
   maxHp: 40
   hp: 40
-  exp: 0
+  exp: 30
   stab: 0
   swipe: 0
   lob: 1

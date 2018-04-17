@@ -134,7 +134,7 @@ MonoBehaviour:
   name: Mirrage
   maxHp: 100
   hp: 100
-  exp: 100
+  exp: 75
   stab: 0
   swipe: 0
   lob: 0

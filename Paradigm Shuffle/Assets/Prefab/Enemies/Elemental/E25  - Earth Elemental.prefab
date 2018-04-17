@@ -133,7 +133,7 @@ MonoBehaviour:
   name: Earth Elemental
   maxHp: 50
   hp: 50
-  exp: 0
+  exp: 50
   stab: 1
   swipe: 0
   lob: 0

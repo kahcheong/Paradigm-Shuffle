@@ -146,7 +146,7 @@ MonoBehaviour:
   name: Guard
   maxHp: 20
   hp: 20
-  exp: 0
+  exp: 5
   stab: 1
   swipe: 0
   lob: 0

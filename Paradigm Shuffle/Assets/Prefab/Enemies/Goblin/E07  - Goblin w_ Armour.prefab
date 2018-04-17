@@ -146,9 +146,9 @@ MonoBehaviour:
   name: Goblin w/ Armour
   maxHp: 30
   hp: 30
-  exp: 0
-  stab: 0
-  swipe: 1
+  exp: 12
+  stab: 1
+  swipe: 0
   lob: 0
   ranged: 0
   special: 0
@@ -161,8 +161,8 @@ MonoBehaviour:
   maxRange: 1
   atkSpeed: 0.5
   moveSpeed: 0.5
-  damageReducFlat: 5
-  damageReducPercent: 0
+  damageReducFlat: 1
+  damageReducPercent: 0.1
   distance: 0
   player: {fileID: 0}
   canAtk: 1
