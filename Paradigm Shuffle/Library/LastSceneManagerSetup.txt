@@ -1,4 +1,8 @@
 sceneSetups:
+<<<<<<< HEAD
 - path: Assets/Scenes/card loadout.unity
+=======
+- path: Assets/Scenes/Test.unity
+>>>>>>> 6817fad60e1c8fd7b0112a5d87eaf3a621f6cd30
   isLoaded: 1
   isActive: 1

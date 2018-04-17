@@ -133,7 +133,7 @@ MonoBehaviour:
   name: Wizard
   maxHp: 20
   hp: 20
-  exp: 0
+  exp: 25
   stab: 0
   swipe: 0
   lob: 1

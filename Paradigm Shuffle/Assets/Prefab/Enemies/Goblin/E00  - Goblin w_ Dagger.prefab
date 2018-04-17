@@ -133,7 +133,7 @@ MonoBehaviour:
   name: Goblin w/ Dagger
   maxHp: 5
   hp: 5
-  exp: 0
+  exp: 2
   stab: 1
   swipe: 0
   lob: 0

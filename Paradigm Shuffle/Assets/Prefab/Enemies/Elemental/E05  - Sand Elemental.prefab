@@ -133,7 +133,7 @@ MonoBehaviour:
   name: Sand Elemental
   maxHp: 25
   hp: 25
-  exp: 0
+  exp: 10
   stab: 1
   swipe: 0
   lob: 0

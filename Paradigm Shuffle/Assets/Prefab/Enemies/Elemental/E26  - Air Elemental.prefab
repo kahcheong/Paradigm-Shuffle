@@ -133,7 +133,7 @@ MonoBehaviour:
   name: Air Elemental
   maxHp: 30
   hp: 30
-  exp: 0
+  exp: 35
   stab: 1
   swipe: 0
   lob: 0

@@ -146,7 +146,7 @@ MonoBehaviour:
   name: Assassin
   maxHp: 25
   hp: 25
-  exp: 0
+  exp: 20
   stab: 1
   swipe: 0
   lob: 0

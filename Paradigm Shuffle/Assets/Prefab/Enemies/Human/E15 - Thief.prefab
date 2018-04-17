@@ -133,7 +133,7 @@ MonoBehaviour:
   name: Thief
   maxHp: 15
   hp: 15
-  exp: 0
+  exp: 15
   stab: 1
   swipe: 0
   lob: 0

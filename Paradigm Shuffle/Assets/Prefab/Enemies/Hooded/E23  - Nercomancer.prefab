@@ -234,7 +234,7 @@ MonoBehaviour:
   name: Nercomancer
   maxHp: 35
   hp: 35
-  exp: 0
+  exp: 50
   stab: 0
   swipe: 0
   lob: 1
