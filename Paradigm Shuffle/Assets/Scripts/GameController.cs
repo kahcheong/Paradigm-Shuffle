@@ -20,6 +20,7 @@ public class GameController : MonoBehaviour {
     public int level = 1;
     public bool[] unlockedCards = new bool[30];
     public GameObject buuf;
+    public int elitesSlain;
 
     public GameObject takeUI;
     public GameObject discardUI;

@@ -58,6 +58,7 @@ MonoBehaviour:
   card: {fileID: 1825963781592802}
   itemName: Pin
   item: {fileID: 1373624404890868, guid: 739a835ca0a1f5340baa4874260d6d7a, type: 2}
+  singleSpawn: 1
   spawnsMinion: 0
   minion: {fileID: 0}
   minionCount: 0

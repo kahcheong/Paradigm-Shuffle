@@ -58,6 +58,7 @@ MonoBehaviour:
   card: {fileID: 1470874236782258}
   itemName: Short Bow
   item: {fileID: 1190610931051618, guid: 8cc6b277ba333574a94f8aa80df57b9d, type: 2}
+  singleSpawn: 1
   spawnsMinion: 0
   minion: {fileID: 0}
   minionCount: 0

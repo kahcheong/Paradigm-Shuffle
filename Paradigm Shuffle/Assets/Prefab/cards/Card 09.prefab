@@ -58,6 +58,7 @@ MonoBehaviour:
   card: {fileID: 1055664623801044}
   itemName: 
   item: {fileID: 0}
+  singleSpawn: 1
   spawnsMinion: 1
   minion: {fileID: 1682339209092290, guid: 535918569bc410b43ba6236eca18d659, type: 2}
   minionCount: 3

@@ -58,6 +58,7 @@ MonoBehaviour:
   card: {fileID: 1079412104352772}
   itemName: Long Bow
   item: {fileID: 1796062724248278, guid: b3d899ae6900a76449cccb52fef2d711, type: 2}
+  singleSpawn: 1
   spawnsMinion: 0
   minion: {fileID: 0}
   minionCount: 0

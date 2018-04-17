@@ -158,6 +158,7 @@ MonoBehaviour:
   info: {fileID: 1071521097}
   hide: {fileID: 0}
   card: {fileID: 1605017765022948, guid: 64fc5cb66c0aeb34596687674ba729fa, type: 2}
+  id: 17
 --- !u!114 &3138770
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -247,6 +248,7 @@ MonoBehaviour:
   info: {fileID: 1211245020}
   hide: {fileID: 0}
   card: {fileID: 1055664623801044, guid: b039f21ba9c72cd4ca063259dd7c34c0, type: 2}
+  id: 9
 --- !u!114 &4449197
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -336,6 +338,7 @@ MonoBehaviour:
   info: {fileID: 1018728606}
   hide: {fileID: 0}
   card: {fileID: 1745389402347950, guid: 99368558d768ed24386a70f491af75b3, type: 2}
+  id: 26
 --- !u!114 &8510197
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -427,6 +430,7 @@ MonoBehaviour:
   info: {fileID: 1539095408}
   hide: {fileID: 0}
   card: {fileID: 1875687301971170, guid: 318d2d3db3c292b4aa94eb50e5644c02, type: 2}
+  id: 4
 --- !u!114 &15295504
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -516,6 +520,7 @@ MonoBehaviour:
   info: {fileID: 1403013234}
   hide: {fileID: 0}
   card: {fileID: 1426355539307434, guid: e0586d8a89c2f1545a73998b9d3d8185, type: 2}
+  id: 6
 --- !u!114 &22739434
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1228,6 +1233,7 @@ MonoBehaviour:
   info: {fileID: 1090457668}
   hide: {fileID: 0}
   card: {fileID: 1745389402347950, guid: 21e2c47384d21be43bef078c92f19c9c, type: 2}
+  id: 29
 --- !u!114 &206910216
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2024,6 +2030,11 @@ Prefab:
       propertyPath: npcDeck.Array.data[0]
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 114756272756514284, guid: ce0c26c836afb5f45b08b0dc17c16b58,
+        type: 2}
+      propertyPath: unlockedCards.Array.data[3]
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ce0c26c836afb5f45b08b0dc17c16b58, type: 2}
   m_IsPrefabParent: 0
@@ -2077,6 +2088,7 @@ MonoBehaviour:
   info: {fileID: 1847066063}
   hide: {fileID: 0}
   card: {fileID: 1745389402347950, guid: b046fbdc273888744ad337d00b79ca2c, type: 2}
+  id: 23
 --- !u!114 &417027878
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2576,6 +2588,7 @@ MonoBehaviour:
   info: {fileID: 125842107}
   hide: {fileID: 0}
   card: {fileID: 1010283649912402, guid: 05c5c22a309e2a24ab806d6c361f5d0e, type: 2}
+  id: 12
 --- !u!114 &554791542
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2665,6 +2678,7 @@ MonoBehaviour:
   info: {fileID: 58165028}
   hide: {fileID: 0}
   card: {fileID: 1790504134410014, guid: 16b8293089831334aa16021ffb0c5d9e, type: 2}
+  id: 18
 --- !u!114 &567619856
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3064,6 +3078,7 @@ MonoBehaviour:
   info: {fileID: 1537290551}
   hide: {fileID: 0}
   card: {fileID: 1729249192301434, guid: 3dc0ff553529de94bbddaedac2495f50, type: 2}
+  id: 7
 --- !u!114 &642838365
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3153,6 +3168,7 @@ MonoBehaviour:
   info: {fileID: 990788653}
   hide: {fileID: 0}
   card: {fileID: 1885245263964106, guid: 2a47018ec190fe841bb05bf6c3072eee, type: 2}
+  id: 1
 --- !u!114 &645982493
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3429,6 +3445,7 @@ MonoBehaviour:
   info: {fileID: 1368958228}
   hide: {fileID: 0}
   card: {fileID: 1745389402347950, guid: 4a61c6bda35335d479630b46af0f0c25, type: 2}
+  id: 25
 --- !u!114 &702344404
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3987,6 +4004,7 @@ MonoBehaviour:
   info: {fileID: 925434729}
   hide: {fileID: 0}
   card: {fileID: 1318939999746584, guid: f29e98ab2d0903546a046cef605dfae5, type: 2}
+  id: 11
 --- !u!114 &825944610
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4076,6 +4094,7 @@ MonoBehaviour:
   info: {fileID: 1625642053}
   hide: {fileID: 0}
   card: {fileID: 1745389402347950, guid: f9958289c3f5207469cfe8aee5405504, type: 2}
+  id: 22
 --- !u!114 &835534393
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4243,6 +4262,7 @@ MonoBehaviour:
   info: {fileID: 2137729929}
   hide: {fileID: 0}
   card: {fileID: 1167643977713352, guid: 7b70c14285fd1064289103f3c906ce7b, type: 2}
+  id: 13
 --- !u!114 &863587527
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4332,6 +4352,7 @@ MonoBehaviour:
   info: {fileID: 1699207473}
   hide: {fileID: 0}
   card: {fileID: 1679785680084718, guid: c7d912157129ad04cb247f560bbb8b49, type: 2}
+  id: 5
 --- !u!114 &888534024
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4496,6 +4517,7 @@ MonoBehaviour:
   info: {fileID: 2052878922}
   hide: {fileID: 0}
   card: {fileID: 1079412104352772, guid: 4be1f40da6163264a80aa5b4293e6795, type: 2}
+  id: 16
 --- !u!114 &900138469
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4695,6 +4717,7 @@ MonoBehaviour:
   info: {fileID: 1915315390}
   hide: {fileID: 0}
   card: {fileID: 1156466021937018, guid: 030ded037621a6d43a118e9540523917, type: 2}
+  id: 0
 --- !u!114 &940361929
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5186,6 +5209,7 @@ MonoBehaviour:
   info: {fileID: 1109480197}
   hide: {fileID: 0}
   card: {fileID: 1912988197818124, guid: cd349b44be23a2047a0897ea763e7026, type: 2}
+  id: 10
 --- !u!114 &1038888349
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5525,6 +5549,7 @@ MonoBehaviour:
   info: {fileID: 2068410215}
   hide: {fileID: 0}
   card: {fileID: 1745389402347950, guid: 38a06b720841f40419e82285e7686b73, type: 2}
+  id: 28
 --- !u!114 &1124874869
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5857,6 +5882,7 @@ GameObject:
   - component: {fileID: 1222653145}
   - component: {fileID: 1222653147}
   - component: {fileID: 1222653146}
+  - component: {fileID: 1222653148}
   m_Layer: 0
   m_Name: Exit
   m_TagString: Untagged
@@ -5921,6 +5947,17 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1222653144}
+--- !u!114 &1222653148
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1222653144}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2ea6240ef6828f42a420a74e0bb3f84, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1238872863
 GameObject:
   m_ObjectHideFlags: 0
@@ -6114,6 +6151,7 @@ MonoBehaviour:
   info: {fileID: 1596273636}
   hide: {fileID: 0}
   card: {fileID: 1745389402347950, guid: 9a99ba2c6729cfe44b8c7249677501ad, type: 2}
+  id: 24
 --- !u!114 &1266782088
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7020,6 +7058,7 @@ MonoBehaviour:
   info: {fileID: 1583503261}
   hide: {fileID: 0}
   card: {fileID: 1825963781592802, guid: 2c34526c22ce24d4fa43a72f9ca55140, type: 2}
+  id: 14
 --- !u!114 &1437105963
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7109,6 +7148,7 @@ MonoBehaviour:
   info: {fileID: 1810040561}
   hide: {fileID: 0}
   card: {fileID: 1470874236782258, guid: b1721e545bbbdf947b620e40529aeed4, type: 2}
+  id: 3
 --- !u!114 &1438269456
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7425,6 +7465,7 @@ MonoBehaviour:
   info: {fileID: 1844889124}
   hide: {fileID: 0}
   card: {fileID: 1745389402347950, guid: 8fda4200872f05947a3c58f51c23b485, type: 2}
+  id: 20
 --- !u!114 &1517024455
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8225,6 +8266,7 @@ MonoBehaviour:
   info: {fileID: 2023648243}
   hide: {fileID: 0}
   card: {fileID: 1252489019727298, guid: 98f1811e69ad2a34fb6f9ce1b5b569e3, type: 2}
+  id: 15
 --- !u!114 &1640598437
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8728,6 +8770,7 @@ MonoBehaviour:
   info: {fileID: 749953854}
   hide: {fileID: 0}
   card: {fileID: 1745389402347950, guid: e548ad872de8bef4db0e047c4d46e3a1, type: 2}
+  id: 21
 --- !u!114 &1723745491
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9175,6 +9218,7 @@ MonoBehaviour:
   info: {fileID: 1581008675}
   hide: {fileID: 0}
   card: {fileID: 1745389402347950, guid: c13a102183fa796479b3b71ff18c5f78, type: 2}
+  id: 27
 --- !u!114 &1857957831
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9432,6 +9476,7 @@ MonoBehaviour:
   info: {fileID: 726743585}
   hide: {fileID: 0}
   card: {fileID: 1745389402347950, guid: 4bfb3ad6ffb20594e9a99940a6f1e3c1, type: 2}
+  id: 19
 --- !u!114 &1884100077
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10025,6 +10070,7 @@ MonoBehaviour:
   info: {fileID: 172157477}
   hide: {fileID: 0}
   card: {fileID: 1135759578150940, guid: 4a55d0d8ade93fe43962b85cfec2da84, type: 2}
+  id: 2
 --- !u!114 &2036711289
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10258,6 +10304,7 @@ MonoBehaviour:
   info: {fileID: 670781153}
   hide: {fileID: 0}
   card: {fileID: 1347630675443802, guid: 80a31f40285a043419066c82a7fbe758, type: 2}
+  id: 8
 --- !u!114 &2124327986
 MonoBehaviour:
   m_ObjectHideFlags: 0

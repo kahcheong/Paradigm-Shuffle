@@ -10,6 +10,7 @@ public class library : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler{
     public GameObject hide;
     public GameObject card;
     private bool canClick = false;
+    public int id;
 
     public void Start()
     {
@@ -37,6 +38,10 @@ public class library : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler{
         {
             if (CardChoice.choices != null) CardChoice.choices.cards[CardChoice.choices.size] = card;
             CardChoice.choices.size++;
+        }
+        if (GameController.control.unlockedCards[id] == false)
+        {
+            Destroy(gameObject);
         }
     }
 

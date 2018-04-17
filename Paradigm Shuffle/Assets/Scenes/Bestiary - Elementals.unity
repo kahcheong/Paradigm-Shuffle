@@ -159,6 +159,7 @@ MonoBehaviour:
   newColour: {r: 1, g: 1, b: 1, a: 1}
   originalColour: {r: 1, g: 0.7655173, b: 0, a: 0}
   sound: {fileID: 0}
+  cheat: 0
   LoadLevel: Bestiary - Goblins
 --- !u!114 &127943862
 MonoBehaviour:
@@ -357,6 +358,7 @@ GameObject:
   - component: {fileID: 369131468}
   - component: {fileID: 369131470}
   - component: {fileID: 369131469}
+  - component: {fileID: 369131471}
   m_Layer: 0
   m_Name: Exit
   m_TagString: Untagged
@@ -421,6 +423,17 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 369131467}
+--- !u!114 &369131471
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 369131467}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2ea6240ef6828f42a420a74e0bb3f84, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &414861774
 GameObject:
   m_ObjectHideFlags: 0
@@ -849,6 +862,7 @@ MonoBehaviour:
   newColour: {r: 1, g: 1, b: 1, a: 1}
   originalColour: {r: 1, g: 1, b: 1, a: 1}
   sound: {fileID: 0}
+  cheat: 0
   LoadLevel: GameMenu
 --- !u!114 &1074810209
 MonoBehaviour:
@@ -1274,6 +1288,7 @@ MonoBehaviour:
   newColour: {r: 1, g: 1, b: 1, a: 1}
   originalColour: {r: 1, g: 0.7655173, b: 0, a: 0}
   sound: {fileID: 0}
+  cheat: 0
   LoadLevel: Bestiary - Humanoids
 --- !u!114 &1405495283
 MonoBehaviour:
@@ -1785,6 +1800,7 @@ MonoBehaviour:
   newColour: {r: 1, g: 1, b: 1, a: 1}
   originalColour: {r: 1, g: 0.7655173, b: 0, a: 0}
   sound: {fileID: 0}
+  cheat: 0
   LoadLevel: Bestiary - Hooded
 --- !u!114 &1676296628
 MonoBehaviour:
@@ -2172,6 +2188,7 @@ MonoBehaviour:
   newColour: {r: 1, g: 1, b: 1, a: 1}
   originalColour: {r: 1, g: 0.7655173, b: 0, a: 0}
   sound: {fileID: 0}
+  cheat: 0
   LoadLevel: Bestiary - Elementals
 --- !u!114 &1894537775
 MonoBehaviour:

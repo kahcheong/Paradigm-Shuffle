@@ -16,6 +16,7 @@ public class UITextEvent : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
     public Color originalColour;
     public AudioSource sound;
     bool hasAudio = false;
+    public bool cheat;
 
     public string LoadLevel;
 
@@ -46,6 +47,15 @@ public class UITextEvent : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
     public void OnPointerClick(PointerEventData e)
     {
         print("Load: " + LoadLevel);
+        if (cheat)
+        {
+            int pos = 0;
+            foreach (bool b in GameController.control.unlockedCards)
+            {
+                if (b == true) pos++;
+            }
+            if (pos == 30) SceneManager.LoadScene("Credits");
+        }
         if (!String.IsNullOrEmpty(LoadLevel))
         {
             SceneManager.LoadScene(LoadLevel);

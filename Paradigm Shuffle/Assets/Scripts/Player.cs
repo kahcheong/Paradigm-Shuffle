@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
@@ -43,12 +44,15 @@ public class Player : MonoBehaviour
         hp = maxHp;
     }
 
+
+
     void Update()
     {
 
         MoveForward(); // Player Movement 
         if (hp > maxHp) hp = maxHp;
-        
+        if (hp < 0) SceneManager.LoadScene("Death");
+
     }
 
     public void newEquip()

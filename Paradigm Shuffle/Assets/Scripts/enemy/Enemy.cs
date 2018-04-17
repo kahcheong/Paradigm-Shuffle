@@ -109,6 +109,7 @@ public class Enemy : MonoBehaviour {
     private void OnDestroy()
     {
         Player.player.exp += exp;
+        if (boss) GameController.control.elitesSlain++;
     }
 
     public IEnumerator Atacking()

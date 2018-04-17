@@ -32,7 +32,7 @@ public class FloorManager : MonoBehaviour {
         }
         else if (floorManager != this)
         {
-            Destroy(this);
+            floorManager = this;
         }
 
         GameController.control.itemStat = itemStat;

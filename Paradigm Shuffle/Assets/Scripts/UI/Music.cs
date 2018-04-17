@@ -9,7 +9,7 @@ public class Music : MonoBehaviour
     // Use this for initialization
     void Awake()
     {
-                audio.clip = myMusic[0] as AudioClip;
+        audio.clip = myMusic[0] as AudioClip;
     }
     void Start()
     {
@@ -23,7 +23,7 @@ public class Music : MonoBehaviour
         if (!audio.isPlaying)
             playRandomMusic();
     }
-    void playRandomMusic()
+    public void playRandomMusic()
     {
         audio.clip = myMusic[Random.Range(0, myMusic.Length)] as AudioClip;
         audio.Play();
