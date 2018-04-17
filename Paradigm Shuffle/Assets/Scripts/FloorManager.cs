@@ -34,6 +34,18 @@ public class FloorManager : MonoBehaviour {
         {
             Destroy(this);
         }
+
+        GameController.control.itemStat = itemStat;
+        GameController.control.minDmg = MinDmg;
+        GameController.control.dash = Dash;
+        GameController.control.maxDmg = MaxDamage;
+        GameController.control.atkSpeed = AtkSpeed;
+        GameController.control.roomDisplay = RoomDisplay;
+        GameController.control.buuf = buuf;
+        GameController.control.takeUI = TakeUI;
+        GameController.control.discardUI = DiscardUI;
+
+
         loadFloor();
 
 	}

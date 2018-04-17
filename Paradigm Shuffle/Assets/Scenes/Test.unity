@@ -6302,6 +6302,15 @@ MonoBehaviour:
   floorSize: 0
   giveExit: 0
   exitLoc: {fileID: 1648498460946542, guid: cbee0622b4c04674b8b7c6d2b05bb71b, type: 2}
+  itemStat: {fileID: 1513286482}
+  MinDmg: {fileID: 1945745251}
+  Dash: {fileID: 2142071062}
+  MaxDamage: {fileID: 227201337}
+  AtkSpeed: {fileID: 1432942697}
+  RoomDisplay: {fileID: 331124297}
+  buuf: {fileID: 1016624512}
+  TakeUI: {fileID: 1792619034}
+  DiscardUI: {fileID: 1908680664}
 --- !u!4 &1957535063
 Transform:
   m_ObjectHideFlags: 0
