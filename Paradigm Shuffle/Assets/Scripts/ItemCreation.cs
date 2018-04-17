@@ -66,7 +66,7 @@ public class ItemCreation : MonoBehaviour {
 
 
 
-                GameObject card =  Instantiate(cardDisplay, GameController.control.itemStat.transform);
+            GameObject card =  Instantiate(cardDisplay, GameController.control.itemStat.transform);
             card.GetComponent<Image>().sprite = Card1.card.GetComponent<SpriteRenderer>().sprite;
             StartCoroutine(wait(2.5f));
 

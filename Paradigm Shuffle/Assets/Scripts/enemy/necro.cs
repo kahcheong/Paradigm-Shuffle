@@ -22,9 +22,9 @@ public class necro : MonoBehaviour {
 
     IEnumerator spawn()
     {
-        Instantiate(skeletal, spwn1.transform.position, spwn1.transform.rotation);
-        Instantiate(skeletal, spwn2.transform.position, spwn2.transform.rotation);
-        Instantiate(skeletal, spwn3.transform.position, spwn3.transform.rotation);
+        GameObject other =  Instantiate(skeletal, spwn1.transform.position, spwn1.transform.rotation);
+        other = Instantiate(skeletal, spwn2.transform.position, spwn2.transform.rotation);
+        other = Instantiate(skeletal, spwn3.transform.position, spwn3.transform.rotation);
 
         yield return new WaitForSeconds(3);
         StartCoroutine(spawn());

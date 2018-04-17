@@ -1891,7 +1891,7 @@ Prefab:
     - target: {fileID: 114756272756514284, guid: ce0c26c836afb5f45b08b0dc17c16b58,
         type: 2}
       propertyPath: npcDeck.Array.size
-      value: 10
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4572780935694776, guid: ce0c26c836afb5f45b08b0dc17c16b58, type: 2}
       propertyPath: m_LocalPosition.x

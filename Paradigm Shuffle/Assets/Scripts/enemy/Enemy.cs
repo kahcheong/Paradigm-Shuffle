@@ -104,11 +104,12 @@ public class Enemy : MonoBehaviour {
         {
             StartCoroutine(Atacking());
         }
-
-
-        
-
 	}
+
+    private void OnDestroy()
+    {
+        Player.player.exp += exp;
+    }
 
     public IEnumerator Atacking()
     {
@@ -146,12 +147,16 @@ public class Enemy : MonoBehaviour {
             {
                 GameObject other = Instantiate(weapon, transform.position, target.transform.rotation);
                 other.GetComponent<slime>().damage = UnityEngine.Random.Range(minDamage, maxDamage);
+                FloorManager.floorManager.currRoom.GetComponent<room>().enemies.Add(other);
 
                 other = Instantiate(weapon, transform.position, target.transform.rotation * Quaternion.Euler(0, 0, 30));
                 other.GetComponent<slime>().damage = UnityEngine.Random.Range(minDamage, maxDamage);
+                FloorManager.floorManager.currRoom.GetComponent<room>().enemies.Add(other);
 
                 other = Instantiate(weapon, transform.position, target.transform.rotation * Quaternion.Euler(0, 0, -30));
                 other.GetComponent<slime>().damage = UnityEngine.Random.Range(minDamage, maxDamage);
+                FloorManager.floorManager.currRoom.GetComponent<room>().enemies.Add(other);
+
             }
             else if (bossCount == 2)
             {
@@ -159,18 +164,23 @@ public class Enemy : MonoBehaviour {
 
                 GameObject other = Instantiate(weapon, transform.position, angle);
                 other.GetComponent<slime>().damage = UnityEngine.Random.Range(minDamage, maxDamage);
+                FloorManager.floorManager.currRoom.GetComponent<room>().enemies.Add(other);
 
                 other = Instantiate(weapon, transform.position, angle * Quaternion.Euler(0, 0, 72));
                 other.GetComponent<slime>().damage = UnityEngine.Random.Range(minDamage, maxDamage);
+                FloorManager.floorManager.currRoom.GetComponent<room>().enemies.Add(other);
 
                 other = Instantiate(weapon, transform.position, angle * Quaternion.Euler(0, 0, -72));
                 other.GetComponent<slime>().damage = UnityEngine.Random.Range(minDamage, maxDamage);
+                FloorManager.floorManager.currRoom.GetComponent<room>().enemies.Add(other);
 
                 other = Instantiate(weapon, transform.position, angle * Quaternion.Euler(0, 0, 144));
                 other.GetComponent<slime>().damage = UnityEngine.Random.Range(minDamage, maxDamage);
+                FloorManager.floorManager.currRoom.GetComponent<room>().enemies.Add(other);
 
                 other = Instantiate(weapon, transform.position, angle * Quaternion.Euler(0, 0, -144));
                 other.GetComponent<slime>().damage = UnityEngine.Random.Range(minDamage, maxDamage);
+                FloorManager.floorManager.currRoom.GetComponent<room>().enemies.Add(other);
             }
 
             else if (bossCount == 3)
@@ -179,21 +189,27 @@ public class Enemy : MonoBehaviour {
 
                 GameObject other = Instantiate(weapon, transform.position, angle);
                 other.GetComponent<slime>().damage = UnityEngine.Random.Range(minDamage, maxDamage);
+                FloorManager.floorManager.currRoom.GetComponent<room>().enemies.Add(other);
 
                 other = Instantiate(weapon, transform.position, angle * Quaternion.Euler(0, 0, 60));
                 other.GetComponent<slime>().damage = UnityEngine.Random.Range(minDamage, maxDamage);
+                FloorManager.floorManager.currRoom.GetComponent<room>().enemies.Add(other);
 
                 other = Instantiate(weapon, transform.position, angle * Quaternion.Euler(0, 0, -60));
                 other.GetComponent<slime>().damage = UnityEngine.Random.Range(minDamage, maxDamage);
+                FloorManager.floorManager.currRoom.GetComponent<room>().enemies.Add(other);
 
                 other = Instantiate(weapon, transform.position, angle * Quaternion.Euler(0, 0, 120));
                 other.GetComponent<slime>().damage = UnityEngine.Random.Range(minDamage, maxDamage);
+                FloorManager.floorManager.currRoom.GetComponent<room>().enemies.Add(other);
 
                 other = Instantiate(weapon, transform.position, angle * Quaternion.Euler(0, 0, -120));
                 other.GetComponent<slime>().damage = UnityEngine.Random.Range(minDamage, maxDamage);
+                FloorManager.floorManager.currRoom.GetComponent<room>().enemies.Add(other);
 
                 other = Instantiate(weapon, transform.position, angle * Quaternion.Euler(0, 0, 180));
                 other.GetComponent<slime>().damage = UnityEngine.Random.Range(minDamage, maxDamage);
+                FloorManager.floorManager.currRoom.GetComponent<room>().enemies.Add(other);
             }
 
 
