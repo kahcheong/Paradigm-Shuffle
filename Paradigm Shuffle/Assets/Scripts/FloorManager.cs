@@ -14,6 +14,16 @@ public class FloorManager : MonoBehaviour {
     public bool giveExit;
     public GameObject exitLoc;
 
+    public GameObject itemStat;
+    public GameObject MinDmg;
+    public GameObject Dash;
+    public GameObject MaxDamage;
+    public GameObject AtkSpeed;
+    public GameObject RoomDisplay;
+    public GameObject buuf;
+    public GameObject TakeUI;
+    public GameObject DiscardUI;
+
 	// Use this for initialization
 	void OnEnable () {
 		if (floorManager == null)
