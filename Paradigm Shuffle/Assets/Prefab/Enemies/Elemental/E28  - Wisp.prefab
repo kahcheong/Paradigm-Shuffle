@@ -27,7 +27,7 @@ GameObject:
   - component: {fileID: 114735800081834302}
   m_Layer: 0
   m_Name: E28  - Wisp
-  m_TagString: Untagged
+  m_TagString: enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -135,7 +135,7 @@ MonoBehaviour:
   maxHp: 5
   hp: 5
   exp: 2
-  stab: 0
+  stab: 1
   swipe: 0
   lob: 0
   ranged: 0

@@ -1978,62 +1978,52 @@ Prefab:
         type: 2}
       propertyPath: npcDeck.Array.data[1]
       value: 
-      objectReference: {fileID: 114052714443705626, guid: efe4545ff6c1e1a479f9501079056f9f,
-        type: 2}
+      objectReference: {fileID: 0}
     - target: {fileID: 114756272756514284, guid: ce0c26c836afb5f45b08b0dc17c16b58,
         type: 2}
       propertyPath: npcDeck.Array.data[2]
       value: 
-      objectReference: {fileID: 114052714443705626, guid: efe4545ff6c1e1a479f9501079056f9f,
-        type: 2}
+      objectReference: {fileID: 0}
     - target: {fileID: 114756272756514284, guid: ce0c26c836afb5f45b08b0dc17c16b58,
         type: 2}
       propertyPath: npcDeck.Array.data[3]
       value: 
-      objectReference: {fileID: 114052714443705626, guid: efe4545ff6c1e1a479f9501079056f9f,
-        type: 2}
+      objectReference: {fileID: 0}
     - target: {fileID: 114756272756514284, guid: ce0c26c836afb5f45b08b0dc17c16b58,
         type: 2}
       propertyPath: npcDeck.Array.data[4]
       value: 
-      objectReference: {fileID: 114052714443705626, guid: efe4545ff6c1e1a479f9501079056f9f,
-        type: 2}
+      objectReference: {fileID: 0}
     - target: {fileID: 114756272756514284, guid: ce0c26c836afb5f45b08b0dc17c16b58,
         type: 2}
       propertyPath: npcDeck.Array.data[5]
       value: 
-      objectReference: {fileID: 114052714443705626, guid: efe4545ff6c1e1a479f9501079056f9f,
-        type: 2}
+      objectReference: {fileID: 0}
     - target: {fileID: 114756272756514284, guid: ce0c26c836afb5f45b08b0dc17c16b58,
         type: 2}
       propertyPath: npcDeck.Array.data[6]
       value: 
-      objectReference: {fileID: 114052714443705626, guid: efe4545ff6c1e1a479f9501079056f9f,
-        type: 2}
+      objectReference: {fileID: 0}
     - target: {fileID: 114756272756514284, guid: ce0c26c836afb5f45b08b0dc17c16b58,
         type: 2}
       propertyPath: npcDeck.Array.data[7]
       value: 
-      objectReference: {fileID: 114052714443705626, guid: efe4545ff6c1e1a479f9501079056f9f,
-        type: 2}
+      objectReference: {fileID: 0}
     - target: {fileID: 114756272756514284, guid: ce0c26c836afb5f45b08b0dc17c16b58,
         type: 2}
       propertyPath: npcDeck.Array.data[8]
       value: 
-      objectReference: {fileID: 114052714443705626, guid: efe4545ff6c1e1a479f9501079056f9f,
-        type: 2}
+      objectReference: {fileID: 0}
     - target: {fileID: 114756272756514284, guid: ce0c26c836afb5f45b08b0dc17c16b58,
         type: 2}
       propertyPath: npcDeck.Array.data[9]
       value: 
-      objectReference: {fileID: 114052714443705626, guid: efe4545ff6c1e1a479f9501079056f9f,
-        type: 2}
+      objectReference: {fileID: 0}
     - target: {fileID: 114756272756514284, guid: ce0c26c836afb5f45b08b0dc17c16b58,
         type: 2}
       propertyPath: npcDeck.Array.data[0]
       value: 
-      objectReference: {fileID: 114052714443705626, guid: efe4545ff6c1e1a479f9501079056f9f,
-        type: 2}
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ce0c26c836afb5f45b08b0dc17c16b58, type: 2}
   m_IsPrefabParent: 0
@@ -5005,6 +4995,112 @@ RectTransform:
   m_AnchoredPosition: {x: 0.5, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &1000689627 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1247300077080094, guid: ce0c26c836afb5f45b08b0dc17c16b58,
+    type: 2}
+  m_PrefabInternal: {fileID: 370004328}
+--- !u!114 &1000689630
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1000689627}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee76f1895ace8f942823031088453fa5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audio: {fileID: 1000689631}
+  myMusic:
+  - {fileID: 8300000, guid: 6ae8bbc89d5ae124aa73f4712eb9ef02, type: 3}
+  - {fileID: 8300000, guid: eaf7e25f69acb7d4eb73732d6743be16, type: 3}
+  - {fileID: 8300000, guid: c17b17d8083aa004899330a006dfdc4b, type: 3}
+  - {fileID: 8300000, guid: 62aa108d0a83b0949a14dd2bb51b24f8, type: 3}
+  - {fileID: 8300000, guid: c0e714d613c84864a9aef57d54187ea2, type: 3}
+  - {fileID: 8300000, guid: ac7685ed2666dab4e9db678e3f96ebea, type: 3}
+  - {fileID: 8300000, guid: fe76fe4a08f3f5347ad6b6410cb2e097, type: 3}
+  - {fileID: 8300000, guid: df6f8f6397c77c7499eb8c8929c55ac1, type: 3}
+--- !u!82 &1000689631
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1000689627}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
 --- !u!1 &1018728606
 GameObject:
   m_ObjectHideFlags: 0
