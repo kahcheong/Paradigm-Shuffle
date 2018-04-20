@@ -1221,7 +1221,7 @@ MonoBehaviour:
   - {fileID: 1922493802975164}
   - {fileID: 1575253078639078}
   - {fileID: 1484653368222850}
-  itemSpawner: {fileID: 0}
+  itemSpawner: {fileID: 1166175931196506}
   cleared: 0
   enemies: []
   stage: 0

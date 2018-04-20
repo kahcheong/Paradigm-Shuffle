@@ -41,7 +41,7 @@ public class library : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler{
         }
         if (GameController.control.unlockedCards[id] == false)
         {
-            Destroy(gameObject);
+             Destroy(gameObject);
         }
     }
 

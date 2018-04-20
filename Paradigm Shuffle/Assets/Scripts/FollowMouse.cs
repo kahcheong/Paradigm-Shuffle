@@ -16,6 +16,8 @@ public class FollowMouse : MonoBehaviour {
     public GameObject stab;
     public GameObject arrow;
     public GameObject bomb;
+    public GameObject fire;
+    public GameObject ice;
 
     void Update()
     {

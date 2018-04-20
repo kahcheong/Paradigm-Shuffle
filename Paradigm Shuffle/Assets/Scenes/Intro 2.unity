@@ -401,9 +401,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   txtStart: {fileID: 0}
-  newColour: {r: 1, g: 1, b: 1, a: 0}
-  originalColour: {r: 1, g: 1, b: 1, a: 0}
+  newColour: {r: 1, g: 1, b: 1, a: 1}
+  originalColour: {r: 1, g: 1, b: 1, a: 1}
   sound: {fileID: 0}
+  cheat: 0
   LoadLevel: GameMenu
 --- !u!1 &617090059
 GameObject:

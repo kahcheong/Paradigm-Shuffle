@@ -31,7 +31,7 @@ public class Enemy : MonoBehaviour {
     public float maxRange;
     public float atkSpeed;
     public float moveSpeed;
-    private bool canMove = true;
+    public bool canMove = true;
 
     public float damageReducFlat;
     public float damageReducPercent;
@@ -64,12 +64,11 @@ public class Enemy : MonoBehaviour {
 
     private void OnEnable()
     {
-        maxHp *= (FloorManager.floorManager.floor / 100 + 1.0f);
-        minDamage *= (FloorManager.floorManager.floor / 100 + 1.0f);
-        maxDamage *= (FloorManager.floorManager.floor / 100 + 1.0f);
-        hp = maxHp;
+        canMove = true;
+        canAtk = true;
 
     }
+    
 
     // Update is called once per frame
     void Update () {
@@ -105,6 +104,7 @@ public class Enemy : MonoBehaviour {
             StartCoroutine(Atacking());
         }
 	}
+
 
     private void OnDestroy()
     {

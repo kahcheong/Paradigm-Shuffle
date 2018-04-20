@@ -249,7 +249,7 @@ MonoBehaviour:
   playerAnim: {fileID: 0}
   GOD: 0
   hpLvl: 0
-  damageLvl: 5
+  damageLvl: 0
   trueHP: 100
   maxHp: 100
   hp: 100
@@ -270,12 +270,14 @@ MonoBehaviour:
   atk: 0
   atkType: 2
   player: {fileID: 0}
-  atkSpeed: 50
-  minDamage: 5
-  maxDamage: 5
+  atkSpeed: 1
+  minDamage: 1
+  maxDamage: 3
   stab: {fileID: 1026622694259436, guid: 2414661049cdcb74ab259f7afdaee111, type: 2}
   arrow: {fileID: 1859282655915018, guid: f2712b1ad18c5a84bba401e32fcf643b, type: 2}
   bomb: {fileID: 1852851002882904, guid: b2f72fd7dc794f943a48c0fa44def04f, type: 2}
+  fire: {fileID: 1332934402171300, guid: 2347e0025d00d4b4ebdaa1404c74dc1c, type: 2}
+  ice: {fileID: 1837589680353254, guid: 2d91a693721668640ad5743f4a19d37c, type: 2}
 --- !u!212 &212190492314218348
 SpriteRenderer:
   m_ObjectHideFlags: 1

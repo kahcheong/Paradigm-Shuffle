@@ -30,17 +30,22 @@ public class room : MonoBehaviour {
     private int enemyCount = 0;
     private readonly Vector3 spawn = new Vector3(0, 0.5f, 0);
     private bool activate = true;
+    private bool first = true;
 
     // Use this for initialization
     void OnEnable () {
-
-        for(int i = 0; i < 4; i++)
+        if (first)
         {
-            if (rooms[i] == null) Destroy(doors[i]);
+            for (int i = 0; i < 4; i++)
+            {
+                if (rooms[i] == null) Destroy(doors[i]);
+            }
+            Card1 = GameController.control.GetCard().gameObject;
+            Card2 = GameController.control.GetCard().gameObject;
+            StartCoroutine(wait(2.5f));
+            first = false;
+
         }
-        Card1 = GameController.control.GetCard().gameObject;
-        Card2 = GameController.control.GetCard().gameObject;
-        StartCoroutine(wait(2.5f));
         
 
     }
@@ -157,9 +162,15 @@ public class room : MonoBehaviour {
         for (int i = enemyCount-1; i >= 0; i--)
         {
             GameObject enemy = Instantiate(Enemy,spawnPoints[i].transform.position + spawn ,Enemy.transform.rotation);
-            enemy.transform.parent = null;;
+            enemy.transform.parent = gameObject.transform; 
             enemy.transform.position = new Vector3(enemy.transform.position.x, enemy.transform.position.y, -0.1f);
             enemy.GetComponent<Enemy>().enabled = false;
+
+            enemy.GetComponent<Enemy>().maxHp *= (FloorManager.floorManager.floor / 100f + 1.0f);
+            enemy.GetComponent<Enemy>().minDamage *= (FloorManager.floorManager.floor / 100f + 1.0f);
+            enemy.GetComponent<Enemy>().maxDamage *= (FloorManager.floorManager.floor / 100f + 1.0f);
+            enemy.GetComponent<Enemy>().hp = enemy.GetComponent<Enemy>().maxHp;
+
             enemies.Add(enemy);
             yield return new WaitForSeconds(0.25f);
         }

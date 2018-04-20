@@ -22,7 +22,10 @@ public class Stab : MonoBehaviour {
         Destroy(gameObject.gameObject);
     }
 
-
+    private void OnDisable()
+    {
+        Destroy(gameObject.gameObject);
+    }
 
     private void OnTriggerEnter(Collider other)
     {
