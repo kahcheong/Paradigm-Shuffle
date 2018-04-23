@@ -20,6 +20,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4572780935694776}
   - component: {fileID: 114756272756514284}
+  - component: {fileID: 82823312358363778}
+  - component: {fileID: 114989577294726826}
   m_Layer: 0
   m_Name: DeckManager
   m_TagString: Untagged
@@ -40,6 +42,86 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &82823312358363778
+AudioSource:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1247300077080094}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
 --- !u!114 &114756272756514284
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -62,6 +144,8 @@ MonoBehaviour:
   level: 1
   unlockedCards: 010101000000000000000101010000000000000001010100000000000000
   buuf: {fileID: 0}
+  elitesSlain: 0
+  flames: {fileID: 1759443568407512, guid: 92201f1d22801954a94bb13e5187273a, type: 2}
   takeUI: {fileID: 0}
   discardUI: {fileID: 0}
   spawnLoc: {fileID: 1247300077080094}
@@ -101,14 +185,25 @@ MonoBehaviour:
   - {fileID: 114862266758746314, guid: 21e2c47384d21be43bef078c92f19c9c, type: 2}
   - {fileID: 114052714443705626, guid: efe4545ff6c1e1a479f9501079056f9f, type: 2}
   - {fileID: 114813005734143520, guid: b7fe86cc892fb1a4286894affcdef480, type: 2}
-  npcDeck:
-  - {fileID: 114862266758746314, guid: 38a06b720841f40419e82285e7686b73, type: 2}
-  - {fileID: 114862266758746314, guid: 38a06b720841f40419e82285e7686b73, type: 2}
-  - {fileID: 114862266758746314, guid: 38a06b720841f40419e82285e7686b73, type: 2}
-  - {fileID: 114862266758746314, guid: 38a06b720841f40419e82285e7686b73, type: 2}
-  - {fileID: 114862266758746314, guid: 38a06b720841f40419e82285e7686b73, type: 2}
-  - {fileID: 114862266758746314, guid: 38a06b720841f40419e82285e7686b73, type: 2}
-  - {fileID: 114862266758746314, guid: 38a06b720841f40419e82285e7686b73, type: 2}
-  - {fileID: 114862266758746314, guid: 38a06b720841f40419e82285e7686b73, type: 2}
-  - {fileID: 114862266758746314, guid: 38a06b720841f40419e82285e7686b73, type: 2}
-  - {fileID: 114862266758746314, guid: 38a06b720841f40419e82285e7686b73, type: 2}
+  npcDeck: []
+--- !u!114 &114989577294726826
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1247300077080094}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee76f1895ace8f942823031088453fa5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audio: {fileID: 82823312358363778}
+  myMusic:
+  - {fileID: 8300000, guid: 6ae8bbc89d5ae124aa73f4712eb9ef02, type: 3}
+  - {fileID: 8300000, guid: eaf7e25f69acb7d4eb73732d6743be16, type: 3}
+  - {fileID: 8300000, guid: c17b17d8083aa004899330a006dfdc4b, type: 3}
+  - {fileID: 8300000, guid: 62aa108d0a83b0949a14dd2bb51b24f8, type: 3}
+  - {fileID: 8300000, guid: c0e714d613c84864a9aef57d54187ea2, type: 3}
+  - {fileID: 8300000, guid: ac7685ed2666dab4e9db678e3f96ebea, type: 3}
+  - {fileID: 8300000, guid: fe76fe4a08f3f5347ad6b6410cb2e097, type: 3}
+  - {fileID: 8300000, guid: df6f8f6397c77c7499eb8c8929c55ac1, type: 3}

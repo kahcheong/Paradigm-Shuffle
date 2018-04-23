@@ -46,7 +46,8 @@ public class reveal : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
         {
             CardChoice.choices.cards[id] = null;
             CardChoice.choices.restock();
-            remove = false;
+            //remove = false;
+            
         }
     }
 }

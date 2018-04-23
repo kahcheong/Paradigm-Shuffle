@@ -40,8 +40,8 @@ public class room : MonoBehaviour {
             {
                 if (rooms[i] == null) Destroy(doors[i]);
             }
-            Card1 = GameController.control.GetCard().gameObject;
-            Card2 = GameController.control.GetCard().gameObject;
+            if (Card1 == null) Card1 = GameController.control.GetCard().gameObject;
+            if (Card2 == null) Card2 = GameController.control.GetCard().gameObject;
             StartCoroutine(wait(2.5f));
             first = false;
 

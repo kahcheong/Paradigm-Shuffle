@@ -29,8 +29,9 @@ public class Stab : MonoBehaviour {
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "enemy" && tag == "playerAttack")
+        if (other.tag == "enemy" && tag == "playerAttack"  && other.GetComponent<Enemy>().enabled)
         {
+
             float temp = damage - other.GetComponent<Enemy>().damageReducFlat;
             if (temp > 0) other.GetComponent<Enemy>().hp -= temp * (1f - other.GetComponent<Enemy>().damageReducPercent);
 

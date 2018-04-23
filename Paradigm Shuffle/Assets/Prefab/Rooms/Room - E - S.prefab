@@ -1171,8 +1171,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e0d402067e818248819440d751c8845, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Card1: {fileID: 1745389402347950, guid: e548ad872de8bef4db0e047c4d46e3a1, type: 2}
-  Card2: {fileID: 1426355539307434, guid: e0586d8a89c2f1545a73998b9d3d8185, type: 2}
+  Card1: {fileID: 0}
+  Card2: {fileID: 0}
   spawnPoints:
   - {fileID: 1447941592756744}
   - {fileID: 1097231011956906}

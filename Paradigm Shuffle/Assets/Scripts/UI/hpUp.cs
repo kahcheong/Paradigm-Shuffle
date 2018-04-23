@@ -19,6 +19,7 @@ public class hpUp : MonoBehaviour
     {
         Player.player.hpLvl++;
         Player.player.exp -= 100;
+        Player.player.newEquip();
         transform.parent.GetComponent<EXP>().lvlUp = false;
 
     }

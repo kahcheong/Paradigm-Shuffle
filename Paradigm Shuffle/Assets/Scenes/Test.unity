@@ -2209,11 +2209,6 @@ Transform:
   m_PrefabParentObject: {fileID: 4169554724118330, guid: 21e2c47384d21be43bef078c92f19c9c,
     type: 2}
   m_PrefabInternal: {fileID: 560618662}
---- !u!1 &593176317 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1989037059097528, guid: 13a0c770fec4e4a4aa0811343c862744,
-    type: 2}
-  m_PrefabInternal: {fileID: 45216292}
 --- !u!1001 &605136786
 Prefab:
   m_ObjectHideFlags: 0
@@ -6808,7 +6803,7 @@ MonoBehaviour:
   - {fileID: 1806575887471220, guid: d3d4fe536716b03429bf81d459845019, type: 2}
   - {fileID: 1040723468192690, guid: 6149fb2efffe630408d4fb9c0dce2334, type: 2}
   - {fileID: 1922493978892720, guid: b0938165199a0de4dbffb351c0c580af, type: 2}
-  - {fileID: 593176317}
+  - {fileID: 1989037059097528, guid: 13a0c770fec4e4a4aa0811343c862744, type: 2}
   floorRooms: []
   floorSize: 0
   giveExit: 0

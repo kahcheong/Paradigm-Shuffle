@@ -8,7 +8,7 @@ public class wisp : MonoBehaviour {
     private float damage;
 
 	// Use this for initialization
-	void Start () {
+	void OnEnable () {
         damage = gameObject.GetComponent<Enemy>().maxDamage * 5;
         StartCoroutine(boom());
 	}

@@ -34,7 +34,7 @@ public class takenItems : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
         else if (wep.percentReduc)
         {
             uses.GetComponent<Text>().text = ("LV " + wep.level + " " + weapon.name +
-                "@" + "increases HP by : " + (wep.percentReduction - 1) * 100 + "%" +
+                "@" + "increases HP by : " + (((int)((wep.percentReduction - 1) * 1000)) / 10f).ToString() + "%" +
                 "@").Replace("@", "\n").Replace("(Clone)", "");
         }
         else if (wep.consume)
@@ -146,6 +146,8 @@ public class takenItems : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
             {
                 yes = false;
                 Destroy(uses);
+                if (tinkerer.tinker != null) tinkerer.tinker.wep = wep;
+                if (trader.traderer != null) trader.traderer.wep = wep;
 
                 inventory.inventor.items[slot] = null;
                 inventory.inventor.Reset();

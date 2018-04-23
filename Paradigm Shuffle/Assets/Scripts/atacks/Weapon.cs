@@ -19,6 +19,7 @@ public class Weapon : MonoBehaviour
     public bool xp;
     public bool statBuff;
     public bool GODPOTION;
+    public GameObject parentCard;
 
     public bool weapon;
     public bool flatReduc;

@@ -47,14 +47,16 @@ public class ItemCreation : MonoBehaviour {
             other.gameObject.transform.parent.GetComponent<Player>().enabled = false;
             player = other.transform.parent.gameObject;
 
-            Card1 = GameController.control.GetCard();
+            if (Card1 == null) Card1 = GameController.control.GetCard();
             stat1 = Card1.GetComponent<Card>().id;
 
             if (stat1 % 10 == 9)
             {
                 elite = true;
-                Instantiate(gameObject, gameObject.transform.position + split, gameObject.transform.rotation,gameObject.transform.parent.transform);
-                Instantiate(gameObject, gameObject.transform.position - split, gameObject.transform.rotation, gameObject.transform.parent.transform);
+                GameObject others = Instantiate(gameObject, gameObject.transform.position + split, gameObject.transform.rotation,gameObject.transform.parent.transform);
+                others.GetComponent<ItemCreation>().Card1 = null;
+                others = Instantiate(gameObject, gameObject.transform.position - split, gameObject.transform.rotation, gameObject.transform.parent.transform);
+                others.GetComponent<ItemCreation>().Card1 = null;
                 Destroy(gameObject.gameObject);
                 player.GetComponent<Player>().enabled = true;
             }
@@ -65,8 +67,7 @@ public class ItemCreation : MonoBehaviour {
             }
 
 
-
-            GameObject card =  Instantiate(cardDisplay, GameController.control.itemStat.transform);
+            GameObject card = Instantiate(cardDisplay, GameController.control.itemStat.transform);
             card.GetComponent<Image>().sprite = Card1.card.GetComponent<SpriteRenderer>().sprite;
             StartCoroutine(wait(2.5f));
 
@@ -110,7 +111,7 @@ public class ItemCreation : MonoBehaviour {
             {
                 GameController.control.minDmg.GetComponent<Text>().text = "Increase HP by";
                 GameController.control.dash.GetComponent<Text>().text = " : ";
-                GameController.control.maxDmg.GetComponent<Text>().text = ((weapon.percentReduction - 1)*100 ).ToString() + "%";
+                GameController.control.maxDmg.GetComponent<Text>().text = (((int)((weapon.percentReduction - 1) * 1000)) / 10f).ToString() + "%";
                 GameController.control.atkSpeed.GetComponent<Text>().text = "";
 
                 stage++;
@@ -164,7 +165,7 @@ public class ItemCreation : MonoBehaviour {
         }
         else if (stage == 2)
         {
-            Card2 = GameController.control.GetCard();
+            if (Card2 == null) Card2 = GameController.control.GetCard();
             stat2 = Card2.GetComponent<Card>().id;
             GameObject card2 = Instantiate(cardDisplay, GameController.control.itemStat.transform);
             card2.GetComponent<Image>().sprite = Card2.card.GetComponent<SpriteRenderer>().sprite;
@@ -361,8 +362,9 @@ public class ItemCreation : MonoBehaviour {
 
         }
 
-        if (low > high) high = low;
+        
         if (low < 0) low = 0;
+        if (low > high) high = low;
         weapon.minDamage = low;
         weapon.maxDamage = high;
         weapon.atkSpeed = spd;

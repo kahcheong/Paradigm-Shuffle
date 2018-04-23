@@ -11,6 +11,7 @@ public class library : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler{
     public GameObject card;
     private bool canClick = false;
     public int id;
+    private int count = 0;
 
     public void Start()
     {
@@ -36,8 +37,12 @@ public class library : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler{
     {
         if (Input.GetMouseButtonDown(0) && canClick)
         {
-            if (CardChoice.choices != null) CardChoice.choices.cards[CardChoice.choices.size] = card;
-            CardChoice.choices.size++;
+            if (CardChoice.choices != null && CardChoice.choices.cards[CardChoice.choices.cards.Length - 1] == null)
+            {
+                CardChoice.choices.cards[CardChoice.choices.size] = card;
+                CardChoice.choices.size++;
+            }
+
         }
         if (GameController.control.unlockedCards[id] == false)
         {
@@ -45,4 +50,5 @@ public class library : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler{
         }
     }
 
+  
 }

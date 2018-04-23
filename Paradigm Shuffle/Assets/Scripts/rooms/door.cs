@@ -25,7 +25,7 @@ public class door : MonoBehaviour {
 	}
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag =="feet" && home.stage>8)
+        if (other.tag =="feet" && home.stage>9)
         {
             FloorManager.floorManager.currRoom = nextRoom;
             other.gameObject.transform.parent.transform.position = nextRoom.GetComponent<room>().doors[((side) / 2 * 2 + 2 - (side) % 2) - 1].GetComponent<door>().spawn.transform.position + new Vector3(0,0,-0.1f);

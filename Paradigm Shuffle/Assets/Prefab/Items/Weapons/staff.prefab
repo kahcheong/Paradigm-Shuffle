@@ -59,6 +59,13 @@ MonoBehaviour:
   atkSpeed: 1
   flatReduction: 0
   percentReduction: 0
+  buff: []
+  level: 0
+  stacks: 0
+  xp: 0
+  statBuff: 0
+  GODPOTION: 0
+  parentCard: {fileID: 1885245263964106, guid: 2a47018ec190fe841bb05bf6c3072eee, type: 2}
   weapon: 1
   flatReduc: 0
   percentReduc: 0

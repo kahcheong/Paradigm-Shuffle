@@ -15,14 +15,13 @@ public class Player : MonoBehaviour
 
     private readonly float baseHp = 100;
     private readonly float baseMinAtk = 1;
-    private readonly float baseMaxAtk = 1;
+    private readonly float baseMaxAtk = 3;
     private readonly float baseAtkSpeed = 1;
 
     public float hpLvl;
     public float damageLvl;
     //private float 
 
-    public float trueHP;
     public float maxHp;
     public float hp;
     public float damageReducFlat;
@@ -51,7 +50,18 @@ public class Player : MonoBehaviour
 
         MoveForward(); // Player Movement 
         if (hp > maxHp) hp = maxHp;
-        if (hp < 0) SceneManager.LoadScene("Death");
+        if (hp <= 0)
+        {
+            /*if (hp > -maxHp / 20)
+            {
+                hp = 1;
+                Time.timeScale = 0.4f;
+                StartCoroutine(matrix());
+            }*/
+            GameController.control.ReShuffleDeck();
+            GameController.control.removeNpc();
+            SceneManager.LoadScene("Death");
+        }
 
     }
 
@@ -64,8 +74,7 @@ public class Player : MonoBehaviour
 
         float temp100 = hpLvl;
         if (statBuff.stats.count > 0) temp100 = hpLvl + statBuff.stats.count;
-
-        maxHp = trueHP * Mathf.Pow(1.1f,(temp100));
+        maxHp = baseHp * Mathf.Pow(1.1f,(temp100));
 
 
         if (equip.equipment.armorObject != null && equip.equipment.armorObject.GetComponent<Weapon>().percentReduc) maxHp *= equip.equipment.armorObject.GetComponent<Weapon>().percentReduction;
@@ -170,6 +179,15 @@ public class Player : MonoBehaviour
             {
                 transform.Translate(playerSpeed * Time.deltaTime, 0, 0);
             }
+        }
+    }
+
+    IEnumerator matrix()
+    {
+        for (int i = 0; i < 20; i++)
+        {
+            Time.timeScale += 0.03f;
+            yield return new WaitForSeconds(0.1f);
         }
     }
 }

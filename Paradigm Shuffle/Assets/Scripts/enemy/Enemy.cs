@@ -77,6 +77,7 @@ public class Enemy : MonoBehaviour {
 		
         if (hp <= 0)
         {
+            if (boss) GameController.control.elitesSlain++;
             Destroy(gameObject.gameObject);
         }
         distance = Vector3.Distance(gameObject.transform.position, player.transform.position);
@@ -109,7 +110,7 @@ public class Enemy : MonoBehaviour {
     private void OnDestroy()
     {
         Player.player.exp += exp;
-        if (boss) GameController.control.elitesSlain++;
+        
     }
 
     public IEnumerator Atacking()
@@ -148,14 +149,18 @@ public class Enemy : MonoBehaviour {
             {
                 GameObject other = Instantiate(weapon, transform.position, target.transform.rotation);
                 other.GetComponent<slime>().damage = UnityEngine.Random.Range(minDamage, maxDamage);
+                other.transform.parent = FloorManager.floorManager.currRoom.transform;
                 FloorManager.floorManager.currRoom.GetComponent<room>().enemies.Add(other);
+
 
                 other = Instantiate(weapon, transform.position, target.transform.rotation * Quaternion.Euler(0, 0, 30));
                 other.GetComponent<slime>().damage = UnityEngine.Random.Range(minDamage, maxDamage);
+                other.transform.parent = FloorManager.floorManager.currRoom.transform;
                 FloorManager.floorManager.currRoom.GetComponent<room>().enemies.Add(other);
 
                 other = Instantiate(weapon, transform.position, target.transform.rotation * Quaternion.Euler(0, 0, -30));
                 other.GetComponent<slime>().damage = UnityEngine.Random.Range(minDamage, maxDamage);
+                other.transform.parent = FloorManager.floorManager.currRoom.transform;
                 FloorManager.floorManager.currRoom.GetComponent<room>().enemies.Add(other);
 
             }
@@ -165,22 +170,27 @@ public class Enemy : MonoBehaviour {
 
                 GameObject other = Instantiate(weapon, transform.position, angle);
                 other.GetComponent<slime>().damage = UnityEngine.Random.Range(minDamage, maxDamage);
+                other.transform.parent = FloorManager.floorManager.currRoom.transform;
                 FloorManager.floorManager.currRoom.GetComponent<room>().enemies.Add(other);
 
                 other = Instantiate(weapon, transform.position, angle * Quaternion.Euler(0, 0, 72));
                 other.GetComponent<slime>().damage = UnityEngine.Random.Range(minDamage, maxDamage);
+                other.transform.parent = FloorManager.floorManager.currRoom.transform;
                 FloorManager.floorManager.currRoom.GetComponent<room>().enemies.Add(other);
 
                 other = Instantiate(weapon, transform.position, angle * Quaternion.Euler(0, 0, -72));
                 other.GetComponent<slime>().damage = UnityEngine.Random.Range(minDamage, maxDamage);
+                other.transform.parent = FloorManager.floorManager.currRoom.transform;
                 FloorManager.floorManager.currRoom.GetComponent<room>().enemies.Add(other);
 
                 other = Instantiate(weapon, transform.position, angle * Quaternion.Euler(0, 0, 144));
                 other.GetComponent<slime>().damage = UnityEngine.Random.Range(minDamage, maxDamage);
+                other.transform.parent = FloorManager.floorManager.currRoom.transform;
                 FloorManager.floorManager.currRoom.GetComponent<room>().enemies.Add(other);
 
                 other = Instantiate(weapon, transform.position, angle * Quaternion.Euler(0, 0, -144));
                 other.GetComponent<slime>().damage = UnityEngine.Random.Range(minDamage, maxDamage);
+                other.transform.parent = FloorManager.floorManager.currRoom.transform;
                 FloorManager.floorManager.currRoom.GetComponent<room>().enemies.Add(other);
             }
 
@@ -190,26 +200,32 @@ public class Enemy : MonoBehaviour {
 
                 GameObject other = Instantiate(weapon, transform.position, angle);
                 other.GetComponent<slime>().damage = UnityEngine.Random.Range(minDamage, maxDamage);
+                other.transform.parent = FloorManager.floorManager.currRoom.transform;
                 FloorManager.floorManager.currRoom.GetComponent<room>().enemies.Add(other);
 
                 other = Instantiate(weapon, transform.position, angle * Quaternion.Euler(0, 0, 60));
                 other.GetComponent<slime>().damage = UnityEngine.Random.Range(minDamage, maxDamage);
+                other.transform.parent = FloorManager.floorManager.currRoom.transform;
                 FloorManager.floorManager.currRoom.GetComponent<room>().enemies.Add(other);
 
                 other = Instantiate(weapon, transform.position, angle * Quaternion.Euler(0, 0, -60));
                 other.GetComponent<slime>().damage = UnityEngine.Random.Range(minDamage, maxDamage);
+                other.transform.parent = FloorManager.floorManager.currRoom.transform;
                 FloorManager.floorManager.currRoom.GetComponent<room>().enemies.Add(other);
 
                 other = Instantiate(weapon, transform.position, angle * Quaternion.Euler(0, 0, 120));
                 other.GetComponent<slime>().damage = UnityEngine.Random.Range(minDamage, maxDamage);
+                other.transform.parent = FloorManager.floorManager.currRoom.transform;
                 FloorManager.floorManager.currRoom.GetComponent<room>().enemies.Add(other);
 
                 other = Instantiate(weapon, transform.position, angle * Quaternion.Euler(0, 0, -120));
                 other.GetComponent<slime>().damage = UnityEngine.Random.Range(minDamage, maxDamage);
+                other.transform.parent = FloorManager.floorManager.currRoom.transform;
                 FloorManager.floorManager.currRoom.GetComponent<room>().enemies.Add(other);
 
                 other = Instantiate(weapon, transform.position, angle * Quaternion.Euler(0, 0, 180));
                 other.GetComponent<slime>().damage = UnityEngine.Random.Range(minDamage, maxDamage);
+                other.transform.parent = FloorManager.floorManager.currRoom.transform;
                 FloorManager.floorManager.currRoom.GetComponent<room>().enemies.Add(other);
             }
 

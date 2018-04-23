@@ -18,6 +18,7 @@ public class DamageUp : MonoBehaviour {
     {
         Player.player.damageLvl++;
         Player.player.exp -= 100;
+        Player.player.newEquip();
         transform.parent.GetComponent<EXP>().lvlUp = false ;
 
     }

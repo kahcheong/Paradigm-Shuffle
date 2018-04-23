@@ -11,7 +11,7 @@ public class necro : MonoBehaviour {
     public GameObject spwn3;
 
     // Use this for initialization
-    void Start () {
+    void OnEnable () {
         StartCoroutine(spawn());
     }
 	
@@ -23,8 +23,17 @@ public class necro : MonoBehaviour {
     IEnumerator spawn()
     {
         GameObject other =  Instantiate(skeletal, spwn1.transform.position, spwn1.transform.rotation);
+        other.transform.parent = FloorManager.floorManager.currRoom.transform;
+        FloorManager.floorManager.currRoom.GetComponent<room>().enemies.Add(other);
+
         other = Instantiate(skeletal, spwn2.transform.position, spwn2.transform.rotation);
+        other.transform.parent = FloorManager.floorManager.currRoom.transform;
+        FloorManager.floorManager.currRoom.GetComponent<room>().enemies.Add(other);
+
         other = Instantiate(skeletal, spwn3.transform.position, spwn3.transform.rotation);
+        other.transform.parent = FloorManager.floorManager.currRoom.transform;
+        FloorManager.floorManager.currRoom.GetComponent<room>().enemies.Add(other);
+
 
         yield return new WaitForSeconds(3);
         StartCoroutine(spawn());

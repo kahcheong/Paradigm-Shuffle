@@ -17,6 +17,7 @@ public class lava : MonoBehaviour {
         if (other.tag == "feet" && canDamage )
         {
             other.transform.parent.GetComponent<Player>().hp -= damage;
+            //Instantiate(GameController.control.flames, Player.player.transform);
             //canDamage = false;
             
             
@@ -24,6 +25,7 @@ public class lava : MonoBehaviour {
         if (other.tag == "enemy" && canDamage)
         {
             other.GetComponent<Enemy>().hp -= damage;
+            //Instantiate(GameController.control.flames, other.transform);
             //canDamage = false;
 
 

@@ -60,6 +60,12 @@ MonoBehaviour:
   flatReduction: 0
   percentReduction: 0
   buff: []
+  level: 0
+  stacks: 0
+  xp: 0
+  statBuff: 0
+  GODPOTION: 0
+  parentCard: {fileID: 1347630675443802, guid: 80a31f40285a043419066c82a7fbe758, type: 2}
   weapon: 1
   flatReduc: 0
   percentReduc: 0

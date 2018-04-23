@@ -61,9 +61,14 @@ MonoBehaviour:
   percentReduction: 1
   buff: []
   level: 0
+  stacks: 0
+  xp: 0
+  statBuff: 0
+  GODPOTION: 0
+  parentCard: {fileID: 0}
   weapon: 0
-  flatReduc: 0
-  percentReduc: 1
+  flatReduc: 1
+  percentReduc: 0
   trinket: 0
   consume: 0
   stab: 0

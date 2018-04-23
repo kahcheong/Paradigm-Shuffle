@@ -21,6 +21,7 @@ public class GameController : MonoBehaviour {
     public bool[] unlockedCards = new bool[30];
     public GameObject buuf;
     public int elitesSlain;
+    public GameObject flames;
 
     public GameObject takeUI;
     public GameObject discardUI;
