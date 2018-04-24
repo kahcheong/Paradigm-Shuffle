@@ -91,9 +91,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4300102048602766}
   - component: {fileID: 212224350959437572}
-  - component: {fileID: 95406996352425880}
   - component: {fileID: 65207313317622132}
   - component: {fileID: 114057214595257658}
+  - component: {fileID: 95129365566970458}
   m_Layer: 0
   m_Name: healSpot
   m_TagString: Untagged
@@ -199,7 +199,7 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!95 &95406996352425880
+--- !u!95 &95129365566970458
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 1
@@ -208,7 +208,7 @@ Animator:
   m_GameObject: {fileID: 1552749316447424}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 9e8dabc7d88f7b941894608b15ce9a6a, type: 2}
+  m_Controller: {fileID: 9100000, guid: 71af62e049b7b3a4faecda32c443ff98, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -380,7 +380,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 5facc4a10334f104588ec1effc53a6b7, type: 3}
+  m_Sprite: {fileID: 21300000, guid: afc6bb68bbacce04caae0a8dea89cbdc, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
