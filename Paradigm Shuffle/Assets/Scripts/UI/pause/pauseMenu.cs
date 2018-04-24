@@ -9,6 +9,7 @@ public class pauseMenu : MonoBehaviour, IPointerEnterHandler, IPointerExitHandle
     private bool canPause = false;
     public GameObject menu;
     public bool isPause = false;
+    private bool wasPaused = false;
 
     public void OnPointerEnter(PointerEventData eventData)
     {
@@ -27,6 +28,8 @@ public class pauseMenu : MonoBehaviour, IPointerEnterHandler, IPointerExitHandle
         {
             isPause = true;
 
+            wasPaused = true;
+
         }
 
         if (isPause)
@@ -36,12 +39,13 @@ public class pauseMenu : MonoBehaviour, IPointerEnterHandler, IPointerExitHandle
             Player.player.GOD = true;
             Player.player.enabled = false;
         }
-        else
+        else if (wasPaused)
         {
             Time.timeScale = 1;
             menu.SetActive(false);
             Player.player.GOD = false;
-            Player.player.enabled = true;  
+            Player.player.enabled = true;
+            wasPaused = false;
         }
 
 	}

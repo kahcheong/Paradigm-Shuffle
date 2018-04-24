@@ -176,6 +176,7 @@ MonoBehaviour:
   maxRange: 1
   atkSpeed: 2
   moveSpeed: 2
+  canMove: 1
   damageReducFlat: 0
   damageReducPercent: 0
   distance: 0

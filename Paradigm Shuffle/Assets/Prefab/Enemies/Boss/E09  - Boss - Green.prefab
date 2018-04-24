@@ -23,6 +23,7 @@ GameObject:
   - component: {fileID: 114920195164615202}
   - component: {fileID: 95140446438996760}
   - component: {fileID: 54932262939315904}
+  - component: {fileID: 114892186490094096}
   - component: {fileID: 65692175648850352}
   - component: {fileID: 65707365012963096}
   - component: {fileID: 65691498015012208}
@@ -157,6 +158,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 0}
   enemy: {fileID: 1682339209092290}
+--- !u!114 &114892186490094096
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1682339209092290}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9df874a351a08b14d8215d52a66fd4aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  boss: {fileID: 0}
 --- !u!114 &114920195164615202
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -187,6 +200,7 @@ MonoBehaviour:
   maxRange: 5
   atkSpeed: 0.5
   moveSpeed: 0.5
+  canMove: 1
   damageReducFlat: 0
   damageReducPercent: 0
   distance: 0

@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 212399720707368334}
   - component: {fileID: 114308823723653068}
   - component: {fileID: 95854259267930658}
+  - component: {fileID: 114343088100279564}
   - component: {fileID: 65289375873691066}
   - component: {fileID: 65767426396512702}
   - component: {fileID: 65523978085996260}
@@ -174,6 +175,7 @@ MonoBehaviour:
   maxRange: 0
   atkSpeed: 0.5
   moveSpeed: 0.5
+  canMove: 1
   damageReducFlat: 0
   damageReducPercent: 0
   distance: 0
@@ -181,6 +183,18 @@ MonoBehaviour:
   canAtk: 1
   target: {fileID: 1825470563981996}
   weapon: {fileID: 1201898623351402, guid: 8a43570d626ddf34ea97b8bcae0774de, type: 2}
+--- !u!114 &114343088100279564
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1201898623351402}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9df874a351a08b14d8215d52a66fd4aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  boss: {fileID: 0}
 --- !u!114 &114695601671393510
 MonoBehaviour:
   m_ObjectHideFlags: 1
