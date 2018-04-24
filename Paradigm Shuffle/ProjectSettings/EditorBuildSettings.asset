@@ -15,26 +15,29 @@ EditorBuildSettings:
     path: Assets/Scenes/GameMenu.unity
     guid: 60ad4d905d8a7a34e80dae9a03b76b44
   - enabled: 1
+    path: Assets/Scenes/card loadout.unity
+    guid: c88dd40c60fdf4d4cac29ae5c4f843a0
+  - enabled: 1
     path: Assets/Scenes/Main.unity
     guid: 14e3a383b5a1c8542a6db1840aed1b40
   - enabled: 1
     path: Assets/Scenes/Test.unity
     guid: 08f53a070a7216e46b2aa74bb7f946c4
-  - enabled: 0
-    path: 
-    guid: 95101fc34cf05d848822f87ad5323640
-  - enabled: 1
-    path: Assets/Scenes/Bestiary - Elementals.unity
-    guid: 1cbe1e1b84e54db4c97fcc6b5a3a0fe7
   - enabled: 1
     path: Assets/Scenes/Death.unity
     guid: 2aaa1e0bd046c87498f19e4862a15a6b
   - enabled: 1
-    path: Assets/Scenes/Bestiary - Goblins.unity
-    guid: 79057e8b0578b094e9379c1debdf1959
-  - enabled: 1
     path: Assets/Scenes/Victory.unity
     guid: fc30eec2cf62ff84983d9fa084f8c802
+  - enabled: 1
+    path: Assets/Scenes/Library.unity
+    guid: 6ce96463f96ecde4c897898a26f14725
+  - enabled: 1
+    path: Assets/Scenes/Bestiary - Elementals.unity
+    guid: 1cbe1e1b84e54db4c97fcc6b5a3a0fe7
+  - enabled: 1
+    path: Assets/Scenes/Bestiary - Goblins.unity
+    guid: 79057e8b0578b094e9379c1debdf1959
   - enabled: 1
     path: Assets/Scenes/Bestiary - Hooded.unity
     guid: d7008fcd4f68c91429437f1abe8cf56d
@@ -42,11 +45,5 @@ EditorBuildSettings:
     path: Assets/Scenes/Bestiary - Humanoids.unity
     guid: 66d59e079d77d414985bb2c77de54e6b
   - enabled: 1
-    path: Assets/Scenes/Library.unity
-    guid: 6ce96463f96ecde4c897898a26f14725
-  - enabled: 1
     path: Assets/Scenes/Credits.unity
     guid: 6f647c76d75e4a34ebcfd13fba8b60fa
-  - enabled: 1
-    path: Assets/Scenes/card loadout.unity
-    guid: c88dd40c60fdf4d4cac29ae5c4f843a0
